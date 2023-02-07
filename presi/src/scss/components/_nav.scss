@@ -1,0 +1,22 @@
+.nav {
+  &-list {
+    display: flex;
+    gap: 0 45px;
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+  }
+
+  &-link {
+    font-family: $font-noto-sans-jp;
+    font-size: 14px;
+  }
+
+  &-cta {
+    background-color: color(blue-100);
+    color: color(white);
+    padding: 9px 21px;
+  }
+}

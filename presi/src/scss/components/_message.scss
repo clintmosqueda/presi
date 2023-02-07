@@ -1,0 +1,21 @@
+.message {
+  @include pad-left();
+  margin-bottom: 131px;
+
+  &-img {
+    display: block;
+    margin-bottom: 44px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &-par {
+    font-size: 14px;
+    margin-bottom: 35px;
+    white-space: pre-line;
+    line-height: 2.4;
+    color: color(black);
+    font-weight: 600;
+    letter-spacing: 0.12em;
+  }
+}

@@ -1,0 +1,93 @@
+.service {
+  &-inner {
+    padding: 0 0 0 103px
+  }
+
+  &-title {
+    margin-bottom: 49px;
+  }
+
+  &-desc {
+    max-width: 744px;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 21px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    border-bottom: 4px solid color(gray);
+    padding-bottom: 35px;
+    margin-bottom: 48px;
+  }
+
+  &-grid {
+    display: grid;
+    grid-template-areas:
+      "one one"
+      "two three"
+      "four five";
+    gap: 15px;
+
+    &-link {
+      background-color: color(blue-100);
+      color: color(white);
+      font-size: 25px;
+      font-weight: bold;
+      letter-spacing: 0.22em;
+      position: relative;
+      padding: 94px 52px 86px;
+
+      &:first-of-type {
+        grid-area: one;
+        font-size: 38px;
+        padding: 117px 82px 105px;
+        background-position: center right 122px;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-image: url(#{$image-path}/building.png);
+      }
+
+      &:nth-child(2) {
+        grid-area: two;
+      }
+
+      &:nth-child(3) {
+        grid-area: three;
+      }
+
+      &:nth-child(4) {
+        grid-area: four;
+      }
+
+      &:nth-child(5) {
+        grid-area: five;
+      }
+
+      &-caret {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+
+  &-main {
+    margin-bottom: 120px;
+
+    &-inner {
+      padding-top: 53px;
+      padding-left: 103px;
+      margin-bottom: 100px;
+    }
+
+    &-desc {
+      font-weight: 500;
+      font-size: 14px;
+      white-space: pre-line;
+      line-height: 2.4;
+      letter-spacing: 0.12em;
+      margin-bottom: 50px;
+    }
+  }
+}

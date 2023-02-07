@@ -1,0 +1,32 @@
+.breadcrumbs {
+  &-inner {
+    padding: 32px 0 32px 103px
+  }
+
+  &-list {
+    display: flex;
+    gap: 0 15px;
+  }
+
+  &-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      &::after {
+        margin-left: 13px;
+        display: inline-block;
+        content: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0Ljk1NiIgaGVpZ2h0PSIxMy4yOTQiIHZpZXdCb3g9IjAgMCA0Ljk1NiAxMy4yOTQiPgogIDxsaW5lIGlkPSJMaW5lXzY0IiBkYXRhLW5hbWU9IkxpbmUgNjQiIHgxPSI0IiB5Mj0iMTMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuNDc4IDAuMTQ3KSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNzA3MDcwIiBzdHJva2Utd2lkdGg9IjEiLz4KPC9zdmc+Cg==);
+      }
+    }
+  }
+
+  &-link {
+    display: inline-block;
+    font-size: 14px;
+    color: color(gray-900);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}

@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&display=swap');
+
+// @font-face {
+//   font-family: 'Jost';
+//   src: url('#{$font-path}/jost/Jost-Medium.woff2') format('woff2'),
+//   url('#{$font-path}/jost/Jost-Medium.woff') format('woff');
+//   font-weight: 500;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: 'Jost';
+//   src: url('#{$font-path}/jost/Jost-Regular.woff2') format('woff2'),
+//   url('#{$font-path}/jost/Jost-Regular.woff') format('woff');
+//   font-weight: normal;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('#{$font-path}/noto-sans/NotoSans-Medium.woff2') format('woff2'),
+  url('#{$font-path}/noto-sans/NotoSans-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('#{$font-path}/noto-sans/NotoSans-Bold.woff2') format('woff2'),
+  url('#{$font-path}/noto-sans/NotoSans-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('#{$font-path}/noto-sans/NotoSans-Regular.woff2') format('woff2'),
+  url('#{$font-path}/noto-sans/NotoSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'noto_sans_jpbold';
+  src: url('#{$font-path}/noto-sans-jp/notosansjp-bold-webfont.woff2') format('woff2'),
+  url('#{$font-path}/noto-sans-jp/notosansjp-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'noto_sans_jpmedium';
+  src: url('#{$font-path}/noto-sans-jp/notosansjp-medium-webfont.woff2') format('woff2'),
+  url('#{$font-path}/noto-sans-jp/notosansjp-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'noto_sans_jpregular';
+  src: url('#{$font-path}/noto-sans-jp/notosansjp-regular-webfont.woff2') format('woff2'),
+  url('#{$font-path}/noto-sans-jp/notosansjp-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}

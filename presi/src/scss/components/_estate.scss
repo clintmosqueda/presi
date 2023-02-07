@@ -1,0 +1,157 @@
+.estate {
+  &-desc {
+    font-size: 14px;
+    color: color(black);
+    letter-spacing: 0.12em;
+    font-weight: 500;
+    line-height: 2.43;
+    letter-spacing: 0.12em;
+    white-space: pre-line;
+    margin-bottom: 50px;
+  }
+
+  &-dev {
+    margin-bottom: 79px;
+  }
+
+  &-title-alt {
+    margin-bottom: 31px;
+  }
+
+  &-structure {
+    border: 5px solid color(gray-100);
+    padding: 67px 55px;
+    position: relative;
+    margin-bottom: 112px;
+  }
+
+  &-intro {
+    text-align: center;
+    white-space: pre-line;
+    font-size: 18px;
+    font-weight: 600;
+    color: color(blue-100);
+    letter-spacing: 0.2em;
+    line-height: 2.2;
+    margin-bottom: 31px;
+  }
+
+  &-departments {}
+
+  &-phase1,
+  &-phase2 {
+    display: grid;
+    gap: 0 6px;
+  }
+
+  &-phase1 {
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 10px;
+  }
+
+  &-phase2 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &-office {
+    height: 108px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 2px solid color(blue);
+    color: color(blue);
+    font-size: 20px;
+    font-weight: 600;
+    white-space: pre-line;
+    letter-spacing: 0.2em;
+    line-height: 1.4;
+
+    &::after {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      content: '';
+      border-style: solid;
+      border-width: 0 0 22px 22px;
+      border-color: transparent transparent color(blue) transparent;
+
+      .estate-dev-phase1 & {
+        border-width: 0 0 22px 30px;
+      }
+    }
+  }
+
+  &-responsibility {
+    position: absolute;
+    bottom: -45px;
+    left: 50%;
+    translate: -50% 0;
+    background-color: color(blue-100);
+    color: color(white);
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 10px;
+    display: block;
+    letter-spacing: 0.2em;
+    white-space: nowrap;
+    padding: 21px 54px;
+
+    &::before {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      translate: -50% 0;
+      content: '';
+      border-style: solid;
+      border-width: 0 12px 12px 12px;
+      border-color: transparent transparent color(blue-100) transparent;
+    }
+  }
+
+  &-business {
+    &-heading {
+      font-size: 20px;
+      font-weight: 600;
+      text-align: center;
+      background-color: color(gray);
+      margin-bottom: 7px;
+      color: color(blue-100);
+      letter-spacing: 0.2em;
+      padding: 35px 0;
+    }
+  }
+
+  &-scope {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0 7px;
+
+    &-item {
+      background-color: color(gray);
+      text-align: center;
+    }
+
+    &-label {
+      font-size: 16px;
+      font-weight: 600;
+      color: color(blue-100);
+      letter-spacing: 0.2em;
+      padding: 29px 0;
+    }
+
+    &-img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 134px 0px;
+    margin-top: 100px;
+    counter-reset: count;
+  }
+}

@@ -1,0 +1,21 @@
+.caret {
+  width: 24px;
+  height: 24px;
+  background-color: color(blue);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    display: inline-block;
+    width: 5.265px;
+    height: 15.703px;
+    flex-shrink: 0;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+    }
+  }
+}

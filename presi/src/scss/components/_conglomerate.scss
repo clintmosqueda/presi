@@ -1,0 +1,38 @@
+.conglomerate {
+  margin-bottom: 240px;
+  @include pad-left();
+
+  &-heading {
+    white-space: pre-line;
+    font-size: 20px;
+    font-weight: 600;
+    color: color(blue-100);
+    line-height: 2.5;
+    letter-spacing: 0.2em;
+    margin-bottom: 22px;
+  }
+
+  &-block {
+    display: flex;
+    gap: 0 34px;
+  }
+
+  &-picture {
+    width: 245px;
+    flex-grow: 0;
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-desc {
+    white-space: pre-line;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 2;
+    letter-spacing: 0.08em;
+  }
+}

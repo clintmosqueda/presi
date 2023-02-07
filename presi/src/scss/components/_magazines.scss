@@ -1,0 +1,29 @@
+.magazines {
+  &-inner {
+    padding-left: 103px;
+  }
+
+  &-content {}
+
+  &-table {
+    border-collapse: collapse;
+
+    &-tr {
+      display: flex;
+    }
+
+    &-td {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 232px;
+      width: 233px;
+      border: 1px solid color(gray-100);
+
+      img {
+        display: block;
+        flex-shrink: 0;
+      }
+    }
+  }
+}

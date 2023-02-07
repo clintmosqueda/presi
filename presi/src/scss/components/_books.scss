@@ -1,0 +1,36 @@
+.books {
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    height: 100%;
+    width: 100vw;
+    background-color: color(gray);
+    z-index: -1;
+    transform: skew(0deg, -3deg);
+  }
+
+  &-inner {
+    padding-left: 103px;
+  }
+
+  &-title {
+    color: color(white);
+
+    &-en {
+      font-size: 140px;
+      font-weight: 500;
+    }
+  }
+
+  &-catalogue {
+    margin-left: 103px;
+    display: flex;
+    gap: 0 1px;
+    width: 1121px;
+  }
+}

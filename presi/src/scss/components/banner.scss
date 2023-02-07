@@ -1,0 +1,54 @@
+.banner {
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    content: '';
+    background-color: color(gray);
+    height: 280px;
+    z-index: -1;
+  }
+
+  &-inner {
+    height: 439px;
+    display: flex;
+    align-items: center;
+  }
+
+  &-title {
+    line-height: 1.6;
+
+    &-jp {
+      font-size: 28px;
+    }
+
+    &-wrap {
+      width: 100%;
+      padding-left: 102px;
+      padding-bottom: 78px;
+    }
+  }
+
+  &-frame {
+    width: 639px;
+    flex-shrink: 0;
+    position: relative;
+    height: 100%;
+
+    &-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      height: 100%;
+      width: 53.8vw;
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}

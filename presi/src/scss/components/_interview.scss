@@ -1,0 +1,146 @@
+.interview {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 100px;
+
+  &-inner {
+    position: relative;
+    padding-left: 44px;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      height: 100%;
+      width: 100vw;
+      background-color: color(blue-100);
+      z-index: -1;
+      transform: skew(0deg, -3deg);
+    }
+  }
+
+  &-title {
+    color: color(white);
+
+    &-en {
+      font-weight: 500;
+      font-size: 101px;
+    }
+  }
+
+  &-content {}
+
+  &-carousel {
+    width: 882px;
+  }
+
+  &-slide {}
+
+  &-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-group {
+    width: 432px;
+    flex-shrink: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-quotes {
+    width: 321px;
+    position: relative;
+    padding-left: 53px;
+    padding-top: 38px;
+    padding-bottom: 42px;
+    z-index: 1;
+    perspective: 800px;
+  }
+
+  &-opening-quote,
+  &-closing-quote {
+    position: absolute;
+    z-index: -1;
+  }
+
+  &-opening-quote {
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 60px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+
+  &-closing-quote {
+    bottom: 0;
+    right: 0;
+    width: 80px;
+    height: 60px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+
+  &-par {
+    font-size: 32px;
+    font-weight: 600;
+    color: color(white);
+    line-height: 1.4;
+    transform: rotateZ(-4deg);
+  }
+
+  &-link {
+    color: color(white);
+    font-family: $font-jost;
+    font-size: 31px;
+    text-transform: uppercase;
+    margin-left: auto;
+    transform: rotateZ(-4deg);
+  }
+
+  &-picture {
+    width: 391px;
+    height: 498px;
+    flex-shrink: 0;
+    perspective: 800px;
+
+    &-frame {
+      display: block;
+      width: 100%;
+      height: 100%;
+      transform: rotateY(-16deg);
+      position: relative;
+      z-index: 1;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 15px;
+        left: 20px;
+        width: 100%;
+        height: 100%;
+        background-color: color(orange);
+        z-index: -1;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+    }
+  }
+}

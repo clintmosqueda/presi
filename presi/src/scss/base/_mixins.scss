@@ -1,0 +1,13 @@
+@mixin viewport($size, $type: max) {
+  @if $type ==min {
+    $size: $size +1
+  }
+
+  @media all and (#{$type}-width: $size) {
+    @content
+  }
+}
+
+@mixin pad-left() {
+  padding-left: 361px
+}

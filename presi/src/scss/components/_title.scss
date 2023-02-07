@@ -1,0 +1,48 @@
+.title {
+  display: flex;
+  flex-direction: column;
+  color: color(blue-100);
+
+  &-en {
+    font-size: 80px;
+    font-family: 'Jost';
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  &-jp {
+    font-family: $font-noto-sans-jp;
+    font-size: 31px;
+  }
+}
+
+.title-alt {
+  min-height: 170px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  padding-left: 9px;
+
+  &-en {
+    color: color(gray);
+    font-size: 170px;
+    font-family: $font-jost;
+    position: absolute;
+    top: 13px;
+    left: -143px;
+    text-transform: capitalize;
+    white-space: nowrap;
+  }
+
+  &-jp {
+    font-size: 48px;
+    font-weight: 600;
+    color: color(blue-100);
+    position: relative;
+    z-index: 1;
+    letter-spacing: 0.2em;
+    border-bottom: 5px solid color(blue-100);
+    padding-bottom: 11px;
+  }
+}

@@ -1,0 +1,241 @@
+.company {
+  &-inner {
+    padding-top: 120px;
+  }
+
+  &-title {
+    position: relative;
+    top: -55px;
+  }
+
+  &-banner {
+    padding-left: 103px;
+    position: relative;
+    z-index: 1;
+    height: 276px;
+    // outline: 1px solid teal;
+
+    &-img {
+      position: absolute;
+      height: 387px;
+      width: 772px;
+      bottom: 0;
+      right: 0;
+
+      img {
+        display: block;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &-bg {
+      height: 100%;
+      width: 100vw;
+      position: absolute;
+      top: 0;
+      translate: -50% 0;
+      left: 50%;
+      z-index: -1;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        content: '';
+        height: 100%;
+        width: 88.3%;
+        background-color: color(gray);
+      }
+    }
+  }
+
+  &-content {
+    padding-left: 103px;
+    display: flex;
+    justify-content: space-around;
+    gap: 0 15px;
+    margin-bottom: 116px;
+
+    &-right {
+      max-width: 474px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 22px 0;
+      padding-top: 108px;
+    }
+  }
+
+  &-heading {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px 0;
+    margin-top: -34px;
+
+    &-text {
+      position: relative;
+      color: color(white);
+      z-index: 1;
+      font-size: 40px;
+      font-weight: 600;
+      padding: 20px 20px;
+      transform: skew(1deg, 2deg);
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        background-color: color(blue-100);
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        // transform: skew(1deg, 2deg)
+      }
+    }
+  }
+
+  &-desc {
+    white-space: pre-line;
+    font-size: 18px;
+    font-family: $font-noto-sans-jp;
+    line-height: 3;
+    // margin-top: -35px;
+  }
+
+  &-button {
+    display: block;
+    font-size: 23px;
+    font-weight: 600;
+    color: color(white);
+    background-color: color(blue-100);
+    position: relative;
+    padding: 75px 49px;
+    letter-spacing: 0.26em;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 19px;
+      width: 271px;
+      height: 204px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url('#{$image-path}/building-small.png');
+      opacity: 0.2;
+    }
+
+    &-caret {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 46px;
+      height: 46px;
+    }
+  }
+
+  &-property {
+    padding-left: 103px;
+    text-align: center;
+
+    &-heading {
+      color: color(blue-100);
+      font-size: 31px;
+      font-family: $font-noto-sans-jp;
+      margin-bottom: 41px;
+    }
+
+    &-desc {
+      font-size: 20px;
+      font-family: $font-noto-sans-jp;
+      color: color(black);
+      letter-spacing: 0.01em;
+      margin-bottom: 74px;
+    }
+
+    &-list {
+      display: flex;
+      gap: 0 43px;
+      margin-bottom: 22px;
+    }
+
+    &-link {
+      height: 157px;
+      border: 2px solid color(gray-400);
+      width: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        display: block;
+      }
+
+      &-icon {
+        position: absolute;
+        bottom: 17px;
+        right: 21px;
+        display: inline-block;
+        width: 15px;
+        height: 16px;
+
+        svg {
+          width: 100%;
+          height: 100%;
+          stroke: color(orange-100);
+        }
+      }
+    }
+  }
+
+  &-notes {
+    display: flex;
+    padding-right: 13px;
+  }
+
+  &-note {
+    margin-left: auto;
+    font-size: 12px;
+    color: color(gray-200)
+  }
+
+  // page
+
+  &-main {
+    padding-top: 60px;
+
+    &-block {
+      position: relative;
+      padding-bottom: 154px;
+    }
+  }
+
+  &-sidebar {
+    position: absolute;
+    top: 0;
+    left: 105px;
+    padding-top: 6px;
+    width: 200px;
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 36px 0px;
+    }
+
+    &-item {}
+
+    &-anchor {
+      font-size: 18px;
+      color: color(blue-100);
+      line-height: 1.5;
+      display: inline-block;
+    }
+  }
+}

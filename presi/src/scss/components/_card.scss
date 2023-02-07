@@ -1,0 +1,14 @@
+.card {
+  &-frame {
+    background-color: color(orange);
+    height: 180px;
+    margin-bottom: 27px;
+  }
+
+  &-desc {
+    text-align: center;
+    color: color(white);
+    font-family: $font-noto-sans-jp;
+    font-size: 18px;
+  }
+}
