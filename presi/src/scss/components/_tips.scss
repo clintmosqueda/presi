@@ -1,0 +1,58 @@
+.tips {
+
+  &-case-study {
+    border-top: 1px solid color(gray-100);
+
+    &-inner {
+      padding-left: 103px;
+      padding-top: 88px;
+    }
+  }
+
+  &-building {
+    margin-bottom: 60px;
+
+    &-inner {
+      padding-left: 103px;
+    }
+
+    &-title-alt {
+      margin-bottom: 42px;
+    }
+
+    &-label {
+      font-size: 18px;
+      font-weight: 600;
+      white-space: pre-line;
+      flex-shrink: 0;
+      letter-spacing: 0.123em;
+      line-height: 2.3;
+    }
+
+    &-desc {
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 69px;
+      letter-spacing: 0.12em;
+      line-height: 2.36;
+    }
+
+    &-frame {
+      height: 300px;
+      background-color: color(gray);
+      margin-bottom: 63px;
+    }
+
+    &-group {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0 40px;
+      padding-right: 39px;
+    }
+
+    &-cluster {
+      display: flex;
+      gap: 0 141px;
+    }
+  }
+}

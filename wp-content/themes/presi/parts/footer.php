@@ -38,12 +38,12 @@
         <div class="footer-bottom-right">
           <nav class="footer-nav">
             <ul class="footer-nav-list">
-              <li class="footer-nav-item"><a class="footer-nav-link" href="">サイトトップ</a></li>
-              <li class="footer-nav-item"><a class="footer-nav-link" href="">事業内容</a></li>
-              <li class="footer-nav-item"><a class="footer-nav-link" href="">PRESIとは</a></li>
-              <li class="footer-nav-item"><a class="footer-nav-link" href="">新卒採用</a></li>
-              <li class="footer-nav-item"><a class="footer-nav-link" href="">会社案内</a></li>
-              <li class="footer-nav-item"><a class="footer-nav-link" href="">お問い合わせ</a></li>
+              <li class="footer-nav-item"><a class="footer-nav-link" href="<?php echo resolve_url(); ?>">サイトトップ</a></li>
+              <li class="footer-nav-item"><a class="footer-nav-link" href="<?php echo resolve_url('service'); ?>">事業内容</a></li>
+              <li class="footer-nav-item"><a class="footer-nav-link" href="<?php echo resolve_url('company'); ?>">PRESIとは</a></li>
+              <li class="footer-nav-item"><a class="footer-nav-link" href="<?php echo resolve_url('tips'); ?>">新卒採用</a></li>
+              <li class="footer-nav-item"><a class="footer-nav-link" href="<?php echo resolve_url('about'); ?>">会社案内</a></li>
+              <li class="footer-nav-item"><a class="footer-nav-link" href="<?php echo resolve_url('contact'); ?>">お問い合わせ</a></li>
             </ul>
           </nav>
         </div>

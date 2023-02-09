@@ -4,7 +4,6 @@
 */
 get_header(); ?>
 
-
 <?php import_part('banner', array(
   'modifier' => '',
   'text_en' => 'COMPANY',

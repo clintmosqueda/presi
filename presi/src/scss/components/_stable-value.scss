@@ -1,0 +1,90 @@
+.stable-value {
+  position: relative;
+  z-index: 1;
+  margin-top: -108px;
+  margin-bottom: 120px;
+
+  &-inner {
+    padding-left: 103px;
+  }
+
+  &-box {
+    border: 1px solid color(gray);
+    background-color: color(white);
+    padding-top: 52px;
+    padding-bottom: 76px;
+  }
+
+  &-heading {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 30px;
+    color: color(black);
+    white-space: pre-line;
+    letter-spacing: 0.12em;
+    line-height: 1.85;
+  }
+
+  &-cta {
+    background-color: color(blue-100);
+    color: color(white);
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
+    margin: 0 auto 52px;
+    max-width: 416px;
+    width: 100%;
+    padding: 23px 0;
+    text-align: center;
+    letter-spacing: 0.11em;
+  }
+
+  &-block {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 0;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      content: '';
+      left: 50%;
+      top: 0;
+      translate: -50% 0;
+      background-color: color(gray);
+    }
+  }
+
+  &-col {
+    padding: 0 70px;
+  }
+
+  &-icon {
+    display: block;
+    margin: 0 auto 31px;
+    width: 158px;
+    height: 158px;
+    background-color: color(gray);
+    border-radius: 50%;
+  }
+
+  &-label {
+    font-weight: 600;
+    font-size: 18px;
+    color: color(black);
+    margin-bottom: 27px;
+    letter-spacing: 0.11em;
+  }
+
+  &-desc {
+    font-size: 14px;
+    font-weight: 500;
+    color: color(black);
+    line-height: 2.46;
+    letter-spacing: 0.12em;
+  }
+}

@@ -41,29 +41,9 @@
         </div>
       </div>
 
-      <div class="company-property">
-        <h3 class="company-property-heading">物件事例紹介</h3>
-        <p class="company-property-desc">PRESIの扱う物件事例は下記のサイトよりご確認ください</p>
 
-        <div class="company-property-list">
-          <a href="" class="company-property-link">
-            <img width="104" src="<?php echo resolve_asset_url('/images/company-site1.png'); ?>" alt="">
-            <?php import_part("svg", array(
-              'svg_class' => 'company-property-link-icon',
-              'svg_id' => '#icon-external'
-            )); ?>
-          </a>
-          <a href="" class="company-property-link">
-            <img width="231"  src="<?php echo resolve_asset_url('/images/company-site2.png'); ?>" alt="">
-            <?php import_part("svg", array(
-              'svg_class' => 'company-property-link-icon',
-              'svg_id' => '#icon-external'
-            )); ?>
-          </a>
-        </div>
-        <div class="company-notes">
-          <span class="company-note">※外部サイトを表示します</span>
-        </div>
+      <div class="company-property">
+        <?php import_part('case-study')?>
       </div>
     </div>
   </div>
