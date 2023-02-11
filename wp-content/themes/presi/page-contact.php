@@ -3,6 +3,202 @@
 * Template Name: Contact
 */
 get_header(); ?>
+<?php import_part('banner', array(
+  'modifier' => '',
+  'text_en' => 'CONTACT',
+  'text_jp' => 'お問い合わせ',
+  'img' => '/images/banner-contact.png',
+))?>
+<?php import_part('breadcrumbs', array(
+  'modifier' => '',
+  'page' => 'お問い合わせ',
+)) ?>
 
+<div class="contact">
+  <div class="wrapper">
+    <div class="contact-inner">
+
+      <section class="contact-methods">
+        <div class="contact-method">
+          <span class="contact-method-via">お電話によるお問い合わせ</span>
+          <h3 class="contact-method-heading contact-method-heading-number">
+            <?php import_part("svg", array(
+            'svg_class' => 'contact-method-heading-number-icon',
+            'svg_id' => '#phone'
+            )); ?>
+            03-6272-8535
+          </h3>
+          <p class="contact-method-time">営業時間 9：00～20：00 年中無休（臨時休業あり）</p>
+        </div>
+        <div class="contact-method">
+          <span class="contact-method-via">WEBによるお問い合わせ</span>
+          <h3 class="contact-method-heading contact-method-heading-inquiry">
+            <?php import_part("svg", array(
+            'svg_class' => 'contact-method-heading-inquiry-icon',
+            'svg_id' => '#caret-down'
+            )); ?>
+            お問い合わせ・請求請求</h3>
+        </div>
+      </section>
+      
+      <?php import_part('eligible')?>
+
+      <div class="contact-inquiry">
+        <h2 class="contact-inquiry-heading">メールフォームによるお問い合わせ</h2>
+        <p class="contact-inquiry-desc">ご返答に関しましてはできる限り迅速に対応させていただきますが、お問い合わせの内容によっては、返信に時間がかかる場合や、
+        お答えできない場合があることをあらかじめご了承ください。
+        お預かりした個人情報は、お問い合わせの対応および管理の目的のみに利用させていただきます。</p>
+
+        <div class="contact-form">
+
+          <section class="contact-group">
+            <div class="contact-term">
+              <label class="contact-label">お問合せ種別</label>
+            </div>
+            <div class="contact-field sm">
+              <select class="contact-select">
+                <option value="">選択してください</option>
+              </select>
+            </div>
+          </section>
+
+          <section class="contact-group">
+            <div class="contact-term">
+              <label class="contact-label">お名前</label>
+            </div>
+            <div class="contact-field">
+              <input class="contact-input" type="text" placeholder="例：山田太郎">
+            </div>
+          </section>
+
+          <section class="contact-group">
+            <div class="contact-term">
+              <label class="contact-label">フリガナ</label>
+            </div>
+            <div class="contact-field">
+              <input class="contact-input" type="text" placeholder="例：ヤマダタロウ">
+            </div>
+          </section>
+
+          <section class="contact-group">
+            <div class="contact-term">
+              <label class="contact-label">性別</label>
+            </div>
+            <div class="contact-field contact-field-radio">
+              <label><input class="contact-input" type="radio" name="gender"> 男性</label>
+              <label><input class="contact-input" type="radio" name="gender"> 女性</label>
+            </div>
+          </section>
+
+          <section class="contact-group">
+            <div class="contact-term">
+              <label class="contact-label">ご年齢</label>
+              <span class="contact-label-any">任意</span>
+            </div>
+            <div class="contact-field sm">
+              <select class="contact-select">
+                <option value="">選択してください</option>
+              </select>
+            </div>
+          </section>
+
+          <section class="contact-group">
+            <div class="contact-term">
+              <label class="contact-label">ご職業</label>
+              <span class="contact-label-any">任意</span>
+            </div>
+            <div class="contact-field sm">
+              <select class="contact-select">
+                <option value="">選択してください</option>
+              </select>
+            </div>
+          </section>
+
+          <section class="contact-group">
+            <div class="contact-term">
+              <label class="contact-label">お電話種類</label>
+            </div>
+            <div class="contact-field contact-field-radio">
+              <label><input class="contact-input" type="radio" name="type"> 固定電話</label>
+              <label><input class="contact-input" type="radio" name="type"> 携帯電話</label>
+            </div>
+          </section>
+
+          <section class="contact-group">
+            <div class="contact-term">
+              <label class="contact-label">お電話番号</label>
+            </div>
+            <div class="contact-field">
+              <input class="contact-input" type="text" placeholder="例：0362654791">
+            </div>
+          </section>
+
+          <section class="contact-group">
+            <div class="contact-term">
+              <label class="contact-label">メールアドレス</label>
+            </div>
+            <div class="contact-field">
+              <input class="contact-input" type="text" placeholder="例：mailaddress@presi.jp">
+            </div>
+          </section>
+
+          <section class="contact-group">
+            <div class="contact-term">
+              <label class="contact-label">ご希望のご連絡方法</label>
+            </div>
+            <div class="contact-field contact-field-radio">
+              <label><input class="contact-input" type="radio" name="contact_method"> 電話</label>
+              <label><input class="contact-input" type="radio" name="contact_method"> メール</label>
+            </div>
+          </section>
+
+          <section class="contact-group">
+            <div class="contact-term contact-term-multiple">
+              <label class="contact-label">当サイトを何で
+              お知りになりましたか？</label>
+              <small>（複数選択可）</small>
+              <span class="contact-label-any">任意</span>
+            </div>
+            <div class="contact-field contact-field-checkbox">
+              <label><input class="contact-input" type="checkbox" name="heard"> 新聞広告</label>
+              <label><input class="contact-input" type="checkbox" name="heard"> テレビCM</label>
+              <label><input class="contact-input" type="checkbox" name="heard"> 雑誌広告</label>
+              <label><input class="contact-input" type="checkbox" name="heard"> インターネット広告</label>
+              <label><input class="contact-input" type="checkbox" name="heard"> インターネット記事</label>
+              <label><input class="contact-input" type="checkbox" name="heard"> 知人紹介</label>
+              <label><input class="contact-input" type="checkbox" name="heard"> その他</label>
+            </div>
+          </section>
+
+          <div class="contact-privacy">
+            <h4 class="contact-privacy-heading">プライバシーポリシー</h4>
+            <div class="contact-privacy-content">
+              <p class="contact-privacy-desc">株式会社PRESI（以下、「当社」といいます）は、個人情報の取り扱いに関する方針を以下のように定めます。</p>
+
+              <ul class="contact-privacy-list">
+                <li class="contact-privacy-item">
+                  <strong>1．個人情報の取得</strong>
+                  <p class="contact-privacy-desc">当社は、お客様等から個人情報を取得する場合には、利用目的、共同利用者の範囲、第三者への提供などの必要な情報を明示し、お客様等ご自身の同意を得たうえで、個人情報を取得します。</p>
+                </li>
+                <li class="contact-privacy-item">
+                  <strong>2．個人情報の種類</strong>
+                  <p class="contact-privacy-desc">当社がお客様等より取得する主な個人情報は、以下の通りです。</p>
+                </li>
+              </ul>
+            </div>
+
+            <label class="contact-privacy-agree"><input type="checkbox"> 上記のプライバシーポリシーに同意する</label>
+          </div>
+
+          <div class="contact-cta">
+            <button class="contact-submit contact-button">送信内容を確認する</button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
 <?php
 get_footer();

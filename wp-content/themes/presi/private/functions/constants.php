@@ -18,3 +18,10 @@ define('ANTICACHE_HASH', $load_release_hash());
 // define('REGULAR_POST_TYPE', 'regular');
 
 // define('MAGAZINE_CATEGORY', 'magazine-category');
+
+
+define( 'COMPANY_PAGE', 'company');
+define( 'ABOUT_PAGE', 'about');
+define( 'SERVICE_PAGE', 'service');
+define( 'TIPS_PAGE', 'tips');
+define( 'CONTACT_PAGE', 'contact');

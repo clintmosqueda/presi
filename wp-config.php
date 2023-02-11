@@ -67,6 +67,8 @@ define('NONCE_SALT',       'k,3o,7Gw?Nh[ lH/y~6*P%N`YPyKc.n3*+fwy$d87Thw2;yS.CVY
  */
 $table_prefix = 'wp_';
 
+define( 'WP_AUTO_UPDATE_CORE', false );
+
 /**
  * For developers: WordPress debugging mode.
  *

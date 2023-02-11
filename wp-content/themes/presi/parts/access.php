@@ -1,6 +1,6 @@
 <section class="access">
   <div class="access-map">
-    <img src="<?php echo resolve_asset_url('/images/map.jpg'); ?>" alt="">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.3613516360483!2d139.73853543065403!3d35.692724416834515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c6889caf947%3A0x3601733364dbc854!2zSmFwYW4sIOOAkjEwMi0wMDc0IFRva3lvLCBDaGl5b2RhIENpdHksIEt1ZGFubWluYW1pLCAzLWNoxY1tZeKIkjjiiJIxIOS5neauteOCt-ODhuOCo-ODl-ODqeOCtiAy6ZqO!5e0!3m2!1sen!2sph!4v1676071649148!5m2!1sen!2sph" height="376" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
   <p class="access-desc">PRESI-X
   千代田区九段南3-8-1 FG KUDAN CITY PLAZA 2階
