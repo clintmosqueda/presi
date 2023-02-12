@@ -19,6 +19,18 @@
 
     &-title-alt {
       margin-bottom: 42px;
+
+      &-en {
+        width: 3520px;
+
+        span {
+          translate: 82vw 0;
+        }
+      }
+
+      &-jp {
+        padding-left: 0;
+      }
     }
 
     &-label {

@@ -1,6 +1,30 @@
 .service {
+  position: relative;
+
   &-inner {
-    padding: 0 0 0 103px
+    padding: 0 0 249px 103px;
+    position: relative;
+  }
+
+  &-misc {
+    position: absolute;
+    top: 0;
+    left: 554px;
+    height: 100%;
+    width: 1px;
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 300vh;
+      width: 100%;
+      content: '';
+      background-color: color(blue);
+      opacity: 0.2;
+      rotate: -29deg;
+      transform-origin: bottom right;
+    }
   }
 
   &-title {
@@ -68,6 +92,17 @@
         right: 0;
         width: 60px;
         height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: color(blue);
+
+        svg {
+          display: inline-block;
+          height: 15.72px;
+          width: 7.86px;
+          flex-shrink: 0;
+        }
       }
     }
   }

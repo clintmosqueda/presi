@@ -2,21 +2,35 @@
   position: relative;
   z-index: 1;
   margin-bottom: 100px;
+  margin-top: -20px;
 
   &-inner {
     position: relative;
     padding-left: 44px;
+    padding-top: 96px;
 
     &::before {
       position: absolute;
       top: 0;
       left: 0;
       content: '';
-      height: 100%;
+      height: 85%;
       width: 100vw;
       background-color: color(blue-100);
-      z-index: -1;
+      z-index: -2;
       transform: skew(0deg, -3deg);
+    }
+
+    &::after {
+      height: 136px;
+      width: 100vw;
+      position: absolute;
+      content: '';
+      top: 282px;
+      left: 0;
+      z-index: -1;
+      pointer-events: none;
+      background-color: rgba(color(white), 0.1);
     }
   }
 
@@ -29,18 +43,27 @@
     }
   }
 
-  &-content {}
+  &-content {
+    width: 100vw;
+    overflow: hidden;
+    margin-top: -111px;
+    margin-left: 67px;
+    position: relative;
+  }
 
   &-carousel {
     width: 882px;
   }
 
-  &-slide {}
+  &-slide {
+    pointer-events: none;
+  }
 
   &-block {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 40px 0;
+    gap: 0 58px;
   }
 
   &-group {
@@ -49,6 +72,11 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    opacity: 0;
+    width: 0;
+    transition: all 0.5s ease-in-out;
+    justify-content: center;
+    overflow: hidden;
   }
 
   &-quotes {
@@ -59,6 +87,7 @@
     padding-bottom: 42px;
     z-index: 1;
     perspective: 800px;
+    margin-bottom: 15px;
   }
 
   &-opening-quote,
@@ -108,6 +137,36 @@
     text-transform: uppercase;
     margin-left: auto;
     transform: rotateZ(-4deg);
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+    position: relative;
+    z-index: 1;
+    margin-right: 30px;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      translate: 0 -50%;
+      right: -25px;
+      content: '';
+      height: 63px;
+      width: 63px;
+      background-color: color(orange);
+      z-index: -1;
+    }
+
+    &-icon {
+      width: 9.5px;
+      height: 16px;
+      display: inline-block;
+
+      svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
 
   &-picture {
@@ -115,24 +174,41 @@
     height: 498px;
     flex-shrink: 0;
     perspective: 800px;
+    margin-left: -400px;
+    transition: all 0.5s ease-in-out;
+    filter: brightness(0.8);
+
+    &:hover {
+      .interview-picture-frame {
+        transform: rotateY(-16deg);
+
+        &::before {
+          top: 15px;
+          left: 20px;
+          opacity: 1;
+        }
+      }
+    }
 
     &-frame {
       display: block;
       width: 100%;
       height: 100%;
-      transform: rotateY(-16deg);
+      // transform: rotateY(-16deg);
       position: relative;
       z-index: 1;
+      transition: transform 0.5s ease-in-out;
 
       &::before {
         content: '';
         position: absolute;
-        top: 15px;
-        left: 20px;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
         background-color: color(orange);
         z-index: -1;
+        transition: all 0.5s ease-in-out;
       }
 
       img {
@@ -141,6 +217,83 @@
         height: 100%;
         position: relative;
       }
+    }
+  }
+
+  &-nav {
+    display: flex;
+    gap: 0 0;
+    position: absolute;
+    bottom: 96px;
+    left: 41px;
+    z-index: 1;
+
+    &-button {
+      display: inline-flex;
+      width: 57px;
+      height: 57px;
+      background-color: color(blue);
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      &:hover,
+      &.swiper-button-disabled {
+        background-color: #082239;
+      }
+
+      &.swiper-button-disabled {
+        // pointer-events: none;
+        cursor: not-allowed;
+      }
+
+      &-icon {
+        width: 9.47px;
+        height: 15.95px;
+        display: block;
+
+        svg {
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    &-prev {
+      .interview-nav-button-icon {
+        scale: -1 -1;
+      }
+    }
+  }
+}
+
+.swiper-slide-active {
+
+  .interview {
+
+    &-slide {
+      pointer-events: auto;
+    }
+
+    &-picture {
+      margin-left: 0;
+      filter: brightness(1);
+
+      &-frame {
+        // transform: rotateY(-16deg);
+
+        &::before {
+          // top: 15px;
+          // left: 20px;
+          // opacity: 1;
+        }
+      }
+    }
+
+    &-group {
+      opacity: 1;
+      width: 432px;
     }
   }
 }

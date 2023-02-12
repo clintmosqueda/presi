@@ -1,7 +1,4 @@
 <?php 
-/*
-* Template Name: Contact
-*/
 get_header(); ?>
 <?php import_part('banner', array(
   'modifier' => '',
@@ -18,8 +15,6 @@ get_header(); ?>
   <div class="wrapper">
     <div class="contact-inner">
 
-      <?php import_part('contact-top')?>
-
       <?php while (have_posts()) : the_post(); ?>
         <?php remove_filter ('the_content', 'wpautop'); the_content();?>
       <?php endwhile; ?>
@@ -29,5 +24,6 @@ get_header(); ?>
     </div>
   </div>
 </div>
+
 <?php
-get_footer();
+get_footer(); 

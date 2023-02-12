@@ -1,14 +1,17 @@
 <section class="news">
+  <div class="news-marquee">
+    <div class="news-marquee-block">
+      <span class="news-marquee-text js-marquee" data-speed="0.08">PRESI offers valuable real estate in Tokyo and beyond</span>
+    </div>
+  </div>
   <div class="wrapper">
-    <div class="news-inner">
-      <div class="news-marquee">
 
-      </div>
+    <div class="news-inner">
       <div class="news-content">
         <?php import_part('title', array(
           'modifier' => 'news-title',
           'en' => 'NEWS',
-          'jp' => ''
+          'jp' => '',
         ))?>
         
         <ul class="news-list">

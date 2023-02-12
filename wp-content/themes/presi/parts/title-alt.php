@@ -1,4 +1,12 @@
-<h2 class="title-alt <?php echo $modifier; ?>">
-  <span class="title-alt-en <?php echo $modifier.'-en'; ?>"><?php echo $en; ?></span>
-  <span class="title-alt-jp <?php echo $modifier.'-jp'; ?>"><?php echo $jp; ?></span>
-</h2>
+<section class="title-section">
+  <h2 class="title-alt <?php echo $modifier; ?>">
+    <div class="title-alt-en <?php echo $modifier.'-en'; ?>">
+      <span class="js-marquee" data-speed="<?php echo $speed;?>"><?php echo $en; ?></span>
+    </div>
+    <div class="wrapper">
+      <div class="title-alt-jp <?php echo $modifier.'-jp'; ?>">
+        <span><?php echo $jp; ?></span>
+      </div>
+    </div>
+  </h2>
+</section>

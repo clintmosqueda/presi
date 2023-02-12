@@ -63,12 +63,23 @@
     margin-bottom: 40px;
 
     &-en {
-      color: rgba(color(white), 0.05)
+      color: rgba(color(white), 0.05);
+      // translate: -47% 0;
+      width: 2900px;
+
+      span {
+        translate: 82vw 0;
+      }
     }
 
     &-jp {
       color: color(white);
       border-color: color(white);
+      padding-left: 0;
+
+      span {
+        border-color: color(white)
+      }
     }
   }
 

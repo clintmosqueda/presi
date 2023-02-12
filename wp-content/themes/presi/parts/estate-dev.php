@@ -1,9 +1,4 @@
 <section class="estate-dev">
-  <?php import_part('title-alt', array(
-    'modifier' => 'estate-title-alt',
-    'en' => 'Real Estate Development',
-    'jp' => '不動産開発事業',
-  ))?>
   <p class="estate-desc">大規模なものから小規模なものまで、一貫して不動産開発事業を承っております。</p>
   <div class="estate-structure">
     <p class="estate-intro">グループが一体となって取り組むからこそ

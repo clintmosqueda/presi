@@ -1,6 +1,7 @@
 <section class="service">
   <div class="wrapper">
     <div class="service-inner">
+      <span class="service-misc"></span>
       <?php import_part('title', array(
         'modifier' => 'service-title',
         'en' => 'SERVICE',
@@ -11,33 +12,38 @@
       <div class="service-grid">
         <a class="service-grid-link" href="">
           不動産開発事業
-          <?php import_part('caret', array(
-            'modifier' => 'service-grid-link-caret'
-          ))?>
+          <?php import_part("svg", array(
+          'svg_class' => 'service-grid-link-caret',
+          'svg_id' => '#caret'
+          )); ?>
         </a>
         <a class="service-grid-link" href="">
           不動産の開発
-          <?php import_part('caret', array(
-            'modifier' => 'service-grid-link-caret'
-          ))?>
+          <?php import_part("svg", array(
+          'svg_class' => 'service-grid-link-caret',
+          'svg_id' => '#caret'
+          )); ?>
         </a>
         <a class="service-grid-link" href="">
           不動産開発事業
-          <?php import_part('caret', array(
-            'modifier' => 'service-grid-link-caret'
-          ))?>
+          <?php import_part("svg", array(
+          'svg_class' => 'service-grid-link-caret',
+          'svg_id' => '#caret'
+          )); ?>
         </a>
         <a class="service-grid-link" href="">
           不動産コンサルティング
-          <?php import_part('caret', array(
-            'modifier' => 'service-grid-link-caret'
-          ))?>
+          <?php import_part("svg", array(
+          'svg_class' => 'service-grid-link-caret',
+          'svg_id' => '#caret'
+          )); ?>
         </a>
         <a class="service-grid-link" href="">
           税務コンサルティング
-          <?php import_part('caret', array(
-            'modifier' => 'service-grid-link-caret'
-          ))?>
+          <?php import_part("svg", array(
+          'svg_class' => 'service-grid-link-caret',
+          'svg_id' => '#caret'
+          )); ?>
         </a>
       </div>
     </div>

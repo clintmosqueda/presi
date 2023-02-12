@@ -1,4 +1,7 @@
 .nav {
+  position: relative;
+  z-index: 10;
+
   &-list {
     display: flex;
     gap: 0 45px;
@@ -12,6 +15,10 @@
   &-link {
     font-family: $font-noto-sans-jp;
     font-size: 14px;
+
+    &.is-active {
+      color: color(blue)
+    }
   }
 
   &-cta {

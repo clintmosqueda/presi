@@ -18,31 +18,59 @@
 
 .title-alt {
   min-height: 170px;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   justify-content: flex-end;
   position: relative;
-  padding-left: 9px;
 
   &-en {
-    color: color(gray);
+    position: absolute;
+    top: 0;
+    left: 0;
+    // left: 50%;
+    // translate: -50% 0;
+    height: 170px;
     font-size: 170px;
     font-family: $font-jost;
-    position: absolute;
-    top: 13px;
-    left: -143px;
-    text-transform: capitalize;
-    white-space: nowrap;
+    color: color(gray);
+    // width: 100vw;
+    // text-align: center;
+    width: 100%;
+
+    span {
+      text-transform: capitalize;
+      white-space: nowrap;
+      display: flex;
+      // padding: 0 20px;
+      // animation: marquee linear 40s forwards infinite
+      translate: 100vw 0;
+    }
   }
 
   &-jp {
+    position: relative;
+    z-index: 1;
+    padding-left: 112px;
     font-size: 48px;
     font-weight: 600;
     color: color(blue-100);
-    position: relative;
-    z-index: 1;
-    letter-spacing: 0.2em;
-    border-bottom: 5px solid color(blue-100);
-    padding-bottom: 11px;
+    display: inline-block;
+
+    span {
+      letter-spacing: 0.2em;
+      border-bottom: 5px solid color(blue-100);
+      padding-bottom: 11px;
+      display: inline-block;
+    }
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(-120%);
   }
 }

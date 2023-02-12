@@ -1,0 +1,53 @@
+.complete {
+  &-inner {
+    padding-left: 103px;
+    padding-top: 45px;
+    padding-bottom: 119px;
+  }
+
+  &-heading {
+    font-size: 32px;
+    color: color(blue-100);
+    margin-bottom: 10px;
+    font-weight: 600;
+    margin-bottom: 53px;
+    letter-spacing: 0.2em;
+  }
+
+  &-desc {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 2.27;
+    white-space: pre-line;
+    letter-spacing: 0.12em;
+    margin-bottom: 40px;
+  }
+
+  &-cta {
+    text-transform: uppercase;
+    color: color(blue-100);
+    font-size: 20px;
+    font-family: $font-jost;
+    display: inline-flex;
+    align-items: center;
+    border-bottom: 2px solid rgba(color(blue-100), 0.5);
+    letter-spacing: 0.2em;
+    gap: 0 19px;
+    padding: 13px 10px;
+
+    &-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      background-color: color(blue-100);
+
+      svg {
+        display: inline-block;
+        width: 3.14px;
+        height: 6.29px;
+      }
+    }
+  }
+}

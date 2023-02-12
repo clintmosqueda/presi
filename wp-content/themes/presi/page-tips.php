@@ -33,6 +33,7 @@ get_header(); ?>
           'modifier' => 'distribution-title-alt',
           'en' => 'One-stop real estate distribution system',
           'jp' => '一気通貫の不動産流通システム',
+          'speed' => '0.08'
         ))?>
         <p class="distribution-desc">コストをカットしながら、グレードを担保。自社で行うことで、中間マージンとプランニングの時間を劇的に短縮</p>
 
@@ -129,6 +130,7 @@ get_header(); ?>
           'modifier' => 'tips-building-title-alt',
           'en' => 'PRESI buildings with different price and quality',
           'jp' => '価格と品質が違うPRESIの建物',
+          'speed' => '0.08'
         ))?>
         <p class="tips-building-desc">多角的に事業を展開するPRESIだからこそさまざまな要望を捉えた建設が可能です。</p>
 

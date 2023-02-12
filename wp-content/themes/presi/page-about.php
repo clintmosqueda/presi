@@ -16,14 +16,15 @@ get_header(); ?>
 )) ?>
 
 <main class="about-main">
+  <?php import_part('title-alt', array(
+    'modifier' => 'about-main-title-alt',
+    'en' => 'The Three Pledges',
+    'jp' => '3つの誓い',
+    'speed' => '0.05'
+  ))?>
+
   <div class="wrapper">
     <div class="about-main-inner">
-      <?php import_part('title-alt', array(
-        'modifier' => 'about-main-title-alt',
-        'en' => 'The Three Pledges',
-        'jp' => '3つの誓い',
-      ))?>
-
       <div class="about-pledges">
         <div class="about-pledges-box">
 
@@ -57,13 +58,18 @@ get_header(); ?>
           「なぜ、こんなに安いのですか？」と尋ねられることが多々ありますが、弊社は本来企業がすべき努力とサービスを当たり前のようにこなしているだけです。強いて言うならば『お客様の利益を第一に考える』という信念があるからこそ、成し得る結果なのかもしれません。</p>
         </div>
       </div>
+    </div>
+  </div>
 
-      <?php import_part('title-alt', array(
-        'modifier' => 'about-main-title-alt',
-        'en' => 'The Three Pledges',
-        'jp' => 'PRESIの強み',
-      ))?>
-
+  <?php import_part('title-alt', array(
+    'modifier' => 'about-main-title-alt',
+    'en' => 'The Three Pledges',
+    'jp' => 'PRESIの強み',
+    'speed' => '0.05'
+  ))?>
+  
+  <div class="wrapper">
+    <div class="about-main-inner">
       <div class="about-strengths">
         <section class="about-strength">
           <h4 class="about-strength-heading">土地の仕入れ</h4>

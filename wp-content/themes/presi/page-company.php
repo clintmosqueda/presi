@@ -19,12 +19,48 @@ get_header(); ?>
     <div class="company-main-block">
       <div class="company-sidebar">
         <ul class="company-sidebar-list">
-          <li class="company-sidebar-item"><span class="company-sidebar-anchor">理念</span></li>
-          <li class="company-sidebar-item"><span class="company-sidebar-anchor">社長挨拶</span></li>
-          <li class="company-sidebar-item"><span class="company-sidebar-anchor">会社概要</span></li>
-          <li class="company-sidebar-item"><span class="company-sidebar-anchor">会社沿革</span></li>
-          <li class="company-sidebar-item"><span class="company-sidebar-anchor">グループ会社</span></li>
-          <li class="company-sidebar-item"><span class="company-sidebar-anchor">アクセス</span></li>
+          <li class="company-sidebar-item" data-section="idea">
+            <?php import_part("svg", array(
+              'svg_class' => 'company-sidebar-icon',
+              'svg_id' => '#caret'
+            )); ?>
+            <span class="company-sidebar-anchor">理念</span>
+          </li>
+          <li class="company-sidebar-item" data-section="message">
+            <?php import_part("svg", array(
+              'svg_class' => 'company-sidebar-icon',
+              'svg_id' => '#caret'
+            )); ?>
+            <span class="company-sidebar-anchor">社長挨拶</span>
+          </li>
+          <li class="company-sidebar-item" data-section="profile">
+            <?php import_part("svg", array(
+              'svg_class' => 'company-sidebar-icon',
+              'svg_id' => '#caret'
+            )); ?>
+            <span class="company-sidebar-anchor">会社概要</span>
+          </li>
+          <li class="company-sidebar-item" data-section="history">
+            <?php import_part("svg", array(
+              'svg_class' => 'company-sidebar-icon',
+              'svg_id' => '#caret'
+            )); ?>
+            <span class="company-sidebar-anchor">会社沿革</span>
+          </li>
+          <li class="company-sidebar-item" data-section="conglomerate">
+            <?php import_part("svg", array(
+              'svg_class' => 'company-sidebar-icon',
+              'svg_id' => '#caret'
+            )); ?>
+            <span class="company-sidebar-anchor">グループ会社</span>
+          </li>
+          <li class="company-sidebar-item" data-section="access">
+            <?php import_part("svg", array(
+              'svg_class' => 'company-sidebar-icon',
+              'svg_id' => '#caret'
+            )); ?>
+            <span class="company-sidebar-anchor">アクセス</span>
+          </li>
         </ul>
       </div>
 

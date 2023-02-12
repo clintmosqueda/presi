@@ -28,15 +28,17 @@
         <div class="company-content-right">
           <a href="" class="company-button">
             トップメッセージ
-            <?php import_part('caret', array(
-              'modifier' => 'company-button-caret'
-            ))?>
+            <?php import_part("svg", array(
+            'svg_class' => 'company-button-caret',
+            'svg_id' => '#caret'
+            )); ?>
           </a>
           <a href="" class="company-button">
             会社概要
-            <?php import_part('caret', array(
-              'modifier' => 'company-button-caret'
-            ))?>
+            <?php import_part("svg", array(
+            'svg_class' => 'company-button-caret',
+            'svg_id' => '#caret'
+            )); ?>
           </a>
         </div>
       </div>

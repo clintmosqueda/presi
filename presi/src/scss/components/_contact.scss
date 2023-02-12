@@ -238,7 +238,6 @@
 
   &-privacy {
     margin-top: 60px;
-    margin-bottom: 40px;
 
     &-heading {
       font-size: 24px;
@@ -323,6 +322,7 @@
   &-cta {
     display: flex;
     justify-content: center;
+    margin-top: 40px;
   }
 
   &-button {
@@ -338,5 +338,26 @@
     font-size: 22px;
     font-weight: 600;
     letter-spacing: 0.1em;
+  }
+}
+
+.mw_wp_form_confirm {
+  .contact-inquiry {
+    .contact-inquiry-heading {
+      display: none;
+    }
+
+    .contact-inquiry-desc {
+      display: none;
+    }
+
+    .contact-privacy {
+      display: none;
+    }
+  }
+
+  .contact-field {
+    display: flex;
+    align-items: center;
   }
 }

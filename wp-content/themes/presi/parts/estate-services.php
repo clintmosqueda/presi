@@ -1,9 +1,4 @@
 <section class="estate-services">
-  <?php import_part('title-alt', array(
-    'modifier' => 'estate-title-alt',
-    'en' => 'Real Estate Services',
-    'jp' => 'サービス一覧',
-  ))?>
   <p class="estate-desc">お客様の利益を第一とした、不動産に関するサービスを一貫して承っております</p>
 
   <div class="estate-cards">

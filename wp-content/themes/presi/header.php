@@ -30,3 +30,12 @@
     <!-- </div> -->
   </header>
 
+  <div class="hamburger">
+    <div class="hamburger-menu js-hamburger-menu">
+      <span class="hamburger-dash"></span>
+      <span class="hamburger-dash"></span>
+    </div>
+  </div>
+
+  <?php import_part('mega-menu');?>
+
