@@ -2,6 +2,10 @@
   margin-bottom: 240px;
   @include pad-left();
 
+  @include viewport($breakpoint-mobile) {
+    margin-bottom: 97px;
+  }
+
   &-heading {
     white-space: pre-line;
     font-size: 20px;
@@ -10,11 +14,20 @@
     line-height: 2.5;
     letter-spacing: 0.2em;
     margin-bottom: 22px;
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 18px;
+    }
   }
 
   &-block {
     display: flex;
     gap: 0 34px;
+
+    @include viewport($breakpoint-mobile) {
+      flex-direction: column;
+      gap: 34px 0;
+    }
   }
 
   &-picture {
@@ -34,5 +47,9 @@
     font-size: 14px;
     line-height: 2;
     letter-spacing: 0.08em;
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 12px;
+    }
   }
 }

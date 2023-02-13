@@ -1,5 +1,7 @@
 <section class="history">
+  <label class="company-section-label company-section-label-history">会社沿革</label>
   <div class="history-content">
+  
     <dl class="history-list">
       <dt class="history-term">2014年3月</dt>
       <dd class="history-describe">株式会社PRESI設立</dd>

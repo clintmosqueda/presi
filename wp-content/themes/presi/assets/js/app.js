@@ -95,7 +95,6 @@ __webpack_require__.r(__webpack_exports__);
 
 gsap_all__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_all__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger);
 function Sidepinning() {
-  console.log('Sidepinning');
   document.addEventListener("DOMContentLoaded", function () {
     var companyMain = document.querySelector('.company-main');
     var sections = document.querySelectorAll('.company-main-content section');

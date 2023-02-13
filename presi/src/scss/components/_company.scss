@@ -239,6 +239,10 @@
     height: 80%;
     z-index: 2;
 
+    @include viewport($breakpoint-mobile) {
+      display: none;
+    }
+
     &-list {
       display: flex;
       flex-direction: column;
@@ -296,6 +300,59 @@
         width: 6.14px;
         height: 10.29px;
       }
+    }
+  }
+
+  &-section-label {
+    display: none;
+    font-size: 20px;
+    font-weight: 400;
+    position: relative;
+    color: color(blue-100);
+    padding-left: 18px;
+
+    @include viewport($breakpoint-mobile) {
+      display: block;
+    }
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: -20px;
+      translate: 0 -50%;
+      content: '';
+      height: 40px;
+      width: 8px;
+      background-color: color(blue);
+    }
+
+    &-idea {
+      margin-bottom: 29px;
+    }
+
+    &-message {
+      margin-bottom: 42px;
+    }
+
+    &-profile {
+      margin-bottom: 46px;
+      color: color(white);
+
+      &::before {
+        background-color: color(white);
+      }
+    }
+
+    &-history {
+      margin-bottom: 33px;
+    }
+
+    &-conglomerate {
+      margin-bottom: 31px;
+    }
+
+    &-access {
+      margin-bottom: 40px;
     }
   }
 }

@@ -22,6 +22,10 @@
     line-height: 2;
     letter-spacing: 0.08em;
     margin-bottom: 34px;
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 12px;
+    }
   }
 
   &-train {
@@ -34,6 +38,10 @@
       font-weight: 500;
       letter-spacing: 0.08em;
       margin-bottom: 34px;
+
+      @include viewport($breakpoint-mobile) {
+        font-size: 16px;
+      }
     }
   }
 
@@ -45,6 +53,10 @@
     letter-spacing: 0.08em;
     padding-left: 19px;
     position: relative;
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 12px;
+    }
 
     &::before {
       position: absolute;

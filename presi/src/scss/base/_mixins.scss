@@ -9,5 +9,9 @@
 }
 
 @mixin pad-left() {
-  padding-left: 361px
+  padding-left: 361px;
+
+  @include viewport($breakpoint-mobile) {
+    padding-left: 0;
+  }
 }

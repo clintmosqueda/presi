@@ -2,8 +2,6 @@ import { gsap, ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Sidepinning() {
-  console.log('Sidepinning')
-
 
   document.addEventListener("DOMContentLoaded", () => {
     let companyMain = document.querySelector('.company-main')

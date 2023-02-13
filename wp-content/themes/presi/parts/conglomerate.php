@@ -1,4 +1,5 @@
 <section class="conglomerate">
+<label class="company-section-label company-section-label-conglomerate">グループ会社</label>
   <h3 class="conglomerate-heading">弊社は、不動産の総合エキスパート企業グループである
   PRESIグループの中核企業です。</h3>
 

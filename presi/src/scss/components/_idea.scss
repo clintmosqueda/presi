@@ -2,11 +2,22 @@
   @include pad-left();
   margin-bottom: 119px;
 
+  @include viewport($breakpoint-mobile) {
+    margin-bottom: 90px;
+  }
+
   &-img {
     display: block;
     width: 100%;
     margin-bottom: 39px;
     object-fit: cover;
+
+    @include viewport($breakpoint-mobile) {
+      margin-bottom: 32px;
+      width: 100vw;
+      margin-left: -20px;
+      height: 280px;
+    }
   }
 
   &-heading {
@@ -17,6 +28,12 @@
     line-height: 2.3;
     letter-spacing: 0.2em;
     margin-bottom: 24px;
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 20px;
+      width: 275px;
+      line-height: 2.6;
+    }
   }
 
   &-par {
@@ -27,5 +44,9 @@
     color: color(black);
     font-weight: 600;
     letter-spacing: 0.12em;
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 12px;
+    }
   }
 }

@@ -3,6 +3,11 @@
   @include pad-left();
   padding-top: 143px;
 
+  @include viewport($breakpoint-mobile) {
+    padding-top: 93px;
+    margin-bottom: 73px;
+  }
+
   &-content {
     position: relative;
 
@@ -21,6 +26,11 @@
     display: flex;
     padding: 14px 0 14px 53px;
     position: relative;
+
+    @include viewport($breakpoint-mobile) {
+      padding: 16px 0;
+      padding-left: 27px;
+    }
 
     &::before {
       position: absolute;
@@ -42,11 +52,19 @@
     font-weight: 500;
     letter-spacing: 0.06em;
     line-height: 1.5;
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 12px;
+    }
   }
 
   &-term {
     width: 170px;
     flex-shrink: 0;
+
+    @include viewport($breakpoint-mobile) {
+      width: 94px;
+    }
   }
 
   &-describe {}

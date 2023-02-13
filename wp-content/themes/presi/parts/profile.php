@@ -5,6 +5,7 @@
       'svg_id' => '#triangle'
     )); ?>
   </div>
+  <label class="company-section-label company-section-label-profile">会社概要</label>
   <dl class="profile-list">
     <dt class="profile-term">会社名</dt>
     <dd class="profile-describe">株式会社ＰＲＥＳＩ（プレジ）</dd>
@@ -42,7 +43,8 @@
     公益社団法人　東京都宅地建物取引業協会</dd>
   </dl>
   <dl class="profile-list">
-    <dt class="profile-term">主要取引金融機関	
+    <dt class="profile-term">主要取引
+    金融機関	
     <span>※順不同</span></dt>
     <dd class="profile-describe"><ul><li>三菱UFJ銀行
         三井住友銀行

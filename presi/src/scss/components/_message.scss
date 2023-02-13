@@ -2,11 +2,22 @@
   @include pad-left();
   padding-bottom: 96px;
 
+  @include viewport($breakpoint-mobile) {
+    padding-bottom: 56px;
+  }
+
   &-img {
     display: block;
     margin-bottom: 44px;
     width: 100%;
     object-fit: cover;
+
+    @include viewport($breakpoint-mobile) {
+      margin-bottom: 36px;
+      width: 100vw;
+      margin-left: -20px;
+      height: 280px;
+    }
   }
 
   &-par {
@@ -17,5 +28,9 @@
     color: color(black);
     font-weight: 600;
     letter-spacing: 0.12em;
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 12px;
+    }
   }
 }

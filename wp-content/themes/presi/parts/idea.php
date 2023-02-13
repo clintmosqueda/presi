@@ -1,5 +1,6 @@
 <section class="idea">
   <img class="idea-img" src="<?php echo resolve_asset_url('/images/idea-img.jpg'); ?>" alt="">
+  <label class="company-section-label company-section-label-idea">理念</label>
   <h3 class="idea-heading">大切なのは、お客様に“今の幸せ”ではなく
   “未来永劫の幸せ”を提供することです。</h3>
   <p class="idea-par">そのために弊社はグループ会社を設立し、用地の仕入れだけに留まらず建設から販売、管理まで一気通貫で請け負
