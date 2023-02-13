@@ -4,6 +4,10 @@
   &-inner {
     padding: 0 0 249px 103px;
     position: relative;
+
+    @include viewport($breakpoint-mobile) {
+      padding-left: 0;
+    }
   }
 
   &-misc {
@@ -110,10 +114,20 @@
   &-main {
     margin-bottom: 120px;
 
+    @include viewport($breakpoint-mobile) {
+      margin-bottom: 78px;
+    }
+
     &-inner {
       padding-top: 53px;
       padding-left: 103px;
       margin-bottom: 100px;
+
+      @include viewport($breakpoint-mobile) {
+        padding-left: 0;
+        margin-bottom: 0;
+        padding-top: 13px;
+      }
     }
 
     &-desc {
@@ -123,6 +137,11 @@
       line-height: 2.4;
       letter-spacing: 0.12em;
       margin-bottom: 50px;
+
+      @include viewport($breakpoint-mobile) {
+        font-size: 12px;
+        margin-bottom: 0;
+      }
     }
   }
 }

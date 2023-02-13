@@ -1,6 +1,10 @@
 .breadcrumbs {
   &-inner {
-    padding: 32px 0 32px 103px
+    padding: 32px 0 32px 103px;
+
+    @include viewport($breakpoint-mobile) {
+      padding-left: 0;
+    }
   }
 
   &-list {

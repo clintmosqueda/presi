@@ -8,11 +8,19 @@
     font-family: 'Jost';
     text-transform: uppercase;
     letter-spacing: 0.08em;
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 50px;
+    }
   }
 
   &-jp {
     font-family: $font-noto-sans-jp;
     font-size: 31px;
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 20px;
+    }
   }
 }
 
@@ -37,6 +45,10 @@
     // text-align: center;
     width: 100%;
 
+    @include viewport($breakpoint-mobile) {
+      // font-size: 32px;
+    }
+
     span {
       text-transform: capitalize;
       white-space: nowrap;
@@ -55,6 +67,11 @@
     font-weight: 600;
     color: color(blue-100);
     display: inline-block;
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 32px;
+      padding-left: 0;
+    }
 
     span {
       letter-spacing: 0.2em;

@@ -11,12 +11,21 @@
     background-color: color(gray);
     height: 280px;
     z-index: -1;
+
+    @include viewport($breakpoint-mobile) {
+      height: 127px;
+    }
   }
 
   &-inner {
     height: 439px;
     display: flex;
     align-items: center;
+
+    @include viewport($breakpoint-mobile) {
+      flex-direction: column;
+      height: auto;
+    }
   }
 
   &-title {
@@ -30,6 +39,11 @@
       width: 100%;
       padding-left: 102px;
       padding-bottom: 78px;
+
+      @include viewport($breakpoint-mobile) {
+        padding-left: 0;
+        padding-bottom: 0;
+      }
     }
   }
 
@@ -38,6 +52,12 @@
     flex-shrink: 0;
     position: relative;
     height: 100%;
+
+    @include viewport($breakpoint-mobile) {
+      height: 253px;
+      width: 315px;
+      translate: 35px 0;
+    }
 
     &-image {
       position: absolute;
@@ -49,6 +69,11 @@
       background-position: center top;
       background-repeat: no-repeat;
       background-size: cover;
+
+      @include viewport($breakpoint-mobile) {
+        width: 100%;
+        background-position: center;
+      }
     }
   }
 }

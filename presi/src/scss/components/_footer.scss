@@ -4,11 +4,21 @@
     position: relative;
     z-index: 1;
 
+    @include viewport($breakpoint-mobile) {
+      margin-bottom: 110px;
+    }
+
     &-inner {
       width: 1232px;
       display: flex;
       gap: 0 5px;
       margin-left: 41px;
+
+      @include viewport($breakpoint-mobile) {
+        width: 100%;
+        margin-left: 0;
+        display: block;
+      }
     }
   }
 
@@ -20,8 +30,16 @@
     height: 390px;
     overflow: hidden;
 
+    @include viewport($breakpoint-mobile) {
+      height: 282px;
+    }
+
     &.footer-recruit {
       margin-top: 74px;
+
+      @include viewport($breakpoint-mobile) {
+        margin-top: 17px;
+      }
     }
 
     &-bg {
@@ -50,6 +68,12 @@
           width: 502px;
           height: 419px;
           background-image: url('#{$image-path}/building-md.png');
+
+          @include viewport($breakpoint-mobile) {
+            width: 75%;
+            height: 80%;
+            right: 0;
+          }
         }
       }
 
@@ -62,6 +86,12 @@
           height: 618px;
           width: 388px;
           background-image: url('#{$image-path}/professional.png');
+
+          @include viewport($breakpoint-mobile) {
+            height: 100%;
+            width: 80%;
+            bottom: 0;
+          }
         }
       }
 
@@ -72,6 +102,10 @@
         width: 100%;
         height: 100%;
         display: block;
+
+        @include viewport($breakpoint-mobile) {
+          display: none;
+        }
 
         &::before,
         &::after {
@@ -99,6 +133,10 @@
       position: relative;
       z-index: 1;
       padding: 66px 0 0 35px;
+
+      @include viewport($breakpoint-mobile) {
+        padding: 43px 20px;
+      }
     }
 
     &-heading {
@@ -106,7 +144,12 @@
       // font-family: $font-jost;
       text-transform: uppercase;
       margin-bottom: 40px;
-      color: color(white)
+      color: color(white);
+
+      @include viewport($breakpoint-mobile) {
+        font-size: 40px;
+        margin-bottom: 22px;
+      }
     }
 
     &-desc {
@@ -117,13 +160,25 @@
       margin-bottom: 40px;
       line-height: 1.3;
       padding-left: 13px;
-      color: color(white)
+      color: color(white);
+
+      @include viewport($breakpoint-mobile) {
+        font-size: 18px;
+        margin-bottom: 44px;
+        padding-left: 0;
+        letter-spacing: normal;
+      }
     }
 
     &-par {
       font-size: 15px;
       padding-left: 13px;
-      color: color(white)
+      color: color(white);
+
+      @include viewport($breakpoint-mobile) {
+        font-size: 12px;
+        padding-left: 0;
+      }
     }
   }
 
@@ -139,6 +194,11 @@
       border-style: solid;
       border-width: 0 100vw 256px 0;
       border-color: transparent transparent color(gray) transparent;
+
+      @include viewport($breakpoint-mobile) {
+        top: -60px;
+        border-width: 0 100vw 60px 0;
+      }
     }
 
     &-inner {
@@ -148,12 +208,24 @@
       gap: 0 0px;
       padding-left: 103px;
       padding-top: 105px;
+
+      @include viewport($breakpoint-mobile) {
+        padding-left: 0;
+        flex-direction: column-reverse;
+        padding-bottom: 20px;
+        padding-top: 66px;
+      }
     }
 
     &-left {}
 
     &-right {
       width: 264px;
+
+      @include viewport($breakpoint-mobile) {
+        width: 100%;
+        margin-bottom: 62px;
+      }
     }
   }
 
@@ -164,6 +236,11 @@
     color: color(black);
     line-height: 2.5;
     margin-bottom: 34px;
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 12px;
+      line-height: 3.4;
+    }
   }
 
   &-copyright {
@@ -176,12 +253,21 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 33px 69px;
+
+      @include viewport($breakpoint-mobile) {
+        gap: 33px 0;
+      }
     }
 
     &-item {}
 
     &-link {
       letter-spacing: 0.12em;
+
+      @include viewport($breakpoint-mobile) {
+        font-size: 16px;
+        letter-spacing: normal;
+      }
     }
   }
 

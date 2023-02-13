@@ -8,10 +8,18 @@
     letter-spacing: 0.12em;
     white-space: pre-line;
     margin-bottom: 50px;
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 12px;
+    }
   }
 
   &-dev {
     margin-bottom: 79px;
+
+    @include viewport($breakpoint-mobile) {
+      margin-bottom: 8px;
+    }
   }
 
   &-title-alt {
@@ -27,6 +35,11 @@
     padding: 67px 55px;
     position: relative;
     margin-bottom: 112px;
+
+    @include viewport($breakpoint-mobile) {
+      padding: 20px 15px 50px;
+      margin-bottom: 105px;
+    }
   }
 
   &-intro {
@@ -38,15 +51,15 @@
     letter-spacing: 0.2em;
     line-height: 2.2;
     margin-bottom: 31px;
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 12px;
+      text-align: left;
+      margin-bottom: 24px;
+    }
   }
 
   &-departments {}
-
-  &-phase1,
-  &-phase2 {
-    display: grid;
-    gap: 0 6px;
-  }
 
   &-phase1 {
     grid-template-columns: repeat(3, 1fr);
@@ -55,6 +68,17 @@
 
   &-phase2 {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  &-phase1,
+  &-phase2 {
+    display: grid;
+    gap: 0 6px;
+
+    @include viewport($breakpoint-mobile) {
+      gap: 14px 0;
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &-office {
@@ -70,6 +94,11 @@
     white-space: pre-line;
     letter-spacing: 0.2em;
     line-height: 1.4;
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 16px;
+      height: 72px;
+    }
 
     &::after {
       position: absolute;
@@ -101,6 +130,14 @@
     white-space: nowrap;
     padding: 21px 54px;
 
+    @include viewport($breakpoint-mobile) {
+      font-size: 14px;
+      white-space: normal;
+      width: 91.5%;
+      line-height: 1.7;
+      bottom: -60px;
+    }
+
     &::before {
       position: absolute;
       top: -12px;
@@ -131,6 +168,11 @@
     grid-template-columns: repeat(5, 1fr);
     gap: 0 7px;
 
+    @include viewport($breakpoint-mobile) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 10px 0;
+    }
+
     &-item {
       background-color: color(gray);
       text-align: center;
@@ -142,12 +184,20 @@
       color: color(blue-100);
       letter-spacing: 0.2em;
       padding: 29px 0;
+
+      @include viewport($breakpoint-mobile) {
+        padding: 14px 0;
+      }
     }
 
     &-img {
       display: block;
       width: 100%;
       object-fit: cover;
+
+      @include viewport($breakpoint-mobile) {
+        height: 200px;
+      }
     }
   }
 
@@ -157,5 +207,10 @@
     gap: 134px 0px;
     margin-top: 100px;
     counter-reset: count;
+
+    @include viewport($breakpoint-mobile) {
+      gap: 33px 0;
+      margin-top: 59px;
+    }
   }
 }
