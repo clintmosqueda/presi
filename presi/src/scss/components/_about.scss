@@ -4,6 +4,10 @@
   &-title {
     margin-bottom: 70px;
     padding-left: 103px;
+
+    @include viewport($breakpoint-mobile) {
+      padding-left: 0;
+    }
   }
 
   &-inner {
@@ -23,12 +27,21 @@
       border-color: transparent transparent color(blue-100) transparent;
       top: -66px;
       border-width: 0 29vw 66px 71vw;
+
+      @include viewport($breakpoint-mobile) {
+        border-width: 0 29vw 43px 70vw;
+        top: -42px;
+      }
     }
 
     &::after {
       border-color: color(blue-100) transparent transparent transparent;
-      bottom: -66px;
+      bottom: -42px;
       border-width: 66px 29vw 0 71vw;
+
+      @include viewport($breakpoint-mobile) {
+        border-width: 43px 29vw 0 70vw;
+      }
     }
   }
 
@@ -44,6 +57,10 @@
     letter-spacing: 0.25em;
     margin-left: auto;
 
+    @include viewport($breakpoint-mobile) {
+      font-size: 18px;
+    }
+
     &-caret {
       margin-left: 16px;
     }
@@ -51,11 +68,20 @@
 
   &-content {
     padding: 90px 0 85px 103px;
+
+    @include viewport($breakpoint-mobile) {
+      padding-left: 0;
+      padding-top: 61px;
+    }
   }
 
   &-investment {
     display: flex;
     flex-direction: column;
+
+    @include viewport($breakpoint-mobile) {
+      margin-bottom: 60px;
+    }
 
     &-table {
       border: 1px solid color(white);
@@ -65,11 +91,22 @@
     &-property {
       border-bottom: 1px solid color(white);
       padding: 38px 63px;
+
+      @include viewport($breakpoint-mobile) {
+        padding: 26px 27px;
+      }
     }
 
     &-heading {
       color: color(white);
       font-size: 27px;
+
+      @include viewport($breakpoint-mobile) {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 2;
+        letter-spacing: 0.25em;
+      }
     }
 
     &-services {
@@ -77,12 +114,22 @@
       grid-template-columns: repeat(2, 1fr);
       padding: 24px 62px;
       gap: 0 100px;
+
+      @include viewport($breakpoint-mobile) {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 24px;
+        padding: 20px;
+      }
     }
 
     &-par {
       color: color(white);
       font-size: 16px;
       line-height: 2.6;
+
+      @include viewport($breakpoint-mobile) {
+        font-size: 14px;
+      }
     }
   }
 
@@ -97,6 +144,12 @@
       letter-spacing: 0.2em;
       padding: 16px 21px 19px 13px;
       margin-bottom: 42px;
+
+      @include viewport($breakpoint-mobile) {
+        font-size: 18px;
+        padding: 16px 21px 13px 20px;
+        margin-bottom: 24px;
+      }
     }
 
     &-desc {
@@ -104,13 +157,26 @@
       font-size: 24px;
       font-weight: 600;
       margin-bottom: 40px;
+
+      @include viewport($breakpoint-mobile) {
+        font-size: 16px;
+        letter-spacing: 0.245em;
+        line-height: 2.2;
+        white-space: pre-line;
+        margin-bottom: 33px;
+      }
     }
 
     &-cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 0 10px;
+      gap: 10px;
       margin-bottom: 35px;
+
+      @include viewport($breakpoint-mobile) {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 34px
+      }
     }
 
     &-link {

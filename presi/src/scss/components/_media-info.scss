@@ -16,17 +16,30 @@
   }
 
   &-inner {
-    padding: 0 0 40px 103px
+    padding: 0 0 40px 103px;
+
+    @include viewport($breakpoint-mobile) {
+      padding-left: 0;
+    }
   }
 
   &-title {
     margin-bottom: 64px;
+
+    @include viewport($breakpoint-mobile) {
+      margin-bottom: 35px;
+    }
   }
 
   &-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0 54px;
+
+    @include viewport($breakpoint-mobile) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &-item {
@@ -36,6 +49,10 @@
     display: flex;
     padding: 22px 0;
     border-collapse: collapse;
+
+    @include viewport($breakpoint-mobile) {
+      padding: 15px 20px;
+    }
 
     &:nth-last-of-type(2),
     &:last-of-type {
@@ -47,11 +64,24 @@
   &-par {
     font-size: 14px;
     color: color(black);
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 12px;
+    }
   }
 
   &-date {
     margin-right: 33px;
+
+    @include viewport($breakpoint-mobile) {
+      margin-right: 20px;
+      white-space: nowrap;
+    }
   }
 
-  &-par {}
+  &-par {
+    @include viewport($breakpoint-mobile) {
+      line-height: 1.4;
+    }
+  }
 }

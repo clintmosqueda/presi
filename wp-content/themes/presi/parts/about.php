@@ -36,7 +36,8 @@
 
         <div class="about-realty">
           <h5 class="about-realty-heading">PRESIの不動産活用の秘訣</h5>
-          <p class="about-realty-desc">高品質で価値ある物件を提供するために弊社が大切している『真のサービス』</p>
+          <p class="about-realty-desc">高品質で価値ある物件を提供するために弊社が大切している
+          『真のサービス』</p>
           <div class="about-realty-cards">
             <?php for ($x = 1; $x <= 3; $x++) { ?>
               <?php import_part('card', array(

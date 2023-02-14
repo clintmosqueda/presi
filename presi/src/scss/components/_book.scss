@@ -2,9 +2,18 @@
   display: flex;
   gap: 0 39px;
 
+  @include viewport($breakpoint-mobile) {
+    gap: 0 30px;
+  }
+
   &-frame {
     height: 275px;
     flex-shrink: 0;
+
+    @include viewport($breakpoint-mobile) {
+      width: 123px !important;
+      height: auto;
+    }
 
     img {
       display: block;
@@ -22,6 +31,10 @@
     font-weight: 600;
     color: color(black);
     margin-bottom: 40px;
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 16px;
+    }
   }
 
   &-desc {
@@ -30,6 +43,11 @@
     font-weight: 500;
     margin-bottom: 21px;
     line-height: 1.4;
+
+    @include viewport($breakpoint-mobile) {
+      margin-bottom: 6px;
+    }
+
   }
 
   &-author {
@@ -37,6 +55,10 @@
     color: color(black);
     display: block;
     margin-bottom: 54px;
+
+    @include viewport($breakpoint-mobile) {
+      margin-bottom: 23px;
+    }
   }
 
   &-link {
@@ -48,6 +70,10 @@
     padding: 0 8px 11px 3px;
     display: inline-flex;
     align-items: center;
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 14px;
+    }
 
     &-icon {
       display: inline-block;

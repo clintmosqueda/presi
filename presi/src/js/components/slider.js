@@ -10,6 +10,9 @@ export default function Slider() {
       slidesPerView: 1,
       speed: duration,
       spaceBetween: 10,
+      autoplay: {
+        disableOnInteraction: false
+      },
       navigation: {
         prevEl: ".js-interview-nav-prev",
         nextEl: ".js-interview-nav-next",

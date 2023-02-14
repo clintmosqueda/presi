@@ -1,14 +1,26 @@
 .company {
   margin-top: -120px;
 
+  @include viewport($breakpoint-mobile) {
+    overflow: hidden;
+  }
+
   &-inner {
     padding-top: 120px;
     margin-bottom: 124px;
+
+    @include viewport($breakpoint-mobile) {
+      padding-top: 0;
+    }
   }
 
   &-title {
     position: relative;
     top: -55px;
+
+    @include viewport($breakpoint-mobile) {
+      top: 0;
+    }
   }
 
   &-banner {
@@ -16,7 +28,11 @@
     position: relative;
     z-index: 1;
     height: 276px;
+
     // outline: 1px solid teal;
+    @include viewport($breakpoint-mobile) {
+      padding-left: 0;
+    }
 
     &-img {
       position: absolute;
@@ -25,9 +41,17 @@
       bottom: 0;
       right: 0;
 
+      @include viewport($breakpoint-mobile) {
+        width: 432px;
+        height: 235px;
+        right: auto;
+        left: 0;
+      }
+
       img {
         display: block;
         height: 100%;
+        width: 100%;
         object-fit: contain;
       }
     }
@@ -49,6 +73,13 @@
         height: 100%;
         width: 88.3%;
         background-color: color(gray);
+
+        @include viewport($breakpoint-mobile) {
+          width: 100%;
+          top: auto;
+          bottom: 0;
+          height: 38%;
+        }
       }
     }
   }
@@ -60,6 +91,11 @@
     gap: 0 15px;
     margin-bottom: 116px;
 
+    @include viewport($breakpoint-mobile) {
+      padding-left: 0;
+      flex-direction: column;
+    }
+
     &-right {
       max-width: 474px;
       width: 100%;
@@ -67,6 +103,16 @@
       flex-direction: column;
       gap: 22px 0;
       padding-top: 108px;
+
+      @include viewport($breakpoint-mobile) {
+        padding-top: 42px;
+        gap: 14px;
+        max-width: 100%;
+      }
+    }
+
+    &-left {
+      // perspective: 800px;
     }
   }
 
@@ -85,6 +131,13 @@
       font-weight: 600;
       padding: 20px 20px;
       transform: skew(1deg, 2deg);
+
+      @include viewport($breakpoint-mobile) {
+        font-size: 26px;
+        padding: 13px 13px;
+        transform: none;
+        rotate: 0 0 -1 0deg
+      }
 
       &::before {
         position: absolute;
@@ -106,6 +159,12 @@
     font-family: $font-noto-sans-jp;
     line-height: 3;
     // margin-top: -35px;
+
+    @include viewport($breakpoint-mobile) {
+      transform-origin: center right;
+      font-size: 14px;
+      rotate: 0 0 -1 2deg
+    }
   }
 
   &-button {
@@ -119,6 +178,17 @@
     letter-spacing: 0.26em;
     overflow: hidden;
 
+    @include viewport($breakpoint-mobile) {
+      font-size: 18px;
+      padding: 44px 25px 45px;
+    }
+
+    &:hover {
+      &::before {
+        scale: 1.1;
+      }
+    }
+
     &::before {
       content: '';
       position: absolute;
@@ -131,6 +201,14 @@
       background-size: cover;
       background-image: url('#{$image-path}/building-small.png');
       opacity: 0.2;
+      pointer-events: none;
+      transition: scale 0.5s $cubic-bezier;
+
+      @include viewport($breakpoint-mobile) {
+        width: 175px;
+        height: 130px;
+        right: 44px;
+      }
     }
 
     &-caret {
@@ -156,6 +234,10 @@
   &-property {
     padding-left: 103px;
     text-align: center;
+
+    @include viewport($breakpoint-mobile) {
+      padding-left: 0;
+    }
 
     &-heading {
       color: color(blue-100);

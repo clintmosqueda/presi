@@ -39,11 +39,8 @@ function Marquee() {
   var speed = 0.15;
   if (marqueeTitles.length) {
     marqueeTitles.forEach(function (el, index) {
-      console.log(el);
       var elWidth = el.offsetWidth;
       var elSpeed = el.getAttribute("data-speed") ? parseFloat(el.getAttribute("data-speed")) : speed;
-      // el.setAttribute("data-width", elWidth);
-      console.log(elSpeed);
       el.animate([{
         transform: "translateX(0px)"
       }, {
@@ -69,12 +66,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ Menu)
 /* harmony export */ });
 function Menu() {
-  console.log('Menu');
   var menu = document.querySelector('.js-hamburger-menu');
   var megaMenu = document.querySelector('.js-mega-menu');
+  function scrollLock() {
+    var body = document.querySelector('html');
+    var scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
+    body.style.position = 'fixed';
+    body.style.width = '100%';
+    body.style.height = '100%';
+    body.style.overflow = 'hidden';
+    body.style.top = "-".concat(scrollY);
+  }
+  ;
+  function scrollAble() {
+    var body = document.querySelector('html');
+    var scrollY = body.style.top;
+    body.style.position = '';
+    body.style.top = '';
+    body.style.height = '';
+    body.style.overflow = '';
+    window.scrollTo(0, parseInt(scrollY || '0') * -1);
+  }
+  window.addEventListener('scroll', function () {
+    document.documentElement.style.setProperty('--scroll-y', "".concat(window.scrollY, "px"));
+  });
   menu.addEventListener('click', function (el) {
     menu.classList.toggle('is-open');
     megaMenu.classList.toggle('is-open');
+    megaMenu.classList.contains('is-open') ? scrollLock() : scrollAble();
   });
 }
 
@@ -164,6 +183,9 @@ function Slider() {
       slidesPerView: 1,
       speed: duration,
       spaceBetween: 10,
+      autoplay: {
+        disableOnInteraction: false
+      },
       navigation: {
         prevEl: ".js-interview-nav-prev",
         nextEl: ".js-interview-nav-next"

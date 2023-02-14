@@ -15,15 +15,21 @@
         ))?>
         
         <ul class="news-list">
-          <?php for ($x = 1; $x <= 3; $x++) { ?>
-            <li class="news-item">
-              <a class="news-link" href="">
-                <time class="news-time">2022.01.01</time>
-                <span class="news-category">カテゴリ</span>
-                <p class="news-desc">ここにお知らせのタイトルを記載</p>
-              </a>
-            </li>
-          <?php } ?>
+          <li class="news-item">
+              <time class="news-time">2023.01</time>
+              <span class="news-category">お知らせ</span>
+              <p class="news-desc">2023年1月14日事業拡大の為、本社を神保町日本文芸社ビル８Fに移転</p>
+          </li>
+          <li class="news-item">
+              <time class="news-time">2021.09</time>
+              <span class="news-category">お知らせ</span>
+              <p class="news-desc">資本金1億5,000万円（資本準備金含む）に変更しました。</p>
+          </li>
+          <li class="news-item">
+              <time class="news-time">2021.01</time>
+              <span class="news-category">お知らせ</span>
+              <p class="news-desc">2021年1月オフィス移転のお知らせ</p>
+          </li>
         </ul>
       </div>
     </div>

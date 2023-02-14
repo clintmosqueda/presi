@@ -4,11 +4,8 @@ export default function Marquee() {
 
   if(marqueeTitles.length) {
     marqueeTitles.forEach((el, index) => {
-      console.log(el);
       let elWidth = el.offsetWidth
       let elSpeed = el.getAttribute("data-speed") ? parseFloat(el.getAttribute("data-speed")) :  speed
-      // el.setAttribute("data-width", elWidth);
-      console.log(elSpeed)
 
       el.animate([ 
         { transform: `translateX(0px)` },

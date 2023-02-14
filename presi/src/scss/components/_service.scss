@@ -7,6 +7,7 @@
 
     @include viewport($breakpoint-mobile) {
       padding-left: 0;
+      padding-bottom: 213px
     }
   }
 
@@ -16,6 +17,10 @@
     left: 554px;
     height: 100%;
     width: 1px;
+
+    @include viewport($breakpoint-mobile) {
+      display: none;
+    }
 
     &::before {
       position: absolute;
@@ -45,6 +50,14 @@
     border-bottom: 4px solid color(gray);
     padding-bottom: 35px;
     margin-bottom: 48px;
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 16px;
+      text-align: center;
+      padding: 0 22px;
+      line-height: 2;
+      padding: 0 22px 21px;
+    }
   }
 
   &-grid {
@@ -55,6 +68,11 @@
       "four five";
     gap: 15px;
 
+    @include viewport($breakpoint-mobile) {
+      display: flex;
+      flex-direction: column;
+    }
+
     &-link {
       background-color: color(blue-100);
       color: color(white);
@@ -64,6 +82,11 @@
       position: relative;
       padding: 94px 52px 86px;
 
+      @include viewport($breakpoint-mobile) {
+        font-size: 18px;
+        padding: 50px 36px 50px;
+      }
+
       &:first-of-type {
         grid-area: one;
         font-size: 38px;
@@ -72,6 +95,18 @@
         background-repeat: no-repeat;
         background-size: auto 100%;
         background-image: url(#{$image-path}/building.png);
+        transition: background-size 0.5s $cubic-bezier;
+
+        &:hover {
+          background-size: auto 105%;
+        }
+
+        @include viewport($breakpoint-mobile) {
+          font-size: 18px;
+          padding: 72px 34px 70px;
+          background-size: auto 82%;
+          background-position: bottom right 8px;
+        }
       }
 
       &:nth-child(2) {
@@ -100,6 +135,11 @@
         align-items: center;
         justify-content: center;
         background-color: color(blue);
+
+        @include viewport($breakpoint-mobile) {
+          width: 46px;
+          height: 46px;
+        }
 
         svg {
           display: inline-block;

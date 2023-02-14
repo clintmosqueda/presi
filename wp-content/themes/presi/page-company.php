@@ -7,12 +7,12 @@ get_header(); ?>
 <?php import_part('banner', array(
   'modifier' => '',
   'text_en' => 'COMPANY',
-  'text_jp' => 'PRESIとは',
+  'text_jp' => '会社概要',
   'img' => '/images/banner-company.png',
 ))?>
 <?php import_part('breadcrumbs', array(
   'modifier' => '',
-  'page' => 'PRESIとは',
+  'page' => '会社概要',
 )) ?>
 <main class="company-main">
   <div class="wrapper">

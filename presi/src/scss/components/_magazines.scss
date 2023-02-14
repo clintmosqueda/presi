@@ -1,28 +1,46 @@
 .magazines {
   &-inner {
-    padding: 57px 0 57px 103px
+    padding: 57px 0 57px 103px;
+
+    @include viewport($breakpoint-mobile) {
+      padding-left: 0;
+    }
   }
 
   &-content {}
 
-  &-table {
-    border-collapse: collapse;
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 
-    &-tr {
-      display: flex;
+    @include viewport($breakpoint-mobile) {
+      grid-template-columns: repeat(3, 1fr)
     }
 
-    &-td {
+    @include viewport($breakpoint-mobile-md) {
+      grid-template-columns: repeat(2, 1fr)
+    }
+
+    &-cell {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      height: 232px;
-      width: 233px;
       border: 1px solid color(gray-100);
+      height: 232px;
+
+      @include viewport($breakpoint-mobile-md) {
+        height: 174px;
+      }
 
       img {
         display: block;
         flex-shrink: 0;
+
+        @include viewport($breakpoint-mobile-md) {
+          object-fit: contain;
+          width: 80%;
+          height: 80%;
+        }
       }
     }
   }
