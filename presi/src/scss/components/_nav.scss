@@ -22,7 +22,7 @@
 
   &-link {
     font-family: $font-noto-sans-jp;
-    font-size: 14px;
+    font-size: 16px;
 
     &.is-active {
       color: color(blue)
@@ -32,6 +32,6 @@
   &-cta {
     background-color: color(blue-100);
     color: color(white);
-    padding: 9px 21px;
+    padding: 48px 25px;
   }
 }

@@ -68,6 +68,7 @@ __webpack_require__.r(__webpack_exports__);
 function Menu() {
   var menu = document.querySelector('.js-hamburger-menu');
   var megaMenu = document.querySelector('.js-mega-menu');
+  var header = document.querySelector('.js-header');
   function scrollLock() {
     var body = document.querySelector('html');
     var scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
@@ -93,6 +94,7 @@ function Menu() {
   menu.addEventListener('click', function (el) {
     menu.classList.toggle('is-open');
     megaMenu.classList.toggle('is-open');
+    header.classList.toggle('is-open');
     megaMenu.classList.contains('is-open') ? scrollLock() : scrollAble();
   });
 }

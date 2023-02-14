@@ -1,5 +1,6 @@
 <section class="eligible">
-  <h3 class="eligible-heading">お申し込みには下記の方が対象となります。</h3>
+  <h3 class="eligible-heading">お申し込みには
+  下記の方が対象となります。</h3>
   <div class="eligible-block">
     <h6 class="eligible-label">お申し込み前のご確認事項</h6>
     <p class="eligible-desc">お客さま個々の状況や条件にしっかり合わせ、サポートの質を保ち、投資の確実性を高めるために、
