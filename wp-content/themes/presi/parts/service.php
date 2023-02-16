@@ -10,35 +10,35 @@
       <p class="service-desc">弊社では、不動産開発を一貫して責任を持って請け負います。</p>
 
       <div class="service-grid">
-        <a class="service-grid-link" href="">
+        <a class="service-grid-link" href="<?php echo resolve_url('service?property-development'); ?>">
           不動産開発事業
           <?php import_part("svg", array(
           'svg_class' => 'service-grid-link-caret',
           'svg_id' => '#caret'
           )); ?>
         </a>
-        <a class="service-grid-link" href="">
+        <a class="service-grid-link" href="<?php echo resolve_url('service?real-estate-development'); ?>">
           不動産の開発
           <?php import_part("svg", array(
           'svg_class' => 'service-grid-link-caret',
           'svg_id' => '#caret'
           )); ?>
         </a>
-        <a class="service-grid-link" href="">
+        <a class="service-grid-link" href="<?php echo resolve_url('service?real-estate-value'); ?>">
           不動産開発事業
           <?php import_part("svg", array(
           'svg_class' => 'service-grid-link-caret',
           'svg_id' => '#caret'
           )); ?>
         </a>
-        <a class="service-grid-link" href="">
+        <a class="service-grid-link" href="<?php echo resolve_url('service?real-estate-consulting'); ?>">
           不動産コンサルティング
           <?php import_part("svg", array(
           'svg_class' => 'service-grid-link-caret',
           'svg_id' => '#caret'
           )); ?>
         </a>
-        <a class="service-grid-link" href="">
+        <a class="service-grid-link" href="<?php echo resolve_url('service?tax-consulting'); ?>">
           税務コンサルティング
           <?php import_part("svg", array(
           'svg_class' => 'service-grid-link-caret',

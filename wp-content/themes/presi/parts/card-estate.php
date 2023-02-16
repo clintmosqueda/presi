@@ -1,4 +1,4 @@
-<article class="card-estate">
+<article class="card-estate" id="<?php echo $id; ?>">
   <div class="card-estate-frame">
     <img src="<?php echo resolve_asset_url($image); ?>" alt="">
   </div>

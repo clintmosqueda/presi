@@ -28,7 +28,7 @@
                 不動産投資の勝ちへのロジックが、我々の強みです</p>
               </div>
             </div>
-            <a href="" class="about-link">More <?php import_part('caret', array(
+            <a href="<?php echo resolve_url('about'); ?>" class="about-link">More <?php import_part('caret', array(
               'modifier' => 'about-link-caret'
             ))?></a>
           </div>
@@ -39,15 +39,24 @@
           <p class="about-realty-desc">高品質で価値ある物件を提供するために弊社が大切している
           『真のサービス』</p>
           <div class="about-realty-cards">
-            <?php for ($x = 1; $x <= 3; $x++) { ?>
               <?php import_part('card', array(
                 'modifier' => 'about-realty-card',
-                'text' => '一気通貫の不動産流通システム'
+                'text' => '一気通貫の<br>不動産流通システム',
+                'image' => '/images/realty-img1.jpg'
               ))?>
-            <?php } ?>
+              <?php import_part('card', array(
+                'modifier' => 'about-realty-card',
+                'text' => '資産価値を保てる<br>土地',
+                'image' => '/images/realty-img2.jpg'
+              ))?>
+              <?php import_part('card', array(
+                'modifier' => 'about-realty-card',
+                'text' => '価格と品質が違う<br>建物',
+                'image' => '/images/realty-img3.jpg'
+              ))?>
           </div>
           <div class="about-realty-link">
-            <a href="" class="about-link">More <?php import_part('caret', array(
+            <a href="<?php echo resolve_url('tips'); ?>" class="about-link">More <?php import_part('caret', array(
               'modifier' => 'about-link-caret'
             ))?></a>
           </div>

@@ -7,6 +7,11 @@
     &-inner {
       padding-left: 103px;
       padding-top: 88px;
+
+      @include viewport($breakpoint-mobile) {
+        padding-left: 0;
+        padding-top: 57px;
+      }
     }
   }
 
@@ -15,6 +20,10 @@
 
     &-inner {
       padding-left: 103px;
+
+      @include viewport($breakpoint-mobile) {
+        padding-left: 0;
+      }
     }
 
     &-title-alt {
@@ -40,6 +49,12 @@
       flex-shrink: 0;
       letter-spacing: 0.123em;
       line-height: 2.3;
+
+      @include viewport($breakpoint-mobile) {
+        font-size: 16px;
+        line-height: 2;
+        margin-bottom: 18px;
+      }
     }
 
     &-desc {
@@ -48,12 +63,29 @@
       margin-bottom: 69px;
       letter-spacing: 0.12em;
       line-height: 2.36;
+
+      @include viewport($breakpoint-mobile) {
+        font-size: 12px;
+        margin-bottom: 15px;
+      }
     }
 
     &-frame {
       height: 300px;
       background-color: color(gray);
       margin-bottom: 63px;
+
+      @include viewport($breakpoint-mobile) {
+        height: 200px;
+        margin-bottom: 16px;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
 
     &-group {
@@ -61,11 +93,21 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 0 40px;
       padding-right: 39px;
+
+      @include viewport($breakpoint-mobile) {
+        display: block;
+        padding-right: 0;
+        margin-bottom: 49px;
+      }
     }
 
     &-cluster {
       display: flex;
       gap: 0 141px;
+
+      @include viewport($breakpoint-mobile) {
+        display: block;
+      }
     }
   }
 }

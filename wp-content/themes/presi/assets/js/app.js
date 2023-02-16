@@ -13,6 +13,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_marquee__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/marquee */ "./presi/src/js/components/marquee.js");
 /* harmony import */ var _components_sidepinning__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/sidepinning */ "./presi/src/js/components/sidepinning.js");
 /* harmony import */ var _components_menu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/menu */ "./presi/src/js/components/menu.js");
+/* harmony import */ var _components_agree__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/agree */ "./presi/src/js/components/agree.js");
+/* harmony import */ var _components_anchorlink__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/anchorlink */ "./presi/src/js/components/anchorlink.js");
+
+
 
 
 
@@ -21,6 +25,68 @@ __webpack_require__.r(__webpack_exports__);
 (0,_components_marquee__WEBPACK_IMPORTED_MODULE_1__["default"])();
 (0,_components_sidepinning__WEBPACK_IMPORTED_MODULE_2__["default"])();
 (0,_components_menu__WEBPACK_IMPORTED_MODULE_3__["default"])();
+(0,_components_agree__WEBPACK_IMPORTED_MODULE_4__["default"])();
+(0,_components_anchorlink__WEBPACK_IMPORTED_MODULE_5__["default"])();
+
+/***/ }),
+
+/***/ "./presi/src/js/components/agree.js":
+/*!******************************************!*\
+  !*** ./presi/src/js/components/agree.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Agree)
+/* harmony export */ });
+function Agree() {
+  var agree = document.querySelector('.js-checkbox');
+  var confirmButton = document.querySelector('.contact-confirm');
+  if (confirmButton) {
+    confirmButton.classList.add('is-disable');
+    agree.addEventListener('click', function () {
+      console.log(agree.checked);
+      agree.checked ? confirmButton.classList.remove('is-disable') : confirmButton.classList.add('is-disable');
+    });
+  }
+}
+
+/***/ }),
+
+/***/ "./presi/src/js/components/anchorlink.js":
+/*!***********************************************!*\
+  !*** ./presi/src/js/components/anchorlink.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Anchorlink)
+/* harmony export */ });
+/* harmony import */ var gsap_all__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap/all */ "./node_modules/gsap/all.js");
+/* harmony import */ var gsap_all__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/all */ "./node_modules/gsap/ScrollToPlugin.js");
+
+gsap_all__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_all__WEBPACK_IMPORTED_MODULE_1__.ScrollToPlugin);
+function Anchorlink() {
+  var body = document.querySelector('body');
+  var id = window.location.search.split('?')[1];
+  var scrollto = function scrollto() {
+    var htmlBody = document.querySelectorAll('html, body');
+    if (id) {
+      var section = document.querySelector("#".concat(id));
+      var sectionOffset = body.classList.contains('service-page') ? section.offsetTop : 1700;
+      gsap_all__WEBPACK_IMPORTED_MODULE_0__.gsap.to(htmlBody, {
+        scrollTo: sectionOffset - 50,
+        duration: 2,
+        ease: "Power4.easeInOut"
+      });
+    }
+  };
+  if (body.classList.contains('service-page') || body.classList.contains('company-page')) {
+    scrollto();
+  }
+}
 
 /***/ }),
 
@@ -50,6 +116,24 @@ function Marquee() {
         iterations: Infinity
       });
     });
+  }
+  var newsMarquee = document.querySelector('.news-marquee-text');
+  if (newsMarquee) {
+    var newsMarqueeWidth = newsMarquee.offsetWidth;
+    var newsKeyfrmes = new KeyframeEffect(newsMarquee, [{
+      transform: "translateX(0px)"
+    }, {
+      transform: "translateX(-".concat(newsMarqueeWidth + (window.innerWidth - 1202) / 2, "px)")
+    }], {
+      duration: newsMarqueeWidth / 0.08,
+      iterations: 1
+    });
+    var newsAnimtion = new Animation(newsKeyfrmes, document.timeline);
+    newsAnimtion.play();
+    // console.log(newsAnimtion.finished)
+    // console.log(newsKeyfrmes)
+    // console.log(newsKeyfrmes.getKeyframes())
+    // newsMarquee.style.translate = `-${newsMarqueeWidth + ((window.innerWidth - 1202)/2)}px 0px`
   }
 }
 
@@ -122,7 +206,6 @@ function Sidepinning() {
     var list = document.querySelector('.company-sidebar-list');
     var items = document.querySelectorAll('.company-sidebar-item');
     if (companyMain) {
-      console.log('sidebar');
       gsap_all__WEBPACK_IMPORTED_MODULE_0__.gsap.timeline({
         ease: 'power1.inOut',
         scrollTrigger: {

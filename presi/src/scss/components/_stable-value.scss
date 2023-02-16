@@ -6,6 +6,10 @@
 
   &-inner {
     padding-left: 103px;
+
+    @include viewport($breakpoint-mobile) {
+      padding-left: 0;
+    }
   }
 
   &-box {
@@ -13,6 +17,10 @@
     background-color: color(white);
     padding-top: 52px;
     padding-bottom: 76px;
+
+    @include viewport($breakpoint-mobile) {
+      border: none;
+    }
   }
 
   &-heading {
@@ -24,6 +32,10 @@
     white-space: pre-line;
     letter-spacing: 0.12em;
     line-height: 1.85;
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 16px;
+    }
   }
 
   &-cta {
@@ -39,6 +51,13 @@
     padding: 23px 0;
     text-align: center;
     letter-spacing: 0.11em;
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 14px;
+      width: 87%;
+      padding: 17px 0;
+      margin-bottom: 39px;
+    }
   }
 
   &-block {
@@ -46,6 +65,10 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 0 0;
     position: relative;
+
+    @include viewport($breakpoint-pc) {
+      display: block;
+    }
 
     &::before {
       position: absolute;
@@ -56,11 +79,34 @@
       top: 0;
       translate: -50% 0;
       background-color: color(gray);
+
+      @include viewport($breakpoint-mobile) {
+        height: 1px;
+        width: 100%;
+        left: 0;
+        top: 47%;
+        translate: 0 -50%;
+      }
     }
   }
 
   &-col {
     padding: 0 70px;
+
+    @include viewport($breakpoint-pc) {
+      padding: 0 40px
+    }
+
+    @include viewport($breakpoint-mobile) {
+      padding: 0 20px;
+
+    }
+
+    &:first-child {
+      @include viewport($breakpoint-mobile) {
+        margin-bottom: 50px;
+      }
+    }
   }
 
   &-icon {
@@ -70,6 +116,10 @@
     height: 158px;
     background-color: color(gray);
     border-radius: 50%;
+
+    @include viewport($breakpoint-mobile) {
+      margin-bottom: 26px;
+    }
   }
 
   &-label {
@@ -78,6 +128,12 @@
     color: color(black);
     margin-bottom: 27px;
     letter-spacing: 0.11em;
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 16px;
+      text-align: center;
+      margin-bottom: 24px;
+    }
   }
 
   &-desc {
@@ -86,5 +142,9 @@
     color: color(black);
     line-height: 2.46;
     letter-spacing: 0.12em;
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 12px;
+    }
   }
 }

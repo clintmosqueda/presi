@@ -10,7 +10,6 @@ export default function Sidepinning() {
     let items = document.querySelectorAll('.company-sidebar-item')
 
     if(companyMain) {
-      console.log('sidebar')
       gsap.timeline({
         ease: 'power1.inOut',
         scrollTrigger: {

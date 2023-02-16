@@ -8,7 +8,8 @@ get_header(); ?>
   'modifier' => '',
   'text_en' => 'About Us',
   'text_jp' => 'PRESIとは',
-  'img' => '/images/banner-about.png',
+  'img_pc' => '/images/banner-about.png',
+  'img_sp' => '/images/banner-about-sp.png',
 ))?>
 <?php import_part('breadcrumbs', array(
   'modifier' => '',

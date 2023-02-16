@@ -7,7 +7,8 @@ get_header(); ?>
   'modifier' => '',
   'text_en' => 'CONTACT',
   'text_jp' => 'お問い合わせ',
-  'img' => '/images/banner-contact.png',
+  'img_pc' => '/images/banner-contact.png',
+  'img_sp' => '/images/banner-contact-sp.png',
 ))?>
 <?php import_part('breadcrumbs', array(
   'modifier' => '',

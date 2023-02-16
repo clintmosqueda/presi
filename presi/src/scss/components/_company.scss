@@ -211,6 +211,16 @@
       }
     }
 
+    &:first-of-type {
+      &::before {
+        width: 150px;
+        height: 168px;
+        background-image: url('#{$image-path}/icon-president.png');
+        opacity: 1;
+        right: 50px;
+      }
+    }
+
     &-caret {
       position: absolute;
       bottom: 0;

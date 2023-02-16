@@ -17,4 +17,28 @@ export default function Marquee() {
     })
   }
 
+  let newsMarquee = document.querySelector('.news-marquee-text')
+
+   
+  if(newsMarquee) {
+    let newsMarqueeWidth = newsMarquee.offsetWidth
+    const newsKeyfrmes = new KeyframeEffect(
+      newsMarquee,
+      [
+        { transform: `translateX(0px)` },
+        { transform: `translateX(-${newsMarqueeWidth + ((window.innerWidth - 1202)/2)}px)` },
+      ],    {
+        duration: ( newsMarqueeWidth / 0.08 ),
+        iterations: 1
+      }
+    )
+
+    const newsAnimtion = new Animation(newsKeyfrmes, document.timeline)
+    newsAnimtion.play()
+      // console.log(newsAnimtion.finished)
+      // console.log(newsKeyfrmes)
+      // console.log(newsKeyfrmes.getKeyframes())
+    // newsMarquee.style.translate = `-${newsMarqueeWidth + ((window.innerWidth - 1202)/2)}px 0px`
+  }
+
 }

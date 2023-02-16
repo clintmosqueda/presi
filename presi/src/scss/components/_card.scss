@@ -24,6 +24,13 @@
       height: 100%;
       transition: transform 0.3s ease-in-out;
       background-color: color(gray-100);
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
     }
   }
 

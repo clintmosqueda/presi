@@ -3,6 +3,10 @@
   margin-top: -112px;
   margin-bottom: 88px;
 
+  @include viewport($breakpoint-mobile) {
+    margin-top: -72px;
+  }
+
   &-image {
     position: absolute;
     top: 0;
@@ -13,6 +17,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url('#{$image-path}/mv-image2.png');
+
+    @include viewport($breakpoint-mobile) {
+      width: 100%;
+    }
 
     &::before,
     &::after {
@@ -27,6 +35,10 @@
       left: 0;
       border-width: 100vh 573px 0 0;
       border-color: color(white) transparent transparent transparent;
+
+      @include viewport($breakpoint-mobile) {
+        border-width: 160vh 221px 0 0;
+      }
     }
 
     &::after {
@@ -34,6 +46,10 @@
       right: 0;
       border-width: 0 0 200px 147px;
       border-color: transparent transparent color(white) transparent;
+
+      @include viewport($breakpoint-mobile) {
+        display: none;
+      }
     }
   }
 
@@ -42,11 +58,21 @@
     display: flex;
     align-items: center;
     padding-top: 110px;
+
+    @include viewport($breakpoint-mobile) {
+      align-items: stretch;
+      padding-top: 160px;
+    }
   }
 
   &-content {
     padding-left: 103px;
     position: relative;
+
+    @include viewport($breakpoint-mobile) {
+      padding-left: 0;
+      width: 100%;
+    }
   }
 
   &-desc {
@@ -55,53 +81,87 @@
     font-weight: 500;
     letter-spacing: 0.198em;
     margin-bottom: 100px;
-    padding-left: 15px;
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 18px;
+      margin-bottom: 23px;
+      white-space: pre-line;
+      line-height: 2.5;
+    }
   }
 
   &-heading {
-    display: block;
-    width: 837px;
-    height: 220px;
+    width: 666.49px;
+    height: 221.83px;
+    overflow: hidden;
+    position: relative;
 
-    text {
-      fill: color(blue-100);
-      font-size: 220px;
+    @include viewport($breakpoint-mobile) {
+      height: 99px;
+      width: 296px;
+    }
+
+    &-svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+
+      svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 
   &-cta {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: 42px;
+    right: -179px;
     display: block;
-    width: 285px;
-    height: 191px;
     z-index: 1;
+
+    @include viewport($breakpoint-mobile) {
+      right: auto;
+      left: 30px;
+      bottom: 0
+    }
 
     &::after {
       display: block;
       position: absolute;
       content: '';
-      width: 300px;
-      height: 249px;
-      background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjk5Ljc0MiIgaGVpZ2h0PSIyNDkuMzA1IiB2aWV3Qm94PSIwIDAgMjk5Ljc0MiAyNDkuMzA1Ij4KICA8ZGVmcz4KICAgIDxjbGlwUGF0aCBpZD0iY2xpcC1wYXRoIj4KICAgICAgPHJlY3Qgd2lkdGg9IjI5OS43NDIiIGhlaWdodD0iMjQ5LjMwNSIgZmlsbD0ibm9uZSIvPgogICAgPC9jbGlwUGF0aD4KICA8L2RlZnM+CiAgPGcgaWQ9IlJlcGVhdF9HcmlkXzExIiBkYXRhLW5hbWU9IlJlcGVhdCBHcmlkIDExIiBjbGlwLXBhdGg9InVybCgjY2xpcC1wYXRoKSI+CiAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTA2Ni4yNTggLTUxNS4yNTUpIj4KICAgICAgPHBhdGggaWQ9IlBhdGhfMTAxIiBkYXRhLW5hbWU9IlBhdGggMTAxIiBkPSJNMTAwMCw1NzMuMDIzLDE0NjEuOTY2LDY4Ni40NywxMDAwLDc2Ny40NzhaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNjcuMjQ0IC0xNzUuMzY3KSByb3RhdGUoNykiIGZpbGw9IiNkNjRlMzAiLz4KICAgIDwvZz4KICA8L2c+Cjwvc3ZnPgo=);
+      width: 478.74px;
+      height: 205.04px;
+      background-image: url('#{$image-path}/mv-button2.png');
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
       z-index: -1;
       top: -20px;
       left: -16px;
-      transform: rotate(-1deg);
+
+      @include viewport($breakpoint-mobile) {
+        width: 270.72px;
+        height: 165.42px;
+        background-image: url('#{$image-path}/mv-button2-sp.png');
+      }
     }
 
     &-link {
       display: block;
-      width: 100%;
-      height: 100%;
+      width: 463.93px;
+      height: 190.74px;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
       background-image: url('#{$image-path}/mv-button.png');
+
+      @include viewport($breakpoint-mobile) {
+        background-image: url('#{$image-path}/mv-button-sp.png');
+        width: 270.72px;
+        height: 165.42px;
+      }
     }
   }
 }

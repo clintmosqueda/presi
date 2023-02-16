@@ -26,14 +26,14 @@
           </p>
         </div>
         <div class="company-content-right">
-          <a href="" class="company-button">
+          <a href="<?php echo resolve_url('company?message'); ?>" class="company-button">
             トップメッセージ
             <?php import_part("svg", array(
             'svg_class' => 'company-button-caret',
             'svg_id' => '#caret'
             )); ?>
           </a>
-          <a href="" class="company-button">
+          <a href="<?php echo resolve_url('company'); ?>" class="company-button">
             会社概要
             <?php import_part("svg", array(
             'svg_class' => 'company-button-caret',

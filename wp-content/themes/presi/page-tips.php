@@ -8,7 +8,8 @@ get_header(); ?>
   'modifier' => '',
   'text_en' => 'Tips',
   'text_jp' => 'PRESIの不動産活用の秘訣',
-  'img' => '/images/banner-tips.png',
+  'img_pc' => '/images/banner-tips.png',
+  'img_sp' => '/images/banner-tips-sp.png',
 ))?>
 <?php import_part('breadcrumbs', array(
   'modifier' => '',
@@ -74,8 +75,8 @@ get_header(); ?>
           </div>
         </div>
 
-        <p class="distribution-par">グループが一体となって取り組むからこそ
-        PRESIの物件は『土地・建物・経営』に自信があります。</p>
+<p class="distribution-par">グループが一体となって<br>取り組むからこそ<br>
+PRESIの物件は<br>『土地・建物・経営』に<br>自信があります。</p>
       </div>
     </div>
   </section>
@@ -84,6 +85,7 @@ get_header(); ?>
     <div class="wrapper">
       <div class="property-value-inner">
         <span class="property-value-bg"></span>
+        <img class="property-value-district" src="<?php echo resolve_asset_url('/images/district.png'); ?>" alt="">
         <h3 class="property-value-heading">資産価値を保てる土地</h3>
         <p class="property-value-desc">未来に繋がる価値ある資産とは、地価が安定した東京23区の土地です。
         将来的に資産価値が高い物件を所有することは、お客様にとって最高のステータス。
@@ -134,14 +136,18 @@ get_header(); ?>
         ))?>
         <p class="tips-building-desc">多角的に事業を展開するPRESIだからこそさまざまな要望を捉えた建設が可能です。</p>
 
-        <div class="tips-building-frame"></div>
+        <div class="tips-building-frame">
+          <img src="<?php echo resolve_asset_url('/images/building-prices1.jpg'); ?>" alt="">
+        </div>
 
         <div class="tips-building-group">
           <p class="tips-building-desc">用地の仕入れから設計・建設まで完遂する弊社では、建材のロット管理や中間コストの削減により、相場よりも２～３割も安い価格で建設が可能です。単に安いだけではなく耐震性、劣化対策ともに高い水準で満たし、そのうえで仕様や構造、デザインにおいても、限られた予算の中で最大限グレードを上げる工夫を怠りません。</p>
           <p class="tips-building-desc">また一戸建てから一棟アパート、商業施設に至るまで、多角的な不動産事業を展開しているため、お客様の要望に柔軟な対応ができるのも弊社の魅力となっております。「マイホームの一部を賃貸アパートにしたい」「賃貸アパートの１階を店舗として使用したい」お客様が思い描く理想の建物を、ぜひともお聞かせください。弊社にはそれを実現する力があります。</p>
         </div>
 
-        <div class="tips-building-frame"></div>
+        <div class="tips-building-frame">
+          <img src="<?php echo resolve_asset_url('/images/building-prices2.jpg'); ?>" alt="">
+        </div>
 
         <div class="tips-building-cluster">
           <h5 class="tips-building-label">不動産投資の成功に繋がる

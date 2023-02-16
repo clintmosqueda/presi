@@ -7,7 +7,8 @@ get_header(); ?>
   'modifier' => '',
   'text_en' => 'SERVICE',
   'text_jp' => '事業内容',
-  'img' => '/images/banner-service.png',
+  'img_pc' => '/images/banner-service.png',
+  'img_sp' => '/images/banner-service-sp.png',
 ))?>
 <?php import_part('breadcrumbs', array(
   'modifier' => '',
@@ -21,7 +22,7 @@ get_header(); ?>
       不動産に関するあらゆるステージにおいて、お客様のニーズにお応えします。</p>
     </div>
   </div>
-  
+  <div id="property-development"></div>
   <?php import_part('title-alt', array(
     'modifier' => 'estate-title-alt',
     'en' => 'Real Estate Development',

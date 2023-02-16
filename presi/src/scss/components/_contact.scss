@@ -516,6 +516,11 @@
       background-color: color(blue);
       background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMS4wNDIiIGhlaWdodD0iMTcuODQyIiB2aWV3Qm94PSIwIDAgMTEuMDQyIDE3Ljg0MiI+CiAgPHBhdGggaWQ9IlBhdGhfMTAzIiBkYXRhLW5hbWU9IlBhdGggMTAzIiBkPSJNMzgzNy4xLDMyMTIuNmw3Ljg2MSw3Ljg2MS03Ljg2MSw3Ljg2MSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTM4MzYuMDM1IC0zMjExLjU0MikiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIzIi8+Cjwvc3ZnPgo=)
     }
+
+    &.is-disable {
+      pointer-events: none;
+      filter: opacity(0.5);
+    }
   }
 }
 

@@ -7,6 +7,11 @@
     padding-top: 241px;
     padding-bottom: 156px;
 
+    @include viewport($breakpoint-mobile) {
+      padding-left: 0;
+      padding-top: 135px;
+    }
+
     &::before {
       position: absolute;
       top: 0;
@@ -15,19 +20,22 @@
       height: 250px;
       content: '';
       background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 100%);
-      ;
+
+      @include viewport($breakpoint-mobile) {
+        margin-left: -20px;
+      }
     }
 
-    &::after {
-      position: absolute;
-      top: 382px;
-      right: 86px;
-      content: '';
-      height: 294px;
-      width: 294px;
-      background-color: color(white);
-      border-radius: 50%;
-    }
+    // &::after {
+    //   position: absolute;
+    //   top: 382px;
+    //   right: 86px;
+    //   content: '';
+    //   height: 294px;
+    //   width: 294px;
+    //   background-color: color(white);
+    //   border-radius: 50%;
+    // }
   }
 
   &-bg {
@@ -41,6 +49,10 @@
     display: block;
     overflow: hidden;
 
+    @include viewport($breakpoint-mobile) {
+      margin-left: -20px;
+    }
+
     $length: 550px;
 
     &::before {
@@ -52,6 +64,27 @@
       border-style: solid;
       border-width: 0 $length 1230px $length;
       border-color: transparent transparent color(gray-400) transparent;
+
+      @include viewport($breakpoint-mobile) {
+        left: 0;
+      }
+    }
+  }
+
+  &-district {
+    display: block;
+    width: 319px;
+    height: 421px;
+    object-fit: cover;
+    position: absolute;
+    top: 350px;
+    right: 45px;
+
+    @include viewport($breakpoint-mobile) {
+      position: static;
+      margin: 0 auto 60px;
+      width: 218px;
+      height: 290px;
     }
   }
 
@@ -61,6 +94,11 @@
     color: color(blue-100);
     letter-spacing: 0.2em;
     margin-bottom: 64px;
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 20px;
+      margin-bottom: 35px;
+    }
   }
 
   &-desc {
@@ -72,5 +110,13 @@
     line-height: 2.85;
     letter-spacing: 0.12em;
     padding-left: 47px;
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 12px;
+      padding-left: 0;
+      white-space: normal;
+      line-height: 2.3;
+      margin-bottom: 22px;
+    }
   }
 }

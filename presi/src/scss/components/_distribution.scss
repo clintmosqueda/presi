@@ -9,6 +9,11 @@
     padding-top: 114px;
     position: relative;
 
+    @include viewport($breakpoint-mobile) {
+      padding-left: 0;
+      padding-bottom: 28px;
+    }
+
     &::before {
       position: absolute;
       content: '';
@@ -18,6 +23,11 @@
       background-color: color(blue-100);
       width: calc(100% + calc(100vw - 100%));
       z-index: -1;
+
+      @include viewport($breakpoint-mobile) {
+        width: 100vw;
+        left: -20px
+      }
     }
   }
 
@@ -37,6 +47,14 @@
       width: 100%;
       height: 100%;
       display: block;
+
+      @include viewport($breakpoint-mobile) {
+        width: 100vw;
+        margin-left: -20px;
+        margin-top: -25px;
+      }
+
+      @include viewport($breakpoint-mobile-sm) {}
 
       svg {
         display: block;
@@ -89,15 +107,28 @@
     font-weight: 600;
     letter-spacing: 0.12em;
     margin-bottom: 72px;
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 12px;
+      line-height: 2.3;
+    }
   }
 
   &-service {
     border: 1px solid color(white);
     margin-bottom: 72px;
 
+    @include viewport($breakpoint-mobile) {
+      margin-bottom: 42px;
+    }
+
     &-top {
       display: flex;
-      bottom: 1px solid color(white);
+      border-bottom: 1px solid color(white);
+
+      @include viewport($breakpoint-mobile) {
+        display: block;
+      }
     }
 
     &-left {
@@ -110,6 +141,13 @@
       flex-shrink: 0;
       padding: 99px 0;
       border-right: 1px solid rgba(color(white), 0.1);
+      position: relative;
+
+      @include viewport($breakpoint-mobile) {
+        width: 100%;
+        padding: 39px 33px 23px;
+        gap: 17px;
+      }
     }
 
     &-process {
@@ -121,10 +159,37 @@
       color: color(blue-100);
       letter-spacing: 0.12em;
       width: 282px;
+      position: relative;
+
+      @include viewport($breakpoint-mobile) {
+        width: 100%;
+        padding: 21px 78px;
+      }
+
+      &:not(:last-child) {
+        &::before {
+          height: 55%;
+          width: 1px;
+          background-color: color(white);
+          content: '';
+          position: absolute;
+          left: 50%;
+          translate: -50% 0;
+          bottom: -40px;
+
+          @include viewport($breakpoint-mobile) {
+            bottom: -25px;
+          }
+        }
+      }
     }
 
     &-right {
       padding: 91px 44px 91px 74px;
+
+      @include viewport($breakpoint-mobile) {
+        padding: 20px 20px 28px;
+      }
     }
 
     &-heading {
@@ -135,6 +200,11 @@
       line-height: 2.3;
       white-space: pre-line;
       margin-bottom: 42px;
+
+      @include viewport($breakpoint-mobile) {
+        font-size: 15px;
+        margin-bottom: 13px;
+      }
     }
 
     &-desc {
@@ -143,6 +213,10 @@
       font-weight: 500;
       letter-spacing: 0.12em;
       line-height: 2.4;
+
+      @include viewport($breakpoint-mobile) {
+        font-size: 12px;
+      }
     }
 
     &-bottom {
@@ -150,13 +224,22 @@
       display: flex;
       flex-direction: column;
       gap: 60px 0;
-      padding: 87px 0 87px 76px
+      padding: 87px 0 87px 76px;
+
+      @include viewport($breakpoint-mobile) {
+        padding: 39px 20px;
+        gap: 50px 0;
+      }
     }
 
     &-item {
       display: flex;
       align-items: center;
       gap: 0 76px;
+
+      @include viewport($breakpoint-mobile) {
+        display: block;
+      }
     }
 
     &-frame {
@@ -164,10 +247,17 @@
       height: 239px;
       flex-shrink: 0;
 
+      @include viewport($breakpoint-mobile) {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 25px;
+      }
+
       img {
         display: block;
         width: 100%;
         height: 100%;
+        object-fit: cover;
       }
     }
 
@@ -178,6 +268,11 @@
       font-weight: 500;
       letter-spacing: 0.12em;
       line-height: 2.5;
+
+      @include viewport($breakpoint-mobile) {
+        white-space: normal;
+        font-size: 12px;
+      }
     }
   }
 
@@ -189,5 +284,18 @@
     color: color(white);
     line-height: 2.15;
     letter-spacing: 0.12em;
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 20px;
+      white-space: normal;
+    }
+
+    br {
+      display: none;
+
+      @include viewport($breakpoint-mobile) {
+        display: block;
+      }
+    }
   }
 }

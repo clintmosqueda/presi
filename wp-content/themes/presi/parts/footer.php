@@ -2,7 +2,7 @@
   <div class="footer-top">
     <div class="wrapper">
       <div class="footer-top-inner">
-        <a class="footer-link footer-contact" href="">
+        <a class="footer-link footer-contact" href="<?php echo resolve_url('contact'); ?>">
           <div class="footer-link-bg"><span></span></div>
           <div class="footer-link-content">
             <h4 class="footer-link-heading">CONTACT</h4>
@@ -12,7 +12,7 @@
           </div>
         </a>
 
-        <a class="footer-link footer-recruit" href="">
+        <a class="footer-link footer-recruit" href="http://presi.co.jp/recruit/" target="_blank">
           <div class="footer-link-bg"><span></span></div>
           <div class="footer-link-content">
             <h4 class="footer-link-heading">RECRUIT</h4>
@@ -40,9 +40,9 @@
             <ul class="footer-nav-list">
               <li class="footer-nav-item"><a class="footer-nav-link" href="<?php echo resolve_url(); ?>">サイトトップ</a></li>
               <li class="footer-nav-item"><a class="footer-nav-link" href="<?php echo resolve_url('service'); ?>">事業内容</a></li>
-              <li class="footer-nav-item"><a class="footer-nav-link" href="<?php echo resolve_url('company'); ?>">PRESIとは</a></li>
+              <li class="footer-nav-item"><a class="footer-nav-link" href="<?php echo resolve_url('about'); ?>">PRESIとは</a></li>
               <li class="footer-nav-item"><a class="footer-nav-link" href="<?php echo resolve_url('tips'); ?>">新卒採用</a></li>
-              <li class="footer-nav-item"><a class="footer-nav-link" href="<?php echo resolve_url('about'); ?>">会社案内</a></li>
+              <li class="footer-nav-item"><a class="footer-nav-link" href="<?php echo resolve_url('company'); ?>">会社案内</a></li>
               <li class="footer-nav-item"><a class="footer-nav-link" href="<?php echo resolve_url('contact'); ?>">お問い合わせ</a></li>
             </ul>
           </nav>

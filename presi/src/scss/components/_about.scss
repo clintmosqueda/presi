@@ -36,11 +36,12 @@
 
     &::after {
       border-color: color(blue-100) transparent transparent transparent;
-      bottom: -42px;
+      bottom: -66px;
       border-width: 66px 29vw 0 71vw;
 
       @include viewport($breakpoint-mobile) {
         border-width: 43px 29vw 0 70vw;
+        bottom: -42px
       }
     }
   }
@@ -189,6 +190,10 @@
 
     &-inner {
       padding-left: 103px;
+
+      @include viewport($breakpoint-mobile) {
+        padding-left: 0;
+      }
     }
 
     &-title-alt-en {
@@ -202,10 +207,20 @@
     margin-bottom: 69px;
     margin-top: 38px;
 
+    @include viewport($breakpoint-mobile) {
+      margin-top: 86px;
+      margin-bottom: 90px;
+    }
+
     &-box {
       width: 487px;
       height: 443px;
       position: relative;
+
+      @include viewport($breakpoint-mobile) {
+        width: 256px;
+        height: 230px;
+      }
 
       &::before,
       &::after {
@@ -220,12 +235,20 @@
         top: 50%;
         border-width: 0 163px 280px 163px;
         border-color: transparent transparent color(gray-100) transparent;
+
+        @include viewport($breakpoint-mobile) {
+          border-width: 0px 85px 145px 85px;
+        }
       }
 
       &::after {
         top: 52%;
         border-width: 0 130px 225px 130px;
         border-color: transparent transparent color(white) transparent;
+
+        @include viewport($breakpoint-mobile) {
+          border-width: 0 65px 110px 65px;
+        }
       }
     }
 
@@ -244,6 +267,14 @@
       .about-pledges-desc {
         top: 65px;
         right: -254px;
+
+        @include viewport($breakpoint-mobile) {
+          top: -65px;
+          left: 50%;
+          translate: -50% 0;
+          right: auto;
+          width: 160px;
+        }
       }
     }
 
@@ -254,6 +285,13 @@
       .about-pledges-desc {
         top: 65px;
         left: -240px;
+
+        @include viewport($breakpoint-mobile) {
+          left: 50%;
+          translate: -63% 0;
+          width: 160px;
+          top: 114px;
+        }
       }
     }
 
@@ -264,6 +302,14 @@
       .about-pledges-desc {
         top: 65px;
         right: -231px;
+
+        @include viewport($breakpoint-mobile) {
+          left: 50%;
+          translate: -33% 0;
+          right: auto;
+          width: 160px;
+          top: 114px;
+        }
       }
     }
 
@@ -281,6 +327,12 @@
       color: color(white);
       text-transform: capitalize;
       letter-spacing: 0.1em;
+
+      @include viewport($breakpoint-mobile) {
+        width: 105px;
+        height: 105px;
+        font-size: 15px;
+      }
     }
 
     &-desc {
@@ -291,6 +343,11 @@
       letter-spacing: 0.12em;
       line-height: 1.89;
       position: absolute;
+
+      @include viewport($breakpoint-mobile) {
+        font-size: 14px;
+        text-align: center;
+      }
     }
   }
 
@@ -299,11 +356,16 @@
     padding-top: 52px;
     margin-bottom: 140px;
 
+
     &-heading {
       font-size: 20px;
       font-weight: 600;
       margin-bottom: 37px;
       letter-spacing: 0.12em;
+
+      @include viewport($breakpoint-mobile) {
+        font-size: 14px;
+      }
     }
 
     &-words {
@@ -311,6 +373,12 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 0 48px;
       padding-right: 46px;
+
+      @include viewport($breakpoint-mobile) {
+        padding-right: 0;
+        gap: 20px;
+        display: block;
+      }
     }
 
     &-par {
@@ -319,6 +387,11 @@
       white-space: pre-line;
       letter-spacing: 0.12em;
       line-height: 2.4;
+
+      @include viewport($breakpoint-mobile) {
+        font-size: 12px;
+        margin-bottom: 26px;
+      }
     }
   }
 
@@ -335,6 +408,10 @@
     align-items: center;
     justify-content: space-between;
 
+    @include viewport($breakpoint-mobile) {
+      display: block;
+    }
+
     &-heading {
       width: 396px;
       height: 139px;
@@ -350,6 +427,18 @@
       position: relative;
       z-index: 1;
       letter-spacing: 0.12em;
+
+      @include viewport($breakpoint-pc) {
+        font-size: 20px;
+        width: 300px;
+      }
+
+      @include viewport($breakpoint-mobile) {
+        width: 100%;
+        margin-bottom: 25px;
+        height: 96px;
+        box-shadow: inset 0px 0px 0px 5px color(gray);
+      }
 
       &::before,
       &::after {
@@ -388,6 +477,14 @@
       gap: 0 20px;
       white-space: pre-line;
 
+      @include viewport($breakpoint-pc) {
+        width: 380px;
+      }
+
+      @include viewport($breakpoint-mobile) {
+        width: 100%;
+      }
+
       &::before {
         content: '';
         width: 87px;
@@ -396,6 +493,11 @@
         background-color: color(gray);
         display: inline-block;
         flex-shrink: 0;
+
+        @include viewport($breakpoint-mobile) {
+          width: 80px;
+          height: 80px;
+        }
       }
     }
   }

@@ -8,7 +8,8 @@ get_header(); ?>
   'modifier' => '',
   'text_en' => 'COMPANY',
   'text_jp' => '会社概要',
-  'img' => '/images/banner-company.png',
+  'img_pc' => '/images/banner-company.png',
+  'img_sp' => '/images/banner-company-sp.png',
 ))?>
 <?php import_part('breadcrumbs', array(
   'modifier' => '',
