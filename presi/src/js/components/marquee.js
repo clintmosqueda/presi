@@ -1,44 +1,53 @@
 export default function Marquee() {
+  let scrollingText = document.querySelector('.js-scrolling-text');
   let marqueeTitles = document.querySelectorAll('.js-marquee');
   let speed = 0.15
+  let wrapper = 1162
 
-  if(marqueeTitles.length) {
-    marqueeTitles.forEach((el, index) => {
-      let elWidth = el.offsetWidth
-      let elSpeed = el.getAttribute("data-speed") ? parseFloat(el.getAttribute("data-speed")) :  speed
+  if(scrollingText) {
+    let scrollingTextWidth = scrollingText.parentElement.scrollWidth
 
-      el.animate([ 
-        { transform: `translateX(0px)` },
-        { transform: `translateX(-${elWidth + window.innerWidth }px)` },
-      ], {
-        duration: ( elWidth / elSpeed ),
-        iterations: Infinity
-      });
+    scrollingText.animate([
+      { transform: `translateX(0px)` },
+      { transform: `translateX(-${scrollingTextWidth + ((window.innerWidth - wrapper) / 2)}px)` },
+    ], {
+      delay: 1000,
+      iterations: 1,
+      duration: scrollingTextWidth / speed,
+    })
+
+    scrollingText.animate([
+      { transform: `translateX(${wrapper + ((window.innerWidth - wrapper) / 2)}px)` },
+      { transform: `translateX(-${scrollingTextWidth}px)` },
+    ], {
+      delay: scrollingTextWidth / speed,
+      iterations: Infinity,
+      duration: scrollingTextWidth / speed,
     })
   }
 
-  let newsMarquee = document.querySelector('.news-marquee-text')
+  marqueeTitles.forEach((el, index) => {
+    console.log(el)
+    let textWidth = el.parentElement.scrollWidth
 
-   
-  if(newsMarquee) {
-    let newsMarqueeWidth = newsMarquee.offsetWidth
-    const newsKeyfrmes = new KeyframeEffect(
-      newsMarquee,
-      [
-        { transform: `translateX(0px)` },
-        { transform: `translateX(-${newsMarqueeWidth + ((window.innerWidth - 1202)/2)}px)` },
-      ],    {
-        duration: ( newsMarqueeWidth / 0.08 ),
-        iterations: 1
-      }
-    )
+    el.animate([
+      { transform: `translateX(0px)` },
+      { transform: `translateX(-${textWidth + ((window.innerWidth - wrapper) / 2)}px)` },
+    ], {
+      delay: 1000,
+      iterations: 1,
+      duration: textWidth / parseFloat(el.getAttribute("data-speed")),
+    })
 
-    const newsAnimtion = new Animation(newsKeyfrmes, document.timeline)
-    newsAnimtion.play()
-      // console.log(newsAnimtion.finished)
-      // console.log(newsKeyfrmes)
-      // console.log(newsKeyfrmes.getKeyframes())
-    // newsMarquee.style.translate = `-${newsMarqueeWidth + ((window.innerWidth - 1202)/2)}px 0px`
-  }
+    el.animate([
+      { transform: `translateX(${wrapper + ((window.innerWidth - wrapper) / 2)}px)` },
+      { transform: `translateX(-${textWidth}px)` },
+    ], {
+      delay: textWidth / parseFloat(el.getAttribute("data-speed")),
+      iterations: Infinity,
+      duration: textWidth / parseFloat(el.getAttribute("data-speed")),
+    })
+  })
+
 
 }

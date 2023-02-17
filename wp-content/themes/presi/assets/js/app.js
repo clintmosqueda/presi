@@ -135,40 +135,53 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ Marquee)
 /* harmony export */ });
 function Marquee() {
+  var scrollingText = document.querySelector('.js-scrolling-text');
   var marqueeTitles = document.querySelectorAll('.js-marquee');
   var speed = 0.15;
-  if (marqueeTitles.length) {
-    marqueeTitles.forEach(function (el, index) {
-      var elWidth = el.offsetWidth;
-      var elSpeed = el.getAttribute("data-speed") ? parseFloat(el.getAttribute("data-speed")) : speed;
-      el.animate([{
-        transform: "translateX(0px)"
-      }, {
-        transform: "translateX(-".concat(elWidth + window.innerWidth, "px)")
-      }], {
-        duration: elWidth / elSpeed,
-        iterations: Infinity
-      });
-    });
-  }
-  var newsMarquee = document.querySelector('.news-marquee-text');
-  if (newsMarquee) {
-    var newsMarqueeWidth = newsMarquee.offsetWidth;
-    var newsKeyfrmes = new KeyframeEffect(newsMarquee, [{
+  var wrapper = 1162;
+  if (scrollingText) {
+    var scrollingTextWidth = scrollingText.parentElement.scrollWidth;
+    scrollingText.animate([{
       transform: "translateX(0px)"
     }, {
-      transform: "translateX(-".concat(newsMarqueeWidth + (window.innerWidth - 1202) / 2, "px)")
+      transform: "translateX(-".concat(scrollingTextWidth + (window.innerWidth - wrapper) / 2, "px)")
     }], {
-      duration: newsMarqueeWidth / 0.08,
-      iterations: 1
+      delay: 1000,
+      iterations: 1,
+      duration: scrollingTextWidth / speed
     });
-    var newsAnimtion = new Animation(newsKeyfrmes, document.timeline);
-    newsAnimtion.play();
-    // console.log(newsAnimtion.finished)
-    // console.log(newsKeyfrmes)
-    // console.log(newsKeyfrmes.getKeyframes())
-    // newsMarquee.style.translate = `-${newsMarqueeWidth + ((window.innerWidth - 1202)/2)}px 0px`
+    scrollingText.animate([{
+      transform: "translateX(".concat(wrapper + (window.innerWidth - wrapper) / 2, "px)")
+    }, {
+      transform: "translateX(-".concat(scrollingTextWidth, "px)")
+    }], {
+      delay: scrollingTextWidth / speed,
+      iterations: Infinity,
+      duration: scrollingTextWidth / speed
+    });
   }
+  marqueeTitles.forEach(function (el, index) {
+    console.log(el);
+    var textWidth = el.parentElement.scrollWidth;
+    el.animate([{
+      transform: "translateX(0px)"
+    }, {
+      transform: "translateX(-".concat(textWidth + (window.innerWidth - wrapper) / 2, "px)")
+    }], {
+      delay: 1000,
+      iterations: 1,
+      duration: textWidth / parseFloat(el.getAttribute("data-speed"))
+    });
+    el.animate([{
+      transform: "translateX(".concat(wrapper + (window.innerWidth - wrapper) / 2, "px)")
+    }, {
+      transform: "translateX(-".concat(textWidth, "px)")
+    }], {
+      delay: textWidth / parseFloat(el.getAttribute("data-speed")),
+      iterations: Infinity,
+      duration: textWidth / parseFloat(el.getAttribute("data-speed"))
+    });
+  });
 }
 
 /***/ }),

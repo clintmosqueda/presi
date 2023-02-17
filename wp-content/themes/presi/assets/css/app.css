@@ -304,7 +304,6 @@ body {
   text-transform: capitalize;
   white-space: nowrap;
   display: flex;
-  translate: 100vw 0;
 }
 .title-alt-jp {
   position: relative;
@@ -837,8 +836,6 @@ body {
   width: 100%;
   color: #EFEFEF;
   white-space: nowrap;
-  width: 4500px;
-  translate: 100vw 0;
 }
 .news-inner {
   padding: 0 0 143px 103px;
@@ -1150,9 +1147,6 @@ body {
   .about-main-inner {
     padding-left: 0;
   }
-}
-.about-main-title-alt-en {
-  width: 1327px;
 }
 .about-pledges {
   display: flex;
@@ -3609,9 +3603,6 @@ body {
 .estate-title-alt {
   margin-bottom: 31px;
 }
-.estate-title-alt-en {
-  width: 1758px;
-}
 .estate-structure {
   border: 5px solid #E0E0E0;
   padding: 67px 55px;
@@ -3947,12 +3938,6 @@ body {
 .tips-building-title-alt {
   margin-bottom: 42px;
 }
-.tips-building-title-alt-en {
-  width: 3520px;
-}
-.tips-building-title-alt-en span {
-  translate: 82vw 0;
-}
 .tips-building-title-alt-jp {
   padding-left: 0;
 }
@@ -4104,10 +4089,6 @@ body {
 }
 .distribution-title-alt-en {
   color: rgba(255, 255, 255, 0.05);
-  width: 2900px;
-}
-.distribution-title-alt-en span {
-  translate: 82vw 0;
 }
 .distribution-title-alt-jp {
   color: white;

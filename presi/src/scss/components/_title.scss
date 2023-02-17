@@ -36,27 +36,16 @@
     position: absolute;
     top: 0;
     left: 0;
-    // left: 50%;
-    // translate: -50% 0;
     height: 170px;
     font-size: 170px;
     font-family: $font-jost;
     color: color(gray);
-    // width: 100vw;
-    // text-align: center;
     width: 100%;
-
-    @include viewport($breakpoint-mobile) {
-      // font-size: 32px;
-    }
 
     span {
       text-transform: capitalize;
       white-space: nowrap;
       display: flex;
-      // padding: 0 20px;
-      // animation: marquee linear 40s forwards infinite
-      translate: 100vw 0;
     }
   }
 

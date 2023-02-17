@@ -20,35 +20,28 @@ get_header(); ?>
     <div class="service-main-inner">
       <p class="service-main-desc">弊社は不動産の総合エキスパート企業グループであるPRESIグループの中核企業として、
       不動産に関するあらゆるステージにおいて、お客様のニーズにお応えします。</p>
-    </div>
-  </div>
-  <div id="property-development"></div>
-  <?php import_part('title-alt', array(
-    'modifier' => 'estate-title-alt',
-    'en' => 'Real Estate Development',
-    'jp' => '不動産開発事業',
-    'speed' => '0.05'
-  ))?>
 
-  <div class="wrapper">
-    <div class="service-main-inner">
+      <div id="property-development"></div>
+      <?php import_part('title-alt', array(
+        'modifier' => 'estate-title-alt',
+        'en' => 'Real Estate Development',
+        'jp' => '不動産開発事業',
+        'speed' => '0.05'
+      ))?>
+
       <?php import_part('estate-dev') ?>
-    </div>
-  </div>
 
-  <?php import_part('title-alt', array(
-    'modifier' => 'estate-title-alt',
-    'en' => 'Real Estate Services',
-    'jp' => 'サービス一覧',
-    'speed' => '0.05'
-  ))?>
+      <?php import_part('title-alt', array(
+        'modifier' => 'estate-title-alt',
+        'en' => 'Real Estate Services',
+        'jp' => 'サービス一覧',
+        'speed' => '0.05'
+      ))?>
 
-  <div class="wrapper">
-    <div class="service-main-inner">
       <?php import_part('estate-services') ?>
     </div>
-  </div>
 
+  </div>
 </main>
 
 <?php

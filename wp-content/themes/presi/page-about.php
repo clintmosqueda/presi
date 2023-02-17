@@ -17,6 +17,7 @@ get_header(); ?>
 )) ?>
 
 <main class="about-main">
+  <div class="wrapper">
   <?php import_part('title-alt', array(
     'modifier' => 'about-main-title-alt',
     'en' => 'The Three Pledges',
@@ -24,7 +25,7 @@ get_header(); ?>
     'speed' => '0.05'
   ))?>
 
-  <div class="wrapper">
+
     <div class="about-main-inner">
       <div class="about-pledges">
         <div class="about-pledges-box">
@@ -60,7 +61,7 @@ get_header(); ?>
         </div>
       </div>
     </div>
-  </div>
+
 
   <?php import_part('title-alt', array(
     'modifier' => 'about-main-title-alt',
@@ -69,7 +70,6 @@ get_header(); ?>
     'speed' => '0.05'
   ))?>
   
-  <div class="wrapper">
     <div class="about-main-inner">
       <div class="about-strengths">
         <section class="about-strength">
