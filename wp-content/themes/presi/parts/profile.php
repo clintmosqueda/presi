@@ -32,8 +32,11 @@
   </dl>
   <dl class="profile-list">
     <dt class="profile-term">事業内容</dt>
-    <dd class="profile-describe">不動産流動化事業　不動産開発事業　不動産賃貸事業　不動産コンサルティング事業
-    許認可	宅地建物取引業免許　東京都知事(2)第098675号</dd>
+    <dd class="profile-describe">不動産流動化事業　不動産開発事業　不動産賃貸事業　不動産コンサルティング事業</dd>
+  </dl>
+  <dl class="profile-list">
+    <dt class="profile-term">許認可</dt>
+    <dd class="profile-describe">宅地建物取引業免許　東京都知事(2)第098675号</dd>
   </dl>
   <dl class="profile-list">
     <dt class="profile-term">加盟団体	</dt>
@@ -97,8 +100,8 @@
   </dl>
   <dl class="profile-list">
     <dt class="profile-term">所在地</dt>
-    <dd class="profile-describe">〒102-0074
-    東京都千代田区九段南3-8-1 FG KUDAN CITY PLAZA 2階</dd>
+    <dd class="profile-describe">〒101-0051
+    東京都千代田区神田神保町１丁目７ー１１ 日本文芸社ビル８F</dd>
   </dl>
   <dl class="profile-list">
     <dt class="profile-term">アクセス</dt>

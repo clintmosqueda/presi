@@ -156,6 +156,13 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-image: url('#{$image-path}/mv-button.png');
+      transition: scale 0.3s $cubic-bezier, rotate 0.3s $cubic-bezier;
+      transform-origin: center left;
+
+      &:hover {
+        scale: 1.02;
+        rotate: -2deg;
+      }
 
       @include viewport($breakpoint-mobile) {
         background-image: url('#{$image-path}/mv-button-sp.png');

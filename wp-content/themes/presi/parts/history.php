@@ -58,5 +58,9 @@
       <dt class="history-term">2021年1月</dt>
       <dd class="history-describe">本社を千代田区九段南FG KUDAN CITY PLAZAに移転</dd>
     </dl>
+    <dl class="history-list">
+      <dt class="history-term">2023年1月</dt>
+      <dd class="history-describe">本社を千代田区神保町日本文芸社ビルに移転</dd>
+    </dl>
   </div>
 </section>

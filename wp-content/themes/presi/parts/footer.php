@@ -30,10 +30,10 @@
     <div class="wrapper">
       <div class="footer-bottom-inner">
         <div class="footer-bottom-left">
-          <p class="footer-info">〒102-0074　東京都千代田区九段南3-8-1
-          FG KUDAN CITY PLAZA 2階
+          <p class="footer-info">〒101-0051　東京都千代田区神田神保町１丁目７ー１１
+          日本文芸社ビル８F
           営業時間9：00～20：00　年中無休（臨時休業あり）</p>
-          <small class="footer-copyright">© 2021 PRESI Co. Ltd. All rights reserved.</small>
+          <small class="footer-copyright">© 2023 PRESI Co. Ltd. All rights reserved.</small>
         </div>
         <div class="footer-bottom-right">
           <nav class="footer-nav">
