@@ -236,6 +236,26 @@ body {
   position: relative;
 }
 
+@keyframes flipLeftAnime {
+  from {
+    transform: perspective(600px) translate3d(0, 0, 0) rotateY(5deg);
+    opacity: 0;
+  }
+  to {
+    transform: perspective(600px) translate3d(0, 0, 0) rotateY(0deg);
+    opacity: 1;
+  }
+}
+@keyframes slideLTR {
+  from {
+    translate: -101% 0;
+    opacity: 0;
+  }
+  to {
+    translate: 0 0;
+    opacity: 1;
+  }
+}
 .title {
   display: flex;
   flex-direction: column;
@@ -436,7 +456,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 3;
+  z-index: 4;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -524,7 +544,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 2;
+  z-index: 3;
   width: 100vw;
   opacity: 0;
   pointer-events: none;
@@ -939,6 +959,14 @@ body {
 .about-inner {
   background-color: #0E304D;
   position: relative;
+  opacity: 0;
+}
+.about-inner.is-shown {
+  animation-name: flipLeftAnime;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation-fill-mode: forwards;
+  perspective-origin: left center;
 }
 .about-inner::before, .about-inner::after {
   position: absolute;
@@ -986,8 +1014,18 @@ body {
     font-size: 18px;
   }
 }
+.about-link:hover .about-link-caret {
+  background-color: white;
+}
+.about-link:hover .about-link-caret svg {
+  stroke: #0E304D;
+}
 .about-link-caret {
   margin-left: 16px;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.about-link-caret svg {
+  stroke: white;
 }
 .about-content {
   padding: 90px 0 85px 103px;
@@ -1492,6 +1530,12 @@ body {
     padding: 50px 36px 50px;
   }
 }
+.service-grid-link:hover .service-grid-link-caret {
+  background-color: white;
+}
+.service-grid-link:hover .service-grid-link-caret svg {
+  stroke: #0E304D;
+}
 .service-grid-link:first-of-type {
   grid-area: one;
   font-size: 38px;
@@ -1535,6 +1579,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: #174872;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 @media all and (max-width: 767px) {
   .service-grid-link-caret {
@@ -1547,6 +1592,7 @@ body {
   height: 15.72px;
   width: 7.86px;
   flex-shrink: 0;
+  stroke: white;
 }
 .service-main {
   margin-bottom: 120px;
@@ -1702,6 +1748,8 @@ body {
   align-items: flex-start;
   gap: 10px 0;
   margin-top: -34px;
+  padding: 10px 0;
+  overflow: hidden;
 }
 .company-heading-text {
   position: relative;
@@ -1711,6 +1759,8 @@ body {
   font-weight: 600;
   padding: 20px 20px;
   transform: skew(1deg, 2deg);
+  translate: -101% 0;
+  opacity: 0;
 }
 @media all and (max-width: 767px) {
   .company-heading-text {
@@ -1719,6 +1769,12 @@ body {
     transform: none;
     rotate: 0 0 -1 0deg;
   }
+}
+.is-shown .company-heading-text {
+  animation: slideLTR 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+.is-shown .company-heading-text:last-of-type {
+  animation-delay: 0.2s;
 }
 .company-heading-text::before {
   position: absolute;
@@ -1763,6 +1819,12 @@ body {
 .company-button:hover::before {
   scale: 1.1;
 }
+.company-button:hover .company-button-caret {
+  background-color: white;
+}
+.company-button:hover .company-button-caret svg {
+  stroke: #0E304D;
+}
 .company-button::before {
   content: "";
   position: absolute;
@@ -1802,12 +1864,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .company-button-caret svg {
   display: block;
   width: 6.23px;
   height: 12.47px;
   flex-shrink: 0;
+  stroke: white;
 }
 .company-property {
   padding-left: 103px;
@@ -1938,6 +2002,7 @@ body {
   display: block;
   width: 6.14px;
   height: 10.29px;
+  stroke: white;
 }
 .company-section-label {
   display: none;
@@ -2178,9 +2243,13 @@ body {
     height: 174px;
   }
 }
+.magazines-grid-cell:hover img {
+  scale: 1.05;
+}
 .magazines-grid-cell img {
   display: block;
   flex-shrink: 0;
+  transition: scale 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 @media all and (max-width: 580px) {
   .magazines-grid-cell img {
@@ -2571,6 +2640,7 @@ body {
   display: block;
   width: 100%;
   height: 100%;
+  stroke: white;
 }
 .interview-picture {
   width: 391px;
@@ -2659,6 +2729,7 @@ body {
   display: block;
   width: 100%;
   height: 100%;
+  stroke: white;
 }
 .interview-nav-prev .interview-nav-button-icon {
   scale: -1 -1;
@@ -2967,11 +3038,13 @@ body {
   font-size: 15px;
   padding-left: 13px;
   color: white;
+  white-space: pre-line;
 }
 @media all and (max-width: 767px) {
   .footer-link-par {
     font-size: 12px;
     padding-left: 0;
+    white-space: normal;
   }
 }
 .footer-bottom {
@@ -4849,8 +4922,25 @@ body {
   display: flex;
   flex-direction: column;
   gap: 23px 0;
+  overflow-y: scroll;
+  height: 230px;
 }
-.contact-privacy-item:first-of-type {
+.contact-privacy-order {
+  margin-top: 15px;
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+.contact-privacy-order li {
+  font-size: 13px;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+@media all and (max-width: 767px) {
+  .contact-privacy-order li {
+    font-size: 11px;
+  }
+}
+.contact-privacy-item:not(:last-of-type) {
   border-bottom: 1px solid #E0E0E0;
   padding-bottom: 20px;
   margin-bottom: 10px;

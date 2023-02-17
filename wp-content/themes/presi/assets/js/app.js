@@ -15,6 +15,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_menu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/menu */ "./presi/src/js/components/menu.js");
 /* harmony import */ var _components_agree__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/agree */ "./presi/src/js/components/agree.js");
 /* harmony import */ var _components_anchorlink__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/anchorlink */ "./presi/src/js/components/anchorlink.js");
+/* harmony import */ var _components_intersection_observer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/intersection-observer */ "./presi/src/js/components/intersection-observer.js");
+
 
 
 
@@ -27,6 +29,7 @@ __webpack_require__.r(__webpack_exports__);
 (0,_components_menu__WEBPACK_IMPORTED_MODULE_3__["default"])();
 (0,_components_agree__WEBPACK_IMPORTED_MODULE_4__["default"])();
 (0,_components_anchorlink__WEBPACK_IMPORTED_MODULE_5__["default"])();
+(0,_components_intersection_observer__WEBPACK_IMPORTED_MODULE_6__["default"])();
 
 /***/ }),
 
@@ -85,6 +88,37 @@ function Anchorlink() {
   };
   if (body.classList.contains('service-page') || body.classList.contains('company-page')) {
     scrollto();
+  }
+}
+
+/***/ }),
+
+/***/ "./presi/src/js/components/intersection-observer.js":
+/*!**********************************************************!*\
+  !*** ./presi/src/js/components/intersection-observer.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ intersectionObserver)
+/* harmony export */ });
+function intersectionObserver() {
+  var observeSections = document.querySelectorAll('.js-observe');
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      var intersecting = entry.isIntersecting;
+      if (intersecting) {
+        entry.target.classList.add('is-shown');
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+  if (observeSections.length) {
+    observeSections.forEach(function (section) {
+      observer.observe(section);
+    });
   }
 }
 

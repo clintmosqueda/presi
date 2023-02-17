@@ -1,6 +1,6 @@
 <section class="company">
   <div class="wrapper">
-    <div class="company-inner">
+    <div class="company-inner js-observe">
       <div class="company-banner">
         <?php import_part('title', array(
           'modifier' => 'company-title',

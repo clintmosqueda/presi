@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
   <symbol id="caret" viewBox="0 0 11.042 17.842">
-  <path id="Path_103" data-name="Path 103" d="M3837.1,3212.6l7.861,7.861-7.861,7.861" transform="translate(-3836.035 -3211.542)" fill="none" stroke="#fff" stroke-width="3"/>
+  <path id="Path_103" data-name="Path 103" d="M3837.1,3212.6l7.861,7.861-7.861,7.861" transform="translate(-3836.035 -3211.542)" fill="none" stroke-width="3"/>
   </symbol>
 
   <symbol id="icon-external" viewBox="0 0 16.175 14.974">

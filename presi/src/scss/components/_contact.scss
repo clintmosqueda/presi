@@ -375,11 +375,30 @@
       display: flex;
       flex-direction: column;
       gap: 23px 0;
+      overflow-y: scroll;
+      height: 230px;
+    }
+
+    &-order {
+      margin-top: 15px;
+      list-style-type: decimal;
+      padding-left: 20px;
+
+      li {
+        font-size: 13px;
+        // font-weight: 500;
+        line-height: 1.7;
+        margin-bottom: 10px;
+
+        @include viewport($breakpoint-mobile) {
+          font-size: 11px;
+        }
+      }
     }
 
     &-item {
 
-      &:first-of-type {
+      &:not(:last-of-type) {
         border-bottom: 1px solid color(gray-100);
         padding-bottom: 20px;
         margin-bottom: 10px;

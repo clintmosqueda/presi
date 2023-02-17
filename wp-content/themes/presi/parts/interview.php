@@ -27,7 +27,7 @@
                           'svg_id' => '#quote2'
                         )); ?>
                       </span>
-                      <p class="interview-par">就活生とも<br>真剣に向き合う<br>代表に一目惚れ</p>
+                      <p class="interview-par">掲載準備中</p>
                     </div>
                     <a class="interview-link" href="">More 
                       <?php import_part("svg", array(
@@ -38,7 +38,7 @@
                   </div>
                   <div class="interview-picture">
                     <div class="interview-picture-frame">
-                        <img src="<?php echo resolve_asset_url('/images/slider/slide-image1.png'); ?>" alt="">
+                        <img src="<?php echo resolve_asset_url('/images/slider/slide-image.png'); ?>" alt="">
                     </div>
                   </div>
                 </div>

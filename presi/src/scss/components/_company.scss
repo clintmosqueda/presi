@@ -122,6 +122,9 @@
     align-items: flex-start;
     gap: 10px 0;
     margin-top: -34px;
+    padding: 10px 0;
+    overflow: hidden;
+
 
     &-text {
       position: relative;
@@ -131,12 +134,22 @@
       font-weight: 600;
       padding: 20px 20px;
       transform: skew(1deg, 2deg);
+      translate: -101% 0;
+      opacity: 0;
 
       @include viewport($breakpoint-mobile) {
         font-size: 26px;
         padding: 13px 13px;
         transform: none;
         rotate: 0 0 -1 0deg
+      }
+
+      .is-shown & {
+        animation: slideLTR 0.5s $cubic-bezier forwards;
+
+        &:last-of-type {
+          animation-delay: 0.2s;
+        }
       }
 
       &::before {
@@ -187,6 +200,14 @@
       &::before {
         scale: 1.1;
       }
+
+      .company-button-caret {
+        background-color: color(white);
+
+        svg {
+          stroke: color(blue-100)
+        }
+      }
     }
 
     &::before {
@@ -231,12 +252,14 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      transition: all 0.3s $cubic-bezier;
 
       svg {
         display: block;
         width: 6.23px;
         height: 12.47px;
         flex-shrink: 0;
+        stroke: color(white)
       }
     }
   }
@@ -391,6 +414,7 @@
         display: block;
         width: 6.14px;
         height: 10.29px;
+        stroke: color(white);
       }
     }
   }

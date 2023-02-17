@@ -9,7 +9,7 @@
     <?php endif; ?>
   </div>
 
-  <div class="about-inner">
+  <div class="about-inner js-observe">
     <div class="wrapper">
       <div class="about-content">
 

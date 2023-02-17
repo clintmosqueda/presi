@@ -25,7 +25,7 @@
           )); ?>
         </a>
         <a class="service-grid-link" href="<?php echo resolve_url('service?real-estate-value'); ?>">
-          不動産開発事業
+          不動産の価値再生
           <?php import_part("svg", array(
           'svg_class' => 'service-grid-link-caret',
           'svg_id' => '#caret'

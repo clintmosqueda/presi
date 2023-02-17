@@ -13,6 +13,15 @@
   &-inner {
     background-color: color(blue-100);
     position: relative;
+    opacity: 0;
+
+    &.is-shown {
+      animation-name: flipLeftAnime;
+      animation-duration: 1s;
+      animation-timing-function: $cubic-bezier;
+      animation-fill-mode: forwards;
+      perspective-origin: left center;
+    }
 
     &::before,
     &::after {
@@ -62,8 +71,25 @@
       font-size: 18px;
     }
 
+    &:hover {
+
+      .about-link-caret {
+        background-color: color(white);
+
+        svg {
+          stroke: color(blue-100)
+        }
+      }
+
+    }
+
     &-caret {
       margin-left: 16px;
+      transition: all 0.3s $cubic-bezier;
+
+      svg {
+        stroke: color(white)
+      }
     }
   }
 
