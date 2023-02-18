@@ -108,7 +108,9 @@
     <dd class="profile-describe">東京メトロ有楽町線・南北線 市ヶ谷駅A3出口 徒歩6分
     東京メトロ半蔵門線・半蔵門駅 5番出口 徒歩9分
     東京メトロ半蔵門線・東西線 九段下駅 2番出口 徒歩10分
-    JR市ヶ谷駅 徒歩9分</dd>
+    JR市ヶ谷駅 徒歩9分
+    東京メトロ半蔵門線 神保町駅 徒歩2分
+    JR御茶ノ水駅 徒歩8分</dd>
   </dl>
   <dl class="profile-list">
     <dt class="profile-term">連絡先</dt>

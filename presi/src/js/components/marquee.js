@@ -27,7 +27,6 @@ export default function Marquee() {
   }
 
   marqueeTitles.forEach((el, index) => {
-    console.log(el)
     let textWidth = el.parentElement.scrollWidth
 
     el.animate([

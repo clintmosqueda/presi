@@ -41,7 +41,7 @@
               <li class="footer-nav-item"><a class="footer-nav-link" href="<?php echo resolve_url(); ?>">サイトトップ</a></li>
               <li class="footer-nav-item"><a class="footer-nav-link" href="<?php echo resolve_url('service'); ?>">事業内容</a></li>
               <li class="footer-nav-item"><a class="footer-nav-link" href="<?php echo resolve_url('about'); ?>">PRESIとは</a></li>
-              <li class="footer-nav-item"><a class="footer-nav-link" href="<?php echo resolve_url('tips'); ?>">新卒採用</a></li>
+              <li class="footer-nav-item"><a class="footer-nav-link" target="_blank" href="http://presi.co.jp/recruit/">新卒採用</a></li>
               <li class="footer-nav-item"><a class="footer-nav-link" href="<?php echo resolve_url('company'); ?>">会社案内</a></li>
               <li class="footer-nav-item"><a class="footer-nav-link" href="<?php echo resolve_url('contact'); ?>">お問い合わせ</a></li>
             </ul>
