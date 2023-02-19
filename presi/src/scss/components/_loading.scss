@@ -4,19 +4,47 @@
   left: 0;
   right: 0;
   bottom: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   z-index: 20;
   transition: opacity 1s $cubic-bezier;
+  background-color: #b0b0b0;
+  overflow: hidden;
 
   &.is-hidden {
     animation: zoomFade 1.2s $cubic-bezier forwards;
     pointer-events: none;
   }
 
+  &::before {
+    width: 100%;
+    height: 50%;
+    top: -25px;
+    left: 0;
+    content: '';
+    position: absolute;
+    background: radial-gradient(circle, rgb(224, 224, 224) 50%, rgb(176, 176, 176) 135%);
+    z-index: -1;
+  }
+
+  &::after {
+    width: 100%;
+    height: 50%;
+    bottom: -25px;
+    left: 0;
+    content: '';
+    position: absolute;
+    background: radial-gradient(circle, rgb(194 194 194) 36%, rgb(173 173 173) 101%);
+    z-index: -1;
+  }
+
   &-video {
     width: 100%;
     height: 100%;
     object-fit: cover;
+
+    @include viewport($breakpoint-mobile) {
+      object-fit: contain;
+    }
   }
 }
