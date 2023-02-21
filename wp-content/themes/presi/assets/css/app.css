@@ -1416,6 +1416,15 @@ body {
     display: block;
   }
 }
+.about-strength:first-of-type .about-strength-desc::before {
+  background-image: url("../images/strength-icon1.png");
+}
+.about-strength:nth-of-type(2) .about-strength-desc::before {
+  background-image: url("../images/strength-icon2.png");
+}
+.about-strength:nth-of-type(3) .about-strength-desc::before {
+  background-image: url("../images/strength-icon3.png");
+}
 .about-strength-heading {
   width: 396px;
   height: 139px;
@@ -1496,6 +1505,9 @@ body {
   background-color: #EFEFEF;
   display: inline-block;
   flex-shrink: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 @media all and (max-width: 767px) {
   .about-strength-desc::before {
@@ -1825,7 +1837,7 @@ body {
 @media all and (max-width: 767px) {
   .company-heading-text {
     font-size: 26px;
-    padding: 13px 13px;
+    padding: 13px 11px;
     transform: none;
     rotate: 0 0 -1 0deg;
   }
@@ -1856,7 +1868,6 @@ body {
   .company-desc {
     transform-origin: center right;
     font-size: 14px;
-    rotate: 0 0 -1 2deg;
   }
 }
 .company-button {
@@ -1913,6 +1924,11 @@ body {
   background-image: url("../images/icon-president.png");
   opacity: 1;
   right: 50px;
+}
+@media all and (max-width: 767px) {
+  .company-button:first-of-type::before {
+    background-image: none;
+  }
 }
 .company-button-caret {
   position: absolute;
@@ -2279,7 +2295,7 @@ body {
 }
 .magazines-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 @media all and (max-width: 767px) {
   .magazines-grid {
@@ -2322,7 +2338,8 @@ body {
 
 .books {
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  margin-bottom: 90px;
 }
 .books::before {
   position: absolute;
@@ -3066,6 +3083,7 @@ body {
 }
 .footer-link-heading {
   font-size: 61px;
+  font-family: "Jost", sans-serif;
   text-transform: uppercase;
   margin-bottom: 40px;
   color: white;
@@ -3265,7 +3283,7 @@ body {
 
 .idea {
   padding-left: 361px;
-  margin-bottom: 119px;
+  margin-bottom: 35px;
 }
 @media all and (max-width: 767px) {
   .idea {
@@ -3374,7 +3392,7 @@ body {
 }
 @media all and (max-width: 1512px) {
   .profile-bg-triangle {
-    bottom: -87px;
+    bottom: -85px;
   }
 }
 @media all and (max-width: 767px) {
@@ -4142,6 +4160,7 @@ body {
   max-width: 700px;
   width: 100%;
   margin: 0 auto 75px;
+  display: none;
 }
 .distribution-video img {
   display: block;
@@ -4579,13 +4598,22 @@ body {
     margin-bottom: 50px;
   }
 }
+.stable-value-col:first-of-type .stable-value-icon {
+  max-width: 314px;
+  height: 195px;
+  background-image: url("../images/stable-icon1.png");
+}
+.stable-value-col:nth-of-type(2) .stable-value-icon {
+  max-width: 248px;
+  height: 196px;
+  background-image: url("../images/stable-icon2.png");
+}
 .stable-value-icon {
   display: block;
   margin: 0 auto 31px;
-  width: 158px;
-  height: 158px;
-  background-color: #EFEFEF;
-  border-radius: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 @media all and (max-width: 767px) {
   .stable-value-icon {
@@ -5304,4 +5332,5 @@ body {
   display: inline-block;
   width: 3.14px;
   height: 6.29px;
+  stroke: white;
 }

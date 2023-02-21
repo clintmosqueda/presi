@@ -12,8 +12,11 @@
   <meta name="keywords" content="">
   <meta name="viewport" content="width=device-width,initial-scale=1.0" id="js-viewport">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">  
+  <link rel="icon" type="image/x-icon" href="<?php echo resolve_asset_url('/images/favicon/favicon.icon'); ?>">
+  <meta property="og:image" content="<?php echo resolve_asset_url('/images/ogp.png'); ?>">
   <link rel="stylesheet" href="<?php echo resolve_asset_url('/css/app.css'); ?>">
   <?php wp_head(); ?>
+  <?php import_part('favicon'); ?>
 </head>
 
 <body <?php body_class(); ?>>

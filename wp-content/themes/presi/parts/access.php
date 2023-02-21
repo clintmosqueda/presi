@@ -12,10 +12,8 @@
   <div class="access-train">
     <h5 class="access-train-heading">電車でお越しの場合</h5>
     <ul class="access-list">
-      <li class="access-item">東京メトロ有楽町線・南北線市ヶ谷駅A3出口　徒歩6分</li>
-      <li class="access-item">東京メトロ半蔵門線・半蔵門駅5番出口徒歩9分</li>
-      <li class="access-item">東京メトロ半蔵門線・東西線 九段下駅２番出口　徒歩10分</li>
-      <li class="access-item">JR市ケ谷駅 徒歩9分</li>
+      <li class="access-item">東京メトロ半蔵門線 神保町駅 徒歩2分</li>
+      <li class="access-item">JR御茶ノ水駅 徒歩8分</li>
     </ul>
   </div>
 </section>

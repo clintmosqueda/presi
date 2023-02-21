@@ -434,6 +434,24 @@
       display: block;
     }
 
+    &:first-of-type {
+      .about-strength-desc::before {
+        background-image: url('#{$image-path}/strength-icon1.png');
+      }
+    }
+
+    &:nth-of-type(2) {
+      .about-strength-desc::before {
+        background-image: url('#{$image-path}/strength-icon2.png');
+      }
+    }
+
+    &:nth-of-type(3) {
+      .about-strength-desc::before {
+        background-image: url('#{$image-path}/strength-icon3.png');
+      }
+    }
+
     &-heading {
       width: 396px;
       height: 139px;
@@ -515,6 +533,9 @@
         background-color: color(gray);
         display: inline-block;
         flex-shrink: 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
 
         @include viewport($breakpoint-mobile) {
           width: 80px;

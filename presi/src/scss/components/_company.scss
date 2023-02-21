@@ -139,7 +139,7 @@
 
       @include viewport($breakpoint-mobile) {
         font-size: 26px;
-        padding: 13px 13px;
+        padding: 13px 11px;
         transform: none;
         rotate: 0 0 -1 0deg
       }
@@ -176,7 +176,7 @@
     @include viewport($breakpoint-mobile) {
       transform-origin: center right;
       font-size: 14px;
-      rotate: 0 0 -1 2deg
+      // rotate: 0 0 -1 2deg
     }
   }
 
@@ -239,6 +239,10 @@
         background-image: url('#{$image-path}/icon-president.png');
         opacity: 1;
         right: 50px;
+
+        @include viewport($breakpoint-mobile) {
+          background-image: none;
+        }
       }
     }
 

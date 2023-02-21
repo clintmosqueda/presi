@@ -45,7 +45,7 @@
       justify-content: flex-end;
 
       @include viewport(1512px) {
-        bottom: -87px;
+        bottom: -85px;
       }
 
       @include viewport($breakpoint-mobile) {

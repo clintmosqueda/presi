@@ -9,7 +9,6 @@
  * @see https://codex.wordpress.org/Template_Hierarchy
  */
 get_header(); ?>
-<?php import_part('loading')?>
 <?php import_part('mv')?>
 <?php import_part('news')?>
 <?php import_part('about')?>
@@ -18,7 +17,7 @@ get_header(); ?>
 <?php import_part('media-info')?>
 <?php import_part('magazines')?>
 <?php import_part('books')?>
-<?php import_part('interview')?>
+<!--?php import_part('interview')?-->
 <?php
 get_footer();
 

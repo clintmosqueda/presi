@@ -1,6 +1,7 @@
 .idea {
   @include pad-left();
-  margin-bottom: 119px;
+  // margin-bottom: 119px;
+  margin-bottom: 35px;
 
   @include viewport($breakpoint-mobile) {
     margin-bottom: 90px;

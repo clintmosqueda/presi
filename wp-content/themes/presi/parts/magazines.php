@@ -3,10 +3,7 @@
     <div class="magazines-inner">
       <div class="magazines-content">
         <div class="magazines-grid">
-          <a href="https://k-tsushin.jp/interview/kt43_presi/" target="_blank" class="magazines-grid-cell">
-            <img width="141" src="<?php echo resolve_asset_url('/images/magazine1.png'); ?>" alt="">
-          </a>
-          <a href="https://www.youtube.com/watch?v=MMsFXDF0LP0" target="_blank" class="magazines-grid-cell">
+          <a href="" target="_blank" class="magazines-grid-cell">
             <img width="123" src="<?php echo resolve_asset_url('/images/magazine2.png'); ?>" alt="">
           </a>
           <a href="https://www.youtube.com/watch?v=TtC1jx0GmJg" target="_blank" class="magazines-grid-cell">

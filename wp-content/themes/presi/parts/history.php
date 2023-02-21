@@ -27,10 +27,6 @@
       <dd class="history-describe">本社を千代田区麹町2丁目に移転</dd>
     </dl>
     <dl class="history-list">
-      <dt class="history-term">2016年10月</dt>
-      <dd class="history-describe">株式会社PRESI建設設立</dd>
-    </dl>
-    <dl class="history-list">
       <dt class="history-term">2016年11月</dt>
       <dd class="history-describe">本社を千代田区麹町E.C.Kビルディングに移転</dd>
     </dl>
