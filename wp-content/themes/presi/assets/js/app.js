@@ -16,6 +16,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_agree__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/agree */ "./presi/src/js/components/agree.js");
 /* harmony import */ var _components_anchorlink__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/anchorlink */ "./presi/src/js/components/anchorlink.js");
 /* harmony import */ var _components_intersection_observer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/intersection-observer */ "./presi/src/js/components/intersection-observer.js");
+/* harmony import */ var _components_loading__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/loading */ "./presi/src/js/components/loading.js");
 
 
 
@@ -23,7 +24,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-// import Loading from './components/loading'
 
 (0,_components_slider__WEBPACK_IMPORTED_MODULE_0__["default"])();
 (0,_components_marquee__WEBPACK_IMPORTED_MODULE_1__["default"])();
@@ -32,7 +32,7 @@ __webpack_require__.r(__webpack_exports__);
 (0,_components_agree__WEBPACK_IMPORTED_MODULE_4__["default"])();
 (0,_components_anchorlink__WEBPACK_IMPORTED_MODULE_5__["default"])();
 (0,_components_intersection_observer__WEBPACK_IMPORTED_MODULE_6__["default"])();
-// Loading()
+(0,_components_loading__WEBPACK_IMPORTED_MODULE_7__["default"])();
 
 /***/ }),
 
@@ -123,6 +123,33 @@ function intersectionObserver() {
       observer.observe(section);
     });
   }
+}
+
+/***/ }),
+
+/***/ "./presi/src/js/components/loading.js":
+/*!********************************************!*\
+  !*** ./presi/src/js/components/loading.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Loading)
+/* harmony export */ });
+/* harmony import */ var _scrolling__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scrolling */ "./presi/src/js/components/scrolling.js");
+
+function Loading() {
+  var loading = document.querySelector('.js-loading');
+  var video = document.getElementById('loading-video');
+  window.scroll(0, 0);
+  video.addEventListener('canplay', function (event) {
+    (0,_scrolling__WEBPACK_IMPORTED_MODULE_0__.scrollLock)();
+  });
+  video.addEventListener('ended', function (event) {
+    (0,_scrolling__WEBPACK_IMPORTED_MODULE_0__.scrollAble)();
+    loading.classList.add('is-hidden');
+  });
 }
 
 /***/ }),
