@@ -6,6 +6,7 @@ import Agree from './components/agree'
 import Anchorlink from './components/anchorlink'
 import intersectionObserver from './components/intersection-observer'
 import Loading from './components/loading'
+import Mv from './components/mv'
 
 Slider()
 Marquee()
@@ -15,3 +16,4 @@ Agree()
 Anchorlink()
 intersectionObserver()
 Loading()
+Mv()

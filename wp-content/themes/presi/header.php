@@ -8,12 +8,13 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
+  <title><?php wp_title('|'); ?></title>
   <meta charset="<?php bloginfo('charset'); ?>">
-  <meta name="keywords" content="">
   <meta name="viewport" content="width=device-width,initial-scale=1.0" id="js-viewport">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">  
-  <link rel="icon" type="image/x-icon" href="<?php echo resolve_asset_url('/images/favicon/favicon.icon'); ?>">
+  <meta name="keywords" content="PRESI,プレジ,ぷれじ,不動産投資,土地活用,アパート経営,勝てる不動産投資">
   <meta property="og:image" content="<?php echo resolve_asset_url('/images/ogp.png'); ?>">
+  <meta name="twitter:image" content="<?php echo resolve_asset_url('/images/ogp.png?'); ?>"></meta>
   <link rel="stylesheet" href="<?php echo resolve_asset_url('/css/app.css'); ?>">
   <?php wp_head(); ?>
   <?php import_part('favicon'); ?>
