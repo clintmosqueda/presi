@@ -9,7 +9,7 @@
  * @see https://codex.wordpress.org/Template_Hierarchy
  */
 get_header(); ?>
-<!--?php import_part('loading')?-->
+<?php import_part('loading')?>
 <?php import_part('mv')?>
 <?php import_part('news')?>
 <?php import_part('about')?>

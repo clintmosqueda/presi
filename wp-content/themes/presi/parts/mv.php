@@ -1,30 +1,28 @@
 <section class="mv">
   <div class="mv-slider">
-    <!-- <div class="mv-slider-frame" data-rows="5">
-      <img src="<?php echo resolve_asset_url('/images/mv-image2.png'); ?>" alt="">
-    </div> -->
-    <div class="mv-swiper swiper js-mv-swiper">
-      <div class="mv-swiper-wrapper swiper-wrapper">
+    <div class="mv-slides">
 
-        <div class="mv-swiper-slide swiper-slide">
-          <div class="mv-slide" data-rows="5">
+
+        <div class="mv-slide is-active is-animate">
+          <div class="mv-slide-frame" data-rows="6">
             <img src="<?php echo resolve_asset_url('/images/mv-image2.png'); ?>" alt="">
           </div>
         </div>
-        <div class="mv-swiper-slide swiper-slide">
-          <div class="mv-slide" data-rows="5">
-            <img src="<?php echo resolve_asset_url('/images//mv-image3.png'); ?>" alt="">
-          </div>
-        </div>
-        <div class="mv-swiper-slide swiper-slide">
-          <div class="mv-slide" data-rows="5">
-            <img src="<?php echo resolve_asset_url('/images/mv-image4.png'); ?>" alt="">
+
+        <div class="mv-slide is-next">
+          <div class="mv-slide-frame" data-rows="6">
+            <img src="<?php echo resolve_asset_url('/images//mv-image5.png'); ?>" alt="">
           </div>
         </div>
 
-      </div>
+        <div class="mv-slide">
+          <div class="mv-slide-frame" data-rows="6">
+            <img src="<?php echo resolve_asset_url('/images/mv-image6.png'); ?>" alt="">
+          </div>
+        </div>
+
+
     </div>
-
   </div>
   <div class="wrapper">
     <div class="mv-inner">

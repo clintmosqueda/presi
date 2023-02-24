@@ -234,11 +234,12 @@
 
     &:first-of-type {
       &::before {
-        width: 150px;
-        height: 168px;
+        width: 318px;
+        height: 357px;
         background-image: url('#{$image-path}/icon-president.png');
         opacity: 1;
-        right: 50px;
+        right: 0;
+        background-position: bottom left;
 
         @include viewport($breakpoint-mobile) {
           background-image: none;
