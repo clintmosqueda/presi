@@ -9,15 +9,16 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/slider */ "./presi/src/js/components/slider.js");
-/* harmony import */ var _components_marquee__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/marquee */ "./presi/src/js/components/marquee.js");
-/* harmony import */ var _components_sidepinning__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/sidepinning */ "./presi/src/js/components/sidepinning.js");
-/* harmony import */ var _components_menu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/menu */ "./presi/src/js/components/menu.js");
-/* harmony import */ var _components_agree__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/agree */ "./presi/src/js/components/agree.js");
-/* harmony import */ var _components_anchorlink__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/anchorlink */ "./presi/src/js/components/anchorlink.js");
-/* harmony import */ var _components_intersection_observer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/intersection-observer */ "./presi/src/js/components/intersection-observer.js");
-/* harmony import */ var _components_loading__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/loading */ "./presi/src/js/components/loading.js");
-/* harmony import */ var _components_mv__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/mv */ "./presi/src/js/components/mv.js");
+/* harmony import */ var _components_browser_class__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/browser-class */ "./presi/src/js/components/browser-class.js");
+/* harmony import */ var _components_slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/slider */ "./presi/src/js/components/slider.js");
+/* harmony import */ var _components_marquee__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/marquee */ "./presi/src/js/components/marquee.js");
+/* harmony import */ var _components_sidepinning__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/sidepinning */ "./presi/src/js/components/sidepinning.js");
+/* harmony import */ var _components_menu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/menu */ "./presi/src/js/components/menu.js");
+/* harmony import */ var _components_agree__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/agree */ "./presi/src/js/components/agree.js");
+/* harmony import */ var _components_anchorlink__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/anchorlink */ "./presi/src/js/components/anchorlink.js");
+/* harmony import */ var _components_intersection_observer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/intersection-observer */ "./presi/src/js/components/intersection-observer.js");
+/* harmony import */ var _components_loading__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/loading */ "./presi/src/js/components/loading.js");
+/* harmony import */ var _components_mv__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/mv */ "./presi/src/js/components/mv.js");
 
 
 
@@ -27,15 +28,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-(0,_components_slider__WEBPACK_IMPORTED_MODULE_0__["default"])();
-(0,_components_marquee__WEBPACK_IMPORTED_MODULE_1__["default"])();
-(0,_components_sidepinning__WEBPACK_IMPORTED_MODULE_2__["default"])();
-(0,_components_menu__WEBPACK_IMPORTED_MODULE_3__["default"])();
-(0,_components_agree__WEBPACK_IMPORTED_MODULE_4__["default"])();
-(0,_components_anchorlink__WEBPACK_IMPORTED_MODULE_5__["default"])();
-(0,_components_intersection_observer__WEBPACK_IMPORTED_MODULE_6__["default"])();
-(0,_components_loading__WEBPACK_IMPORTED_MODULE_7__["default"])();
-(0,_components_mv__WEBPACK_IMPORTED_MODULE_8__["default"])();
+
+(0,_components_browser_class__WEBPACK_IMPORTED_MODULE_0__["default"])();
+(0,_components_slider__WEBPACK_IMPORTED_MODULE_1__["default"])();
+(0,_components_marquee__WEBPACK_IMPORTED_MODULE_2__["default"])();
+(0,_components_sidepinning__WEBPACK_IMPORTED_MODULE_3__["default"])();
+(0,_components_menu__WEBPACK_IMPORTED_MODULE_4__["default"])();
+(0,_components_agree__WEBPACK_IMPORTED_MODULE_5__["default"])();
+(0,_components_anchorlink__WEBPACK_IMPORTED_MODULE_6__["default"])();
+(0,_components_intersection_observer__WEBPACK_IMPORTED_MODULE_7__["default"])();
+(0,_components_loading__WEBPACK_IMPORTED_MODULE_8__["default"])();
+(0,_components_mv__WEBPACK_IMPORTED_MODULE_9__["default"])();
 
 /***/ }),
 
@@ -101,6 +104,77 @@ function Anchorlink() {
 
 /***/ }),
 
+/***/ "./presi/src/js/components/browser-class.js":
+/*!**************************************************!*\
+  !*** ./presi/src/js/components/browser-class.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ browserClass)
+/* harmony export */ });
+function browserClass() {
+  var html = document.querySelector('html'),
+    userAgent = navigator.userAgent,
+    body = document.querySelector('body');
+  var classBrowser = null,
+    classOS = null;
+  function getBrowser() {
+    var browser = null;
+    if ((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) !== -1) {
+      browser = 'is-opera';
+    } else if (navigator.userAgent.indexOf("Edge") >= 0) {
+      browser = 'is-edge';
+    } else if (navigator.userAgent.indexOf("Chrome") !== -1) {
+      browser = 'is-chrome';
+    } else if (navigator.userAgent.indexOf("Safari") !== -1) {
+      browser = 'is-safari';
+    } else if (navigator.userAgent.indexOf("Firefox") !== -1) {
+      browser = 'is-firefox';
+    } else if (navigator.userAgent.indexOf("MSIE") !== -1 || !!document.documentMode === true) {
+      browser = 'is-ie';
+    }
+    return browser;
+  }
+  function getOS() {
+    var platform = window.navigator.platform,
+      macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
+      windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
+      iosPlatforms = ['iPhone', 'iPad', 'iPod'];
+    var os = null;
+    if (macosPlatforms.indexOf(platform) !== -1) {
+      os = 'is-mac';
+    } else if (iosPlatforms.indexOf(platform) !== -1) {
+      os = 'is-ios';
+    } else if (windowsPlatforms.indexOf(platform) !== -1) {
+      os = 'is-windows';
+    } else if (/Android/.test(userAgent)) {
+      os = 'is-android';
+    } else if (!os && /Linux/.test(platform)) {
+      os = 'is-linux';
+    }
+    return os;
+  }
+  classOS = getOS();
+  classBrowser = getBrowser();
+  html.classList.add(classBrowser, classOS);
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {}
+  var isIpad = navigator.userAgent.match(/iPad/i) !== null;
+  if (isIpad) {
+    html.classList.add('is-ipad');
+    body.classList.add('is-ipad');
+  }
+  var isIOS = /iPad/.test(navigator.platform) || navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1;
+  var checkVersion13 = /Version\/13/.test(navigator.userAgent);
+  var checkVersion14 = /Version\/14/.test(navigator.userAgent);
+  if (isIOS && checkVersion13) document.querySelector('html').classList.add('is-ipad-13');
+  if (isIOS && checkVersion14) document.querySelector('html').classList.add('is-ipad-14');
+}
+
+/***/ }),
+
 /***/ "./presi/src/js/components/intersection-observer.js":
 /*!**********************************************************!*\
   !*** ./presi/src/js/components/intersection-observer.js ***!
@@ -147,17 +221,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scrolling__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scrolling */ "./presi/src/js/components/scrolling.js");
 
 function Loading() {
+  var html = document.querySelector('html');
   var loading = document.querySelector('.js-loading');
-  var video = document.getElementById('loading-video');
-  var path = video.dataset.path;
   var mediaQuery = window.matchMedia('(max-width: 768px)');
-  console.log(mediaQuery.matches);
-  var fileName = mediaQuery.matches ? 'loading-sp.mp4' : 'loading-pc.mp4';
-  if (loading) {
-    window.scroll(0, 0);
+  function videoLoading() {
+    var video = document.getElementById('loading-video');
+    var path = video.dataset.path;
+    var fileName = mediaQuery.matches ? 'loading-sp.webm' : 'loading_presi.webm';
     var source = document.createElement('source');
-    source.src = "".concat(video.dataset.path).concat(fileName);
-    source.type = 'video/mp4';
+    source.src = "".concat(path).concat(fileName);
+    source.type = mediaQuery.matches ? 'video/webm' : 'video/webm';
     source.setAttribute('data-test', 'hello');
     video.appendChild(source);
     video.addEventListener('canplay', function (event) {
@@ -165,11 +238,24 @@ function Loading() {
       (0,_scrolling__WEBPACK_IMPORTED_MODULE_0__.scrollLock)();
     });
     video.addEventListener('ended', function (event) {
-      // setTimeout(() => {
       (0,_scrolling__WEBPACK_IMPORTED_MODULE_0__.scrollAble)();
       loading.classList.add('is-hidden');
-      // }, 500);
     });
+  }
+  function gifLoading() {
+    console.log('test');
+    var loadingGif = document.querySelector('.loading-img');
+    var imgPath = loadingGif.dataset.path;
+    (0,_scrolling__WEBPACK_IMPORTED_MODULE_0__.scrollLock)();
+    loadingGif.src = "".concat(imgPath, "loading.gif");
+    setTimeout(function () {
+      (0,_scrolling__WEBPACK_IMPORTED_MODULE_0__.scrollAble)();
+      loading.classList.add('is-hidden');
+      loadingGif.style.display = 'none';
+    }, 4000);
+  }
+  if (loading) {
+    html.classList.contains('is-ios') ? gifLoading() : videoLoading();
   }
 }
 
@@ -282,12 +368,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-// import Swiper from 'swiper/bundle';
-// import 'swiper/css/bundle';
-
 function Mv() {
-  console.log('mv');
   var slider = document.querySelector('.mv-slider');
   var slides = document.querySelectorAll('.mv-slide');
   var slidesLength = slides.length - 1;
@@ -323,7 +404,6 @@ function Mv() {
     }, 1000);
   };
   var nextSlide = function nextSlide() {
-    console.log('nexslide');
     currentSlide++;
     if (currentSlide > slidesLength) {
       currentSlide = 0;
@@ -348,41 +428,6 @@ function Mv() {
     by: 'cells',
     image: true
   });
-
-  // if(mvSwiper) {
-  //   const mvCarousel = new Swiper(mvSelector, {
-  //     slidesPerView: 1,
-  //     effect: 'fade',
-  //     loop: true,
-  //     speed: 500,
-  //     fadeEffect: {
-  //       // crossFade: true
-  //     },
-  //     autoplay: {
-  //       disableOnInteraction: false
-  //     },
-  //     on: {
-  //       slideChange: swiper => {
-  //         setTimeout(() => {
-  //           mvSlide.forEach((el, indx) => {
-  //             if(el.classList.contains('is-animate')) {
-  //               el.classList.remove('is-animate')
-  //             }
-  //           })
-  //         }, 1000);
-  //       },
-  //       autoplayTimeLeft: (s, time, progress) => {
-  //         if(Math.ceil(time/1000) === 1) {
-  //           mvSlide.forEach((el, indx) => {
-  //             if(el.classList.contains('swiper-slide-active')) {
-  //               el.classList.add('is-animate')
-  //             }
-  //           })
-  //         }
-  //       }
-  //     }
-  //   })
-  // }
 }
 
 /***/ }),

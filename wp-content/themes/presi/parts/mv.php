@@ -4,19 +4,19 @@
 
 
         <div class="mv-slide is-active is-animate">
-          <div class="mv-slide-frame" data-rows="6">
+          <div class="mv-slide-frame" data-rows="8">
             <img src="<?php echo resolve_asset_url('/images/mv-image2.png'); ?>" alt="">
           </div>
         </div>
 
         <div class="mv-slide is-next">
-          <div class="mv-slide-frame" data-rows="6">
+          <div class="mv-slide-frame" data-rows="8">
             <img src="<?php echo resolve_asset_url('/images//mv-image5.png'); ?>" alt="">
           </div>
         </div>
 
         <div class="mv-slide">
-          <div class="mv-slide-frame" data-rows="6">
+          <div class="mv-slide-frame" data-rows="8">
             <img src="<?php echo resolve_asset_url('/images/mv-image6.png'); ?>" alt="">
           </div>
         </div>
@@ -27,8 +27,9 @@
   <div class="wrapper">
     <div class="mv-inner">
       <div class="mv-content">
-        <p class="mv-desc">東京を中心に価値ある
-        不動産を提供する</p>
+        <!-- <p class="mv-desc">東京を中心に価値ある
+        不動産を提供する</p> -->
+        <p class="mv-desc">不動産×ブロックチェーンで日本を代表する企業へ</p>
         <h1 class="mv-heading">
           <?php import_part("svg", array(
           'svg_class' => 'mv-heading-svg',

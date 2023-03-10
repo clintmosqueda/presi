@@ -1,3 +1,4 @@
+import browserClass from './components/browser-class'
 import Slider from './components/slider'
 import Marquee from './components/marquee'
 import Sidepinning from './components/sidepinning'
@@ -8,6 +9,7 @@ import intersectionObserver from './components/intersection-observer'
 import Loading from './components/loading'
 import Mv from './components/mv'
 
+browserClass()
 Slider()
 Marquee()
 Sidepinning()

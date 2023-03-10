@@ -2,11 +2,7 @@ import "splitting/dist/splitting.css";
 import "splitting/dist/splitting-cells.css";
 import Splitting from "splitting";
 
-// import Swiper from 'swiper/bundle';
-// import 'swiper/css/bundle';
-
 export default function Mv() {
-  console.log('mv')
   const slider = document.querySelector('.mv-slider')
   const slides = document.querySelectorAll('.mv-slide')
   const slidesLength = slides.length - 1;
@@ -51,7 +47,6 @@ export default function Mv() {
   }
 
   const nextSlide = () => {
-    console.log('nexslide')
     currentSlide++
     if(currentSlide > slidesLength) {
       currentSlide = 0
@@ -82,44 +77,5 @@ export default function Mv() {
     by: 'cells',
     image: true
   });
-
-
-
-
-
-  // if(mvSwiper) {
-  //   const mvCarousel = new Swiper(mvSelector, {
-  //     slidesPerView: 1,
-  //     effect: 'fade',
-  //     loop: true,
-  //     speed: 500,
-  //     fadeEffect: {
-  //       // crossFade: true
-  //     },
-  //     autoplay: {
-  //       disableOnInteraction: false
-  //     },
-  //     on: {
-  //       slideChange: swiper => {
-  //         setTimeout(() => {
-  //           mvSlide.forEach((el, indx) => {
-  //             if(el.classList.contains('is-animate')) {
-  //               el.classList.remove('is-animate')
-  //             }
-  //           })
-  //         }, 1000);
-  //       },
-  //       autoplayTimeLeft: (s, time, progress) => {
-  //         if(Math.ceil(time/1000) === 1) {
-  //           mvSlide.forEach((el, indx) => {
-  //             if(el.classList.contains('swiper-slide-active')) {
-  //               el.classList.add('is-animate')
-  //             }
-  //           })
-  //         }
-  //       }
-  //     }
-  //   })
-  // }
 
 }

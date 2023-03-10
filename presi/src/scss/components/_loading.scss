@@ -9,6 +9,7 @@
   z-index: 20;
   transition: opacity 1s $cubic-bezier;
   overflow: hidden;
+  background-color: #EFEFEF;
 
   &.is-hidden {
     animation: zoomFade 1.2s $cubic-bezier forwards;
@@ -19,5 +20,24 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+
+    .is-ios & {
+      display: none;
+    }
+  }
+
+  &-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    .is-ios & {
+      display: block;
+    }
   }
 }
