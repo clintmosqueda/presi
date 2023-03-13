@@ -4,7 +4,7 @@
   <div class="estate-cards">
     <?php import_part('card-estate', array(
       'image' => '/images/services-img1.jpg',
-      'heading' => '不動産の開発',
+      'heading' => '不動産開発',
       'description' => '不動産にとって最適な開発プランを提案し、高度な設計・建設・マネジメントを行い、高需要収益物件として、売却あるいは運用することによって収益を生み出します。',
       'id' => 'real-estate-development'
     )) ?>

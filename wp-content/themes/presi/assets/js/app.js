@@ -375,59 +375,61 @@ function Mv() {
   var count = 0;
   var currentSlide = 0;
   var timeleft = 5;
-  var counter = function counter() {
-    setInterval(function () {
-      count++;
-      if (count > slidesLength) {
-        count = 0;
-      }
-      slides.forEach(function (slide, index) {
-        slide.classList.remove('is-animate');
-      });
-      nextSlide();
-      clearTimeout(countdown);
-    }, 5000);
-  };
-  var countdown = function countdown() {
-    setInterval(function () {
-      timeleft--;
-      if (timeleft == 0) {
-        timeleft = 5;
-      }
-      slides.forEach(function (slide, index) {
-        if (timeleft == 5) {
-          if (slide.classList.contains('is-active')) {
-            slide.classList.add('is-animate');
+  if (slider) {
+    var counter = function counter() {
+      setInterval(function () {
+        count++;
+        if (count > slidesLength) {
+          count = 0;
+        }
+        slides.forEach(function (slide, index) {
+          slide.classList.remove('is-animate');
+        });
+        nextSlide();
+        clearTimeout(countdown);
+      }, 5000);
+    };
+    var countdown = function countdown() {
+      setInterval(function () {
+        timeleft--;
+        if (timeleft == 0) {
+          timeleft = 5;
+        }
+        slides.forEach(function (slide, index) {
+          if (timeleft == 5) {
+            if (slide.classList.contains('is-active')) {
+              slide.classList.add('is-animate');
+            }
           }
+        });
+      }, 1000);
+    };
+    var nextSlide = function nextSlide() {
+      currentSlide++;
+      if (currentSlide > slidesLength) {
+        currentSlide = 0;
+      }
+      slides.forEach(function (slide, index) {
+        slide.classList.remove("is-active");
+        slide.classList.remove('is-next');
+        if (index === currentSlide) {
+          slide.classList.add("is-active");
         }
       });
-    }, 1000);
-  };
-  var nextSlide = function nextSlide() {
-    currentSlide++;
-    if (currentSlide > slidesLength) {
-      currentSlide = 0;
-    }
-    slides.forEach(function (slide, index) {
-      slide.classList.remove("is-active");
-      slide.classList.remove('is-next');
-      if (index === currentSlide) {
-        slide.classList.add("is-active");
+      if (currentSlide == 2) {
+        slides[0].classList.add("is-next");
+      } else {
+        slides[currentSlide + 1].classList.add("is-next");
       }
+    };
+    counter();
+    countdown();
+    splitting__WEBPACK_IMPORTED_MODULE_2___default()({
+      target: '[data-rows]',
+      by: 'cells',
+      image: true
     });
-    if (currentSlide == 2) {
-      slides[0].classList.add("is-next");
-    } else {
-      slides[currentSlide + 1].classList.add("is-next");
-    }
-  };
-  counter();
-  countdown();
-  splitting__WEBPACK_IMPORTED_MODULE_2___default()({
-    target: '[data-rows]',
-    by: 'cells',
-    image: true
-  });
+  }
 }
 
 /***/ }),

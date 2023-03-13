@@ -10,6 +10,8 @@ export default function Mv() {
   let currentSlide = 0;
   let timeleft = 5
 
+  if(slider) {
+
   let counter =  function() {
     setInterval(function() {
       count++
@@ -77,5 +79,7 @@ export default function Mv() {
     by: 'cells',
     image: true
   });
+
+}
 
 }

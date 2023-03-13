@@ -987,6 +987,10 @@ body {
     font-size: 40px;
   }
 }
+.news-list {
+  max-height: 250px;
+  overflow-y: auto;
+}
 .news-item {
   display: flex;
   color: #0E304D;
@@ -996,6 +1000,7 @@ body {
   gap: 0 35px;
   padding: 13px 0 24px;
   position: relative;
+  line-height: 1.5;
 }
 @media all and (max-width: 767px) {
   .news-item {
@@ -1052,6 +1057,12 @@ body {
     font-size: 12px;
     margin-top: 17px;
   }
+}
+.news-link {
+  display: block;
+}
+.news-link:hover {
+  text-decoration: underline;
 }
 
 .about {

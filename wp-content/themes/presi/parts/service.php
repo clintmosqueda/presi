@@ -11,14 +11,14 @@
 
       <div class="service-grid">
         <a class="service-grid-link" href="<?php echo resolve_url('service?property-development'); ?>">
-          不動産開発事業
+          PRESIの事業内容
           <?php import_part("svg", array(
           'svg_class' => 'service-grid-link-caret',
           'svg_id' => '#caret'
           )); ?>
         </a>
         <a class="service-grid-link" href="<?php echo resolve_url('service?real-estate-development'); ?>">
-          不動産の開発
+          不動産開発
           <?php import_part("svg", array(
           'svg_class' => 'service-grid-link-caret',
           'svg_id' => '#caret'
