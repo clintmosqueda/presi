@@ -41,7 +41,7 @@
   }
 
   &-desc {
-    max-width: 850px;
+    max-width: 845px;
     width: 100%;
     margin: 0 auto;
     font-size: 21px;
@@ -62,7 +62,7 @@
 
   &-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
       "one one"
       "two three"
@@ -102,10 +102,10 @@
         grid-area: one;
         font-size: 38px;
         padding: 117px 82px 105px;
-        background-position: center right 122px;
+        background-position: center right 0;
         background-repeat: no-repeat;
         background-size: auto 100%;
-        background-image: url(#{$image-path}/building.png);
+        background-image: url(#{$image-path}/presi-bg.png);
         transition: background-size 0.5s $cubic-bezier;
 
         &:hover {

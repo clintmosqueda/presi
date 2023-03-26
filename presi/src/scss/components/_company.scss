@@ -37,7 +37,7 @@
     &-img {
       position: absolute;
       height: 354px;
-      width: 579px;
+      width: 634px;
       bottom: 0;
       right: 0;
 
@@ -46,6 +46,7 @@
         height: 235px;
         right: auto;
         left: 0;
+        padding-top: 50px;
       }
 
       img {
@@ -175,7 +176,7 @@
 
     @include viewport($breakpoint-mobile) {
       transform-origin: center right;
-      font-size: 13px;
+      font-size: 12px;
       // rotate: 0 0 -1 2deg
     }
   }

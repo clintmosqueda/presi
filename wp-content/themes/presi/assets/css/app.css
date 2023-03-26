@@ -1620,7 +1620,7 @@ body {
   margin-bottom: 49px;
 }
 .service-desc {
-  max-width: 850px;
+  max-width: 845px;
   width: 100%;
   margin: 0 auto;
   font-size: 21px;
@@ -1641,7 +1641,7 @@ body {
 }
 .service-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   grid-template-areas: "one one" "two three" "four five";
   gap: 15px;
 }
@@ -1676,10 +1676,10 @@ body {
   grid-area: one;
   font-size: 38px;
   padding: 117px 82px 105px;
-  background-position: center right 122px;
+  background-position: center right 0;
   background-repeat: no-repeat;
   background-size: auto 100%;
-  background-image: url(../images/building.png);
+  background-image: url(../images/presi-bg.png);
   transition: background-size 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .service-grid-link:first-of-type:hover {
@@ -1805,7 +1805,7 @@ body {
 .company-banner-img {
   position: absolute;
   height: 354px;
-  width: 579px;
+  width: 634px;
   bottom: 0;
   right: 0;
 }
@@ -1815,6 +1815,7 @@ body {
     height: 235px;
     right: auto;
     left: 0;
+    padding-top: 50px;
   }
 }
 .company-banner-img img {
@@ -1931,7 +1932,7 @@ body {
 @media all and (max-width: 767px) {
   .company-desc {
     transform-origin: center right;
-    font-size: 13px;
+    font-size: 12px;
   }
 }
 .company-label {
