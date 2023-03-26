@@ -8,7 +8,7 @@
           'jp' => '会社案内'
         ))?>
         <div class="company-banner-img">
-          <img src="<?php echo resolve_asset_url('/images/building-alt.png'); ?>" alt="">
+          <img src="<?php echo resolve_asset_url('/images/lobby.jpg'); ?>" alt="">
         </div>
         <span class="company-banner-bg"></span>
       </div>
@@ -19,11 +19,12 @@
             <span class="company-heading-text">お客様の利益を第一とする</span>
             <span class="company-heading-text">真のサービス</span>
           </h4>
-          <p class="company-desc">PRESIは2016年の創業以来、
-            総合不動産企業として多角的な事業を展開し、
-            不動産業界のさらなる発展、
-            繁栄を牽引すべく日々邁進しております。
-          </p>
+          <p class="company-desc">PRESIは2016年の創業以来、不動産業界のさらなる発展、
+          反映を牽引すべく、多角的な事業を展開。
+          近年では、株式会社ZWEISPACE JAPANと連携し、
+          ブロックチェーンやメタバース、NFTなど、
+          新たなカタチの資産形成・運用にも取り組んでいます。</p>
+          <a class="company-label" href="">PRESIが取り組むWeb3.0サービス</a>
         </div>
         <div class="company-content-right">
           <a href="<?php echo resolve_url('company?message'); ?>" class="company-button">

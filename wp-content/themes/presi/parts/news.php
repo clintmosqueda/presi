@@ -26,7 +26,7 @@
             <time class="news-time">2022.12</time>
             <span class="news-category">お知らせ</span>
             <a href="https://prtimes.jp/main/html/rd/p/000000090.000029068.html" class="news-link" target="_blank">
-              <p class="news-desc">まさかの、AIジェネラティブ不動産！！ デジタルツインでメタバースにも？！</p>
+              <p class="news-desc">東京のワンルーム・アパートとデジタルツインのメタバースを繋げる、世界で一つだけのジェネラティブ不動産NFTの販売開始。</p>
             </a>
           </li>
 
@@ -34,7 +34,7 @@
             <time class="news-time">2022.02</time>
             <span class="news-category">お知らせ</span>
             <a href="https://prtimes.jp/main/html/rd/p/000000075.000029068.html" class="news-link" target="_blank">
-              <p class="news-desc">アパート投資家必見の、ロボット建築士・鑑定士「オートカルク・AutoCalc」、アイフォン・アンドロイド・アプリ版で登場</p>
+              <p class="news-desc">不動産・建設AIアプリ「オートカルク」導入。不動産保有者に限定したプラン提供を開始</p>
             </a>
           </li>
 
@@ -42,7 +42,7 @@
             <time class="news-time">2022.01</time>
             <span class="news-category">お知らせ</span>
             <a href="https://prtimes.jp/main/html/rd/p/000000073.000029068.html" class="news-link" target="_blank">
-              <p class="news-desc">ZWEINOTE、不動産ベースのNFT、１０９億円で開始。購入者は不動産ブロックチェーン、メタバース等の各プロジェクト企画へ招待。一部、コロナ禍での、食とアーティストへのチャリティープロジェクトに拠出</p>
+              <p class="news-desc">Zweichain（ツバイチェーン）不動産ベースのNFT、「ZWEINOTE-TokyoPresiシリーズ」販売開始</p>
             </a>
           </li>
 
@@ -50,11 +50,9 @@
             <time class="news-time">2022.01</time>
             <span class="news-category">お知らせ</span>
             <a href="https://prtimes.jp/main/html/rd/p/000000071.000029068.html" class="news-link" target="_blank">
-              <p class="news-desc">Zweichain（ツバイチェーン）不動産ベースのNFTの制作と販売、まずはバーチャル空間のコワーキングスペース、アパレルショップの賃貸から開始、アパレルフロアでは、コロナ禍にもメタバースで試着が可能</p>
+              <p class="news-desc">ZWEISPACEと連携し、現物不動産とメタバース上とのブロックチェーンを使った不動産取引を開始</p>
             </a>
           </li>
-
-
 
           <li class="news-item">
             <time class="news-time">2021.09</time>
@@ -66,7 +64,7 @@
             <time class="news-time">2019.07</time>
             <span class="news-category">お知らせ</span>
             <a href="https://prtimes.jp/main/html/rd/p/000000038.000029068.html" class="news-link" target="_blank">
-              <p class="news-desc">ツバイスペースは、東京のアパートに設置した地震センサーから建物の耐震構造をAIで解析、ブロックチェーンに記入し、頑丈な建物の設計と施工、建物管理に役立てる。</p>
+              <p class="news-desc">PRESI施工物件にIoT地震センサーを設置！より安全な設計が実現</p>
             </a>
           </li>
 
@@ -74,7 +72,7 @@
             <time class="news-time">2018.10</time>
             <span class="news-category">お知らせ</span>
             <a href="https://prtimes.jp/main/html/rd/p/000000022.000029068.html" class="news-link" target="_blank">
-              <p class="news-desc">測量図、ＣＡＤデータも、特許所有の不動産ブロックチェーンに登記！世界最高性能の登記システムになりました。輸出もしていきます。</p>
+              <p class="news-desc">測量図面やCADデータの不動産ブロックチェーン登記により利便性が向上</p>
             </a>
           </li>
 
@@ -82,7 +80,7 @@
             <time class="news-time">2018.05</time>
             <span class="news-category">お知らせ</span>
             <a href="https://prtimes.jp/main/html/rd/p/000000012.000029068.html" class="news-link" target="_blank">
-              <p class="news-desc">ＡＩ・ロボット が 建築プランを入れて、建設を開始！ ブロックチェーンにも登記！</p>
+              <p class="news-desc">ロボット建築士兼鑑定士を利用した 戸建て、賃貸併用住宅　の設計、見積もり、建築サービス開始</p>
             </a>
           </li>
 
@@ -90,7 +88,7 @@
             <time class="news-time">2018.04</time>
             <span class="news-category">お知らせ</span>
             <a href="https://prtimes.jp/main/html/rd/p/000000010.000029068.html" class="news-link" target="_blank">
-              <p class="news-desc">賃貸不動産管理をブロックチェーンで行う　世界初のサービス開始。不動産業界のブロックチェーンは、日本法人が特許取得済で世界をリード！</p>
+              <p class="news-desc">ブロックチェーンを使った賃貸不動産の管理運用を開始</p>
             </a>
           </li>
           

@@ -5,19 +5,19 @@
 
         <div class="mv-slide is-active is-animate">
           <div class="mv-slide-frame" data-rows="8">
-            <img src="<?php echo resolve_asset_url('/images/mv-image2.png'); ?>" alt="">
+            <img src="<?php echo resolve_asset_url('/images/mv-image7.jpg'); ?>" alt="">
           </div>
         </div>
 
         <div class="mv-slide is-next">
           <div class="mv-slide-frame" data-rows="8">
-            <img src="<?php echo resolve_asset_url('/images//mv-image5.png'); ?>" alt="">
+            <img src="<?php echo resolve_asset_url('/images//mv-image8.jpg'); ?>" alt="">
           </div>
         </div>
 
         <div class="mv-slide">
           <div class="mv-slide-frame" data-rows="8">
-            <img src="<?php echo resolve_asset_url('/images/mv-image6.png'); ?>" alt="">
+            <img src="<?php echo resolve_asset_url('/images/mv-image9.jpg'); ?>" alt="">
           </div>
         </div>
 

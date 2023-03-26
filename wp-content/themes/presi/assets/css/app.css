@@ -405,6 +405,8 @@ body {
   color: white;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 18px;
+  letter-spacing: 0.19em;
+  line-height: 2;
 }
 @media all and (max-width: 767px) {
   .card-desc {
@@ -1160,6 +1162,7 @@ body {
 .about-investment {
   display: flex;
   flex-direction: column;
+  margin-bottom: 42px;
 }
 @media all and (max-width: 767px) {
   .about-investment {
@@ -1193,7 +1196,7 @@ body {
 }
 .about-investment-services {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   padding: 24px 62px;
   gap: 0 100px;
 }
@@ -1208,10 +1211,12 @@ body {
   color: white;
   font-size: 16px;
   line-height: 2.6;
+  white-space: pre-line;
 }
 @media all and (max-width: 767px) {
   .about-investment-par {
     font-size: 14px;
+    white-space: normal;
   }
 }
 .about-realty-heading {
@@ -1615,7 +1620,7 @@ body {
   margin-bottom: 49px;
 }
 .service-desc {
-  max-width: 744px;
+  max-width: 850px;
   width: 100%;
   margin: 0 auto;
   font-size: 21px;
@@ -1636,6 +1641,7 @@ body {
 }
 .service-grid {
   display: grid;
+  grid-template-columns: 1fr 1fr;
   grid-template-areas: "one one" "two three" "four five";
   gap: 15px;
 }
@@ -1798,8 +1804,8 @@ body {
 }
 .company-banner-img {
   position: absolute;
-  height: 387px;
-  width: 772px;
+  height: 354px;
+  width: 579px;
   bottom: 0;
   right: 0;
 }
@@ -1925,8 +1931,36 @@ body {
 @media all and (max-width: 767px) {
   .company-desc {
     transform-origin: center right;
-    font-size: 14px;
+    font-size: 13px;
   }
+}
+.company-label {
+  pointer-events: none;
+  font-size: 18px;
+  padding: 26px 40px 26px 51px;
+  box-shadow: inset 0 0 0 2px #0E304D;
+  letter-spacing: 0.14em;
+  color: #0E304D;
+  display: inline-flex;
+  margin-top: 27px;
+  align-items: center;
+}
+@media all and (max-width: 767px) {
+  .company-label {
+    font-size: 14px;
+    padding: 15px 20px;
+  }
+}
+.company-label::after {
+  content: "";
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2Ljc3NyIgaGVpZ2h0PSIxMC43MjUiIHZpZXdCb3g9IjAgMCA2Ljc3NyAxMC43MjUiPgogIDxwYXRoIGlkPSJQYXRoXzIwMCIgZGF0YS1uYW1lPSJQYXRoIDIwMCIgZD0iTS03NDM0LjMxLDM1OTQuMWw0LjY1Niw0LjY1Ni00LjY1Niw0LjY1NiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNzQzNS4wMTcgLTM1OTMuMzkpIiBmaWxsPSJub25lIiBzdHJva2U9IiMwZTMwNGQiIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4K);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 4.66px;
+  height: 9.31px;
+  display: block;
+  margin-left: 20px;
 }
 .company-button {
   display: block;

@@ -1,7 +1,6 @@
 <div class="case-study">
-  <h3 class="case-study-heading">物件事例紹介</h3>
-  <p class="case-study-desc">PRESIの扱う物件事例は
-  下記のサイトよりご確認ください</p>
+  <h3 class="case-study-heading">PRESIプロデュースの物件</h3>
+  <p class="case-study-desc">新たな価値の創造 ―― 皆様の近くにPRESIは存在します。</p>
 
   <div class="case-study-list">
     <a href="http://presi.co.jp/article.html" target="_blank" class="case-study-link">PRESIの扱う物件一覧を見る
